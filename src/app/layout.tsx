@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import BHMark from './components/BHMark';
 import ThemeToggle from './components/ThemeToggle';
 import './globals.css';
@@ -51,6 +53,9 @@ export default function RootLayout({
             <a href="mailto:contact@hysteresisresearch.com">contact</a>
           </span>
         </footer>
+
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
