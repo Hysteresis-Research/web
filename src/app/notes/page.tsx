@@ -46,6 +46,27 @@ export default function Notes() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/notes/three-cycles">Shallower, so far</Link>
           </li>
+          <li>
+            <time dateTime="2026-05-06">2026-05-06</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/notes/not-the-line">Not the line, the touch</Link>
+          </li>
+          <li>
+            <time dateTime="2026-05-05">2026-05-05</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/notes/decoupled-one-side">Decoupled, on one side</Link>
+          </li>
+          <li>
+            <time dateTime="2026-05-02">2026-05-02</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/notes/prior-conditioned">The prior, conditioned</Link>
+          </li>
         </ul>
 
         <div></div>
