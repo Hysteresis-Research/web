@@ -39,12 +39,13 @@ export default function Firm() {
         <div className="marginalia">§4</div>
         <p className="body-paragraph">
           Within three years <span className="em">—</span> a unified regime
-          model across the cross-asset majors, and the operational
-          infrastructure to keep it honest. Within five{' '}
-          <span className="em">—</span> multiple sleeves running in parallel,
-          and the first public thesis paper. Within ten{' '}
-          <span className="em">—</span> a method validated, and one that can
-          be inherited.
+          model across the cross-asset majors in a reusable form, kept
+          honest by the daily operational process. Within five{' '}
+          <span className="em">—</span> multiple sleeves running in
+          parallel, and the first public thesis paper documenting the core
+          of the method. Within ten <span className="em">—</span> a method
+          validated across regime environments, in a form that can be
+          inherited.
         </p>
 
         <div></div>

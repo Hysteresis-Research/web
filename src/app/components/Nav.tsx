@@ -46,7 +46,7 @@ export default function Nav() {
   ];
 
   return (
-    <nav className="site-nav" aria-label="Site">
+    <nav className={`site-nav${isZh ? ' is-zh' : ''}`} aria-label="Site">
       {items.map((it, i) => (
         <Fragment key={it.key}>
           {i > 0 && <span className="nav-sep" aria-hidden="true">·</span>}
