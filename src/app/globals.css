@@ -198,6 +198,39 @@ h1 {
   max-width: 22rem;
 }
 
+.entry-list {
+  grid-column: 2;
+  list-style: none;
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.6vw, 1.15rem);
+  line-height: 1.62;
+  color: var(--ink);
+  max-width: 38ch;
+  margin-bottom: 1.75rem;
+}
+
+.entry-list li { margin-bottom: 0.5em; }
+
+.entry-list time {
+  font-family: var(--mono);
+  font-size: 0.78em;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  padding-right: 0.7em;
+}
+
+.entry-list a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.entry-list a:hover {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
+
 .tagline a,
 .signature a {
   color: var(--ink-2);
@@ -237,6 +270,6 @@ footer a.is-active {
     min-height: 0;
     margin-bottom: 1.5rem;
   }
-  .hero-mark, h1, .lede, .tagline, .body-paragraph, .signature { grid-column: 1; }
+  .hero-mark, h1, .lede, .tagline, .body-paragraph, .signature, .entry-list { grid-column: 1; }
   footer.rail { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
 }

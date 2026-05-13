@@ -23,13 +23,22 @@ export default function FooterNav() {
   const langHref = isZh ? enPath : pathname === '/' ? '/zh' : `/zh${pathname}`;
 
   const items = [
-    ...SLUGS.map((s) => ({
-      key: s,
-      href: isZh ? `/zh/${s}` : `/${s}`,
-      label: labels[s],
-      active: pathname === `/${s}` || pathname === `/zh/${s}`,
-      external: false as const,
-    })),
+    ...SLUGS.map((s) => {
+      const enRoot = `/${s}`;
+      const zhRoot = `/zh/${s}`;
+      const active =
+        pathname === enRoot ||
+        pathname.startsWith(`${enRoot}/`) ||
+        pathname === zhRoot ||
+        pathname.startsWith(`${zhRoot}/`);
+      return {
+        key: s,
+        href: isZh ? zhRoot : enRoot,
+        label: labels[s],
+        active,
+        external: false as const,
+      };
+    }),
     { key: 'contact', href: CONTACT_HREF, label: labels.contact, active: false, external: true as const },
     {
       key: 'lang',
