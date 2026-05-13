@@ -40,11 +40,11 @@ export default function Approach() {
           memory of how it was magnetised; in economics, expectations and
           capital allocation carry the memory of a regime change long after
           the regime has changed. The framing is borrowed; the discipline is
-          empirical. We measure the gap between fundamentals and price rather
-          than forecast the moment of its closure. We size on durability, not
-          conviction. A thesis describes the world; a position is a trade{' '}
-          <span className="em">—</span> and a correct call without a written
-          exit rule is luck, not skill.
+          empirical. We measure the gap between fundamentals and price, and
+          we size on the durability of that gap <span className="em">—</span>{' '}
+          not on conviction, not on forecasting when it closes. A position
+          must have a written exit rule; without one, the position is
+          outside the method, regardless of whether the call was right.
         </p>
 
         <div className="marginalia">§4</div>

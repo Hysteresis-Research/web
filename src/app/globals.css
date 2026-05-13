@@ -67,6 +67,12 @@ footer.rail { border-top: 0.5px solid var(--rule-soft); margin-top: auto; }
   gap: 0 0.55em;
 }
 
+.site-nav.is-zh {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+
 .site-nav a {
   color: var(--ink-3);
   text-decoration: none;

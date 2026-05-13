@@ -39,7 +39,7 @@ export default function NotTheLineZh() {
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          &ldquo;处于线的上方还是下方&rdquo;这个状态是 regime-dependent 的。在某个 regime 里能赢的规则，到下一个 regime 就是错的，walk-forward 选参数器会在两者之间反复切换。三轮变种<span className="em">——</span>单线版本、日线时间框架、四种机制拆分<span className="em">——</span>都给出同样的形状。
+          &ldquo;处于线的上方还是下方&rdquo;这个状态依赖于当前的市场状态。在某个市场状态里能赢的规则，到下一个市场状态就是错的，walk-forward 选参数器会在两者之间反复切换。三轮变种<span className="em">——</span>单线版本、日线时间框架、四种机制拆分<span className="em">——</span>都给出同样的形状。
         </p>
 
         <div className="marginalia">§4</div>

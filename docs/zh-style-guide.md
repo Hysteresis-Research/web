@@ -140,6 +140,43 @@ is short because it has not been thought through.
 - **Closing aphorisms** in /notes signatures are exempt — they exist
   to land the prose, not to make a claim. But they must not substitute
   for analytical content earlier in the note.
+- **Observation notes** (see below) explicitly status-declare step 4
+  rather than name a position.
+
+### Observation notes vs trade notes
+
+The firm publishes two genres of analytical writing. They look
+identical at the page level (same template, same marginalia
+structure) but differ in what step 4 of the skeleton resolves to:
+
+- **Trade notes** — the firm holds (or recently retired) a position,
+  and the note documents the methodological case. Step 4 = the
+  actual position, the size frame, and the explicit invalidation
+  condition. These notes are not publicly distributed in the current
+  era; they live in the firm's internal record.
+
+- **Observation notes** — the firm has identified a pattern, prior,
+  or anomaly but does **not** (yet) have a corresponding position.
+  Step 4 resolves to a **status declaration**, not a recommendation.
+  Acceptable forms:
+    - "Tracking. No position." / "正在跟踪，无仓位。"
+    - "Rule says wait." / "规则给的指令是：等。"
+    - "Sample too small to validate. Treating as provisional
+       observation." / "样本量不足以验证，仅作提示性观察。"
+    - "Falsifying data: [series X] must hold above/below [threshold]
+       within [window]." / "证伪条件：[X 指标]在 [窗口] 内须
+       保持高于/低于 [阈值]。"
+
+All current `/notes` and `/zh/notes` entries are **observation
+notes**. The /zh homepage §4 explicitly distinguishes the two:
+"公开分享的是方法与具体观察 — 在 /notes。交易是量化的，不公开。"
+The observation-note category is what allows that to be true
+without abandoning the §4 skeleton.
+
+**The status declaration is mandatory.** A purely observational
+note that does not name what would change the firm's view is, by
+this guide, still decorative. The minimum step-4 acceptable form
+for an observation note is a falsifying-data condition.
 
 ## 5. Glossary — required translations
 
@@ -159,14 +196,20 @@ naive translator (or AI) is most likely to produce.
 | easing | 放水 | **流动性宽松** |
 | structural | — | **结构性** |
 | secular | 长期 (alone) | **长周期** |
-| cycle | — | **宏观周期** (or keep English `cycle`) |
-| convexity | — | **凸性收益结构** / 非对称收益 (or keep English `Convexity`) |
+| cycle | — | **宏观周期** (in body prose; titled `Cycle` may stay English) |
+| convexity | — | **凸性收益结构** / 非对称收益 (or keep `Convexity` only as titled concept) |
 | underprice / underpriced | 低估 (too colloquial) | **尚未充分计入** |
 | second-order effects | — | **二阶影响** / 二阶效应 |
 | basis | — | **基差** (futures) / 底子 (other) |
 | dispersion | — | **离散度** / 分化 |
 | trade-off | 取舍 (too literal) | **权衡** |
-| narrative | — | **叙事** (or keep English `narrative` — both register-appropriate) |
+| narrative | — | **叙事** (in body prose; titled `Narrative` may stay English) |
+
+**Body vs titled rule** (resolves a prior §5.A vs §6.D contradiction):
+all glossary entries default to **the Chinese translation in body
+prose**. The English form is allowed only when the term functions as
+a titled concept (capitalised, term-mark usage). This applies
+consistently across §5 and §6.
 
 ### B. AI
 
@@ -315,11 +358,12 @@ Use these patterns to anchor consistency across surfaces.
 | EN | ZH |
 |---|---|
 | We are entering a new regime | **我们正在进入一个新的宏观范式** |
-| A regime shift is underway | **一次 regime shift 正在发生** |
+| A regime shift is underway | **一次 Regime Shift 正在发生** (titled `Regime Shift`; never lowercase `regime shift` in body) |
 | The cycle has turned | **周期已经转向** |
 
 **Avoid:** 我们进入了新政权 (mistranslation of "regime") /
-新时代 (too political)
+新时代 (too political) / lowercase `一次 regime shift 正在发生`
+(§6.D violation — keep only when titled as `Regime Shift`)
 
 ### 模板 3 — 长期结构类
 
@@ -402,22 +446,32 @@ Characteristics:
 - 高信息密度
 
 Canonical example paragraph (replaces the previous noun-stacking
-example):
+example). **The numbers below are illustrative placeholders, not
+sourced facts** — substitute real, sourced figures when adapting this
+template to a real surface:
 
-> AI 算力扩张正推升美国数据中心电力期货曲线（每月 30-45 bp）。
-> 每瓦特训练算力背后是 2-3 倍的冷却与配电负荷；这一倍数在能源
-> 约束下不会减弱。我们因此对长久期电力曲线持续保持结构性偏多，
-> 直到 PJM 曲线与基础负荷增长背离。
+> AI 算力扩张正推升美国数据中心电力期货曲线（近 12 个月 PJM
+> 远月合约 vs 历史 3y 区间的远端边际，[ILLUSTRATIVE: 每月 30-45 bp]
+> 的 drift）。每瓦特训练算力背后是 [ILLUSTRATIVE: 2-3 倍] 的冷却与
+> 配电负荷；这一倍数在能源约束下不会减弱。我们因此对长久期电力
+> 曲线持续保持结构性偏多，直到 PJM 曲线与基础负荷增长背离。
 
-Note what this single paragraph accomplishes:
+The bracketed `[ILLUSTRATIVE: ...]` markers are intentional — they
+distinguish the **shape** of a Level 3 paragraph (claim + observable
+series + mechanism + invalidation) from any specific quantitative
+claim. **Never publish a real surface with unsourced precision** —
+that normalises fake numbers, which is exactly the failure mode
+§5/§6 try to prevent.
 
-1. **Claim + observable** — the AI compute → electricity-futures
-   transmission is named with a specific data series (PJM, basis
-   points), not asserted by adjective
-2. **Mechanism** — the 2-3× multiplier between training compute and
-   total facility load, with a falsifiable constraint
+Note what the paragraph shape accomplishes:
+
+1. **Claim + observable** — names a specific data series (PJM
+   electricity-futures, near-term vs historical range) rather than
+   asserting by adjective
+2. **Mechanism** — points at a defined multiplier between training
+   compute and total facility load, with a falsifiable constraint
 3. **Implication + invalidation** — the firm holds a position and
-   specifies what would cause the position to be retired
+   states the data condition that would retire it
 
 This is the **density target** for Level 3 register. Compare to the
 previous canonical sentence, which was the abstract-noun stacking
@@ -582,5 +636,6 @@ revision should be logged here:
 |---|---|---|
 | 2026-05-14 | Initial draft | Establish baseline before scaling Chinese surfaces beyond /notes |
 | 2026-05-14 | Add B/C/D/E glossary categories (AI / 能源 / 加密 / 系统论); Style D canonical sentence under §9 Level 3 | Expand vocabulary coverage beyond 宏观金融 so AI × 能源 × 加密 × 地缘 content has a stable terminology base |
-| 2026-05-14 | Add §11 Homepage philosophy + four-domain anchor convention | Position /zh as cognitive entry point distinct from /en brand stamp |
-| 2026-05-14 | **Hostile codex review pass** (audits/2026-05-14-zh-corpus-hostile-review.md). Four self-undermining patterns found in the guide itself: (a) negative-only voice model with no positive argument skeleton — fixed by adding "Required argument structure" under §4; (b) English passthrough policy too permissive ("allowed and encouraged" produced 8-15 English nouns per note) — fixed by rewriting §6 as a 3-category restricted whitelist + §6.D translate-by-default list; (c) Style D canonical sentence in §9 was itself the abstract-noun stacking §4 warns against — replaced with an AI-compute → power-futures transmission-chain example carrying claim + observable + mechanism + implication + invalidation; (d) homepage four-domain anchor in §11.3/11.4 was buzzword stack — replaced with explicit causal transmission-chain convention. | Codex flagged the guide as institutionalizing the very habits it claimed to prevent. These four edits address each finding. |
+| 2026-05-14 | Add §11 Homepage philosophy + (initially "four-domain anchor", later renamed to **transmission chain**) | Position /zh as cognitive entry point distinct from /en brand stamp |
+| 2026-05-14 | **Hostile codex review pass** (audits/2026-05-14-zh-corpus-hostile-review.md). Four self-undermining patterns found in the guide itself: (a) negative-only voice model with no positive argument skeleton — fixed by adding "Required argument structure" under §4; (b) English passthrough policy too permissive ("allowed and encouraged" produced 8-15 English nouns per note) — fixed by rewriting §6 as a 3-category restricted whitelist + §6.D translate-by-default list; (c) Style D canonical sentence in §9 was itself the abstract-noun stacking §4 warns against — replaced with an AI-compute → power-futures transmission-chain example carrying claim + observable + mechanism + implication + invalidation; (d) homepage transmission-chain (formerly "four-domain anchor") in §11.3/11.4 was buzzword stack — replaced with explicit causal transmission-chain convention. | Codex flagged the guide as institutionalizing the very habits it claimed to prevent. These four edits address each finding. |
+| 2026-05-14 | **Hostile codex review pass 2** (audits/2026-05-14-zh-corpus-hostile-review-pass2.md). Four guide-internal contradictions found: (a) §5.A `narrative`/`cycle` "or keep English" qualifications conflicted with §6.D translate-by-default — resolved with explicit body-vs-titled rule appended to §5.A; (b) §7 template 2 contained `"一次 regime shift 正在发生"` which violated §6.D as a positive example — fixed by titling as `Regime Shift` and adding an Avoid line; (c) §9 canonical example used "每月 30-45 bp" and "2-3 倍" as unsourced precise numbers — relabeled with `[ILLUSTRATIVE: ...]` markers and added explicit "never publish a real surface with unsourced precision" guardrail; (d) §11 changelog naming still said "four-domain anchor" — renamed inline to clarify the rename trajectory. **Plus new architectural finding:** §4 skeleton demanded portfolio implication for every analytical paragraph while homepage §4 states trading is private; resolved by adding an "Observation notes vs trade notes" subsection under §4 — observation notes hit steps 1-3 and explicitly status-declare step 4 ("tracking, no position" / "rule says wait" / "sample too small to commit"). All current /notes entries are observation-class. | Codex flagged the guide as still self-undermining after pass 1; these edits address the four contradictions and the missing genre distinction. |
