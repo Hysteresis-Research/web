@@ -94,27 +94,71 @@ research.
 
 ## 5. Glossary — required translations
 
-These terms must be translated **consistently** across all Chinese surfaces.
+Canonical translations grouped by domain. Use consistently across all
+Chinese surfaces. "禁止翻译" column flags the wrong-default that a
+naive translator (or AI) is most likely to produce.
 
-| English | Chinese (preferred) | Notes |
+### A. 宏观金融
+
+| English | 禁止翻译 | 推荐翻译 |
 |---|---|---|
-| regime | **宏观范式** / **周期环境** | Use 宏观范式 for slow structural shifts; 周期环境 for cyclical context. **The phrase "Regime Shift" itself is permitted in English** (see §6). |
-| repricing | **资产重估** / **风险重新计价** | 资产重估 for cross-sectional; 风险重新计价 for premia |
-| hysteresis | **系统迟滞** / **路径依赖** | **Never** 磁滞 (that is the magnetic-physics sense; wrong context) |
-| duration | **长久期** (long-duration) / **久期** | Macro asset class, not the verb |
-| tightening | **流动性收缩** | Not 紧缩 alone — too generic |
-| convexity | **凸性收益结构** / **非对称收益** | Or keep as English "Convexity" — both acceptable |
-| bottleneck | context-dependent — see below |
-| second-order effects | **二阶影响** / **二阶效应** | Always plural in meaning |
-| underprice / underpriced | **尚未充分计入** | Not 低估 (too colloquial) |
-| narrative | **叙事** or keep English "narrative" | Both used; keep English in finance-of-finance contexts |
-| trade-off | **权衡** | Not 取舍 (too literal) |
-| structural | **结构性** | |
-| path-dependent | **路径依赖** | |
-| basis | **基差** (futures) / **底子** (other) | |
-| dispersion | **离散度** / **分化** | |
+| regime | 政权 | **宏观范式** / 周期环境 |
+| repricing | 重新定价 | **资产重估** / 风险重新计价 |
+| liquidity | — | **流动性环境** |
+| duration | 久期 (alone) | **长久期资产** |
+| tightening | 紧缩 (alone) | **流动性收缩** |
+| easing | 放水 | **流动性宽松** |
+| structural | — | **结构性** |
+| secular | 长期 (alone) | **长周期** |
+| cycle | — | **宏观周期** (or keep English `cycle`) |
+| convexity | — | **凸性收益结构** / 非对称收益 (or keep English `Convexity`) |
+| underprice / underpriced | 低估 (too colloquial) | **尚未充分计入** |
+| second-order effects | — | **二阶影响** / 二阶效应 |
+| basis | — | **基差** (futures) / 底子 (other) |
+| dispersion | — | **离散度** / 分化 |
+| trade-off | 取舍 (too literal) | **权衡** |
+| narrative | — | **叙事** (or keep English `narrative` — both register-appropriate) |
 
-### bottleneck — context-conditional
+### B. AI
+
+| English | 推荐翻译 |
+|---|---|
+| inference | **推理计算** |
+| training compute | **训练算力** |
+| compute | **算力** |
+| scaling laws | **Scaling Law** (keep English) |
+| AGI | **AGI** (keep English) |
+| AI Scaling Law | **AI Scaling Law** (keep English; titled concept) |
+
+### C. 能源
+
+| English | 推荐翻译 |
+|---|---|
+| baseload | **基荷能源** |
+| intermittency | **间歇性** |
+| energy density | **能量密度** |
+| fusion | **可控核聚变** |
+| grid | **电网系统** |
+
+### D. 加密 / 货币
+
+| English | 推荐翻译 |
+|---|---|
+| stablecoin rails | **稳定币支付轨道** (or keep English `Stablecoin Rails` for titled concepts) |
+| settlement layer | **结算层** |
+| sovereign money | **主权货币** |
+| tokenization | **资产代币化** |
+
+### E. 系统论
+
+| English | 推荐翻译 |
+|---|---|
+| hysteresis | **系统迟滞** / 路径依赖. **Never** 磁滞 (magnetic-physics sense; wrong register). |
+| path dependency | **路径依赖** |
+| reflexivity | **反身性** |
+| emergence | **涌现** |
+
+### F. bottleneck — context-conditional
 
 | Context | Translation |
 |---|---|
@@ -125,7 +169,7 @@ These terms must be translated **consistently** across all Chinese surfaces.
 
 Do **not** default to 瓶颈 alone — it reads as commodity-trading slang.
 
-### Other anti-patterns
+### G. Anti-patterns (forbidden words)
 
 - "暴涨" → use "急涨" or quantify ("一个月内 +35%")
 - "颠覆" → 重塑 / 改写
@@ -133,6 +177,7 @@ Do **not** default to 瓶颈 alone — it reads as commodity-trading slang.
 - "利好 / 利空" → forbidden in long-form (acceptable in market summary only)
 - "风口" → forbidden
 - "巨大机会" → forbidden
+- "革命" (in market context) → 结构性转换 / 重塑
 
 ## 6. English passthroughs (allowed and encouraged)
 
@@ -148,7 +193,8 @@ register. Keep them in English:
 - `Sharpe`, `Sortino`, `Calmar`
 - `β`, `α`, `OI`, `IV`, `RV`, `funding`, `basis`, `skew`
 - `ETF`, `mNAV`, `BTC`, `NQ`, `SP500`
-- `AI Scaling Law`
+- `AI Scaling Law` / `Scaling Law`
+- `AGI`
 - `DeepSeek Moment`
 - `Stablecoin Rails`
 - `PM practice`, `book`, `sleeve`
@@ -252,15 +298,27 @@ Be conscious of the register level you are writing at.
 
 工整 / 规范 / 但 A 股化. May be referenced for terminology but not voice.
 
-### Level 3 — 全球宏观基金
+### Level 3 — 全球宏观基金 ("Style D" — target register)
 
-This is the target register. Characteristics:
+This is the target register for almost everything Hysteresis writes.
+Characteristics:
 
 - 去情绪化
 - 强逻辑
 - 世界观驱动
 - 长周期
 - 高信息密度
+
+Canonical example sentence:
+
+> 我们正在进入一个由能源约束、资本成本与地缘重构共同驱动的新宏观周期。
+
+Note what this single sentence accomplishes: it names three structural
+drivers (in falling order of base-layer depth — energy → capital cost
+→ geopolitics), locates the moment ("正在进入" — present-progressive,
+not declarative), and lands on a canonical template ("新宏观周期"). No
+emotional adjective, no exclamation, three claims, one sentence. This
+is the density target.
 
 ### Level 4 — 文明周期叙事
 
@@ -300,3 +358,4 @@ revision should be logged here:
 | Date | Change | Reason |
 |---|---|---|
 | 2026-05-14 | Initial draft | Establish baseline before scaling Chinese surfaces beyond /notes |
+| 2026-05-14 | Add B/C/D/E glossary categories (AI / 能源 / 加密 / 系统论); Style D canonical sentence under §9 Level 3 | Expand vocabulary coverage beyond 宏观金融 so AI × 能源 × 加密 × 地缘 content has a stable terminology base |
