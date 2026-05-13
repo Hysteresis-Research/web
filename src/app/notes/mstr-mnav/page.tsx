@@ -55,15 +55,16 @@ export default function MstrMnav() {
 
         <div className="marginalia">§4</div>
         <p className="body-paragraph">
-          Three prior episodes of thirty days or more have fully ended.
-          Measured from the day mNAV crossed back above 1.0
-          <span className="em">×</span> in each, MSTR&rsquo;s median forward
-          return was −2% at thirty days, −7% at sixty, −13% at ninety.
-          Bitcoin&rsquo;s was −6%, −16%, −12%. By 180 days the median had
-          inverted <span className="em">—</span> +49% for MSTR, +26% for BTC{' '}
-          <span className="em">—</span> driven by two of the three analogs
-          producing large gains, while the third extended the 2022 bear.
-          N=3 is not a distribution; each episode is its own story.
+          Three prior episodes of thirty days or more have fully ended. N=3
+          is not a base rate <span className="em">—</span> it is three
+          histories laid side by side. Across those three, measured from the
+          day mNAV crossed back above 1.0<span className="em">×</span>,
+          MSTR&rsquo;s median forward return was −2% at thirty days, −7% at
+          sixty, −13% at ninety. Bitcoin&rsquo;s was −6%, −16%, −12%. By 180
+          days the median had &ldquo;inverted&rdquo;{' '}
+          <span className="em">—</span> +49% for MSTR, +26% for BTC{' '}
+          <span className="em">—</span> but that was two analogs lifting the
+          median while the third extended the 2022 bear.
         </p>
 
         <div></div>

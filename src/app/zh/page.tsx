@@ -37,6 +37,13 @@ export default function Home() {
           <span className="signal">AI 算力扩张推升能源约束，能源约束推升资本成本，资本成本重估长久期资产</span>。
         </p>
 
+        <div className="marginalia">§4</div>
+        <p className="body-paragraph">
+          公开分享的是方法与具体观察<span className="em">——</span>
+          在 <a href="/zh/notes" className="email-link">/notes</a>。
+          交易是量化的，不公开。
+        </p>
+
         <div></div>
         <p className="signature">研究自循环，资本跟随。</p>
       </div>

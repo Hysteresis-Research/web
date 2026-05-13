@@ -37,7 +37,7 @@ export default function MstrMnavZh() {
         <p className="body-paragraph">这一轮 episode 已进入第 145 天，仍在进行中。MSTR 历史上只有一段折价 episode 持续更长<span className="em">——</span>180 天，2022 年 1 月至 7 月，上一轮熊市最深的一段。按持续时间，当前已是<span className="signal">历史第二长</span>。</p>
 
         <div className="marginalia">§4</div>
-        <p className="body-paragraph">历史上 ≥30 天的折价 episode 完整结束的有三段。从 mNAV 重新升破 1.0 倍那一天起算，MSTR 30 天中位数前向回报 −2%，60 天 −7%，90 天 −13%；BTC 对应为 −6%、−16%、−12%。到 180 天中位数反转<span className="em">——</span>MSTR +49%，BTC +26%<span className="em">——</span>是其中两段大涨拉动的（第三段延续了 2022 年熊市的下跌）。N=3 不构成分布；每一段都是它自己的故事。</p>
+        <p className="body-paragraph">历史上 ≥30 天的折价 episode 完整结束的只有三段。N=3 不是分布，是三段历史并列。在这有限样本里，从 mNAV 重新升破 1.0 倍那一天起算，MSTR 30/60/90 天中位数前向回报为 −2% / −7% / −13%；BTC 对应 −6% / −16% / −12%。到 180 天的所谓&ldquo;反转&rdquo;<span className="em">——</span>MSTR +49%、BTC +26%<span className="em">——</span>其实是其中两段大涨拉动，第三段延续了 2022 年熊市的下跌。</p>
 
         <div></div>
         <p className="signature">折价是数据，不是结论。</p>
