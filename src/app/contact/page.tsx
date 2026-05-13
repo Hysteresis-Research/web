@@ -30,8 +30,8 @@ export default function Contact() {
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          <a className="email-link" href="mailto:desk@hysres.com">
-            desk@hysres.com
+          <a className="email-link" href="mailto:fund@hysres.com">
+            fund@hysres.com
           </a>
         </p>
 
