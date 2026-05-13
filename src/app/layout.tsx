@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import BrandLink from './components/BrandLink';
-import FooterNav from './components/FooterNav';
+import Nav from './components/Nav';
 import ThemeToggle from './components/ThemeToggle';
 import './globals.css';
 
@@ -39,17 +39,18 @@ export default function RootLayout({
       <body>
         <script dangerouslySetInnerHTML={{ __html: MODE_INIT_SCRIPT }} />
 
-        <header className="rail">
+        <header className="rail rail-header">
           <BrandLink />
+          <div className="header-right">
+            <Nav />
+            <ThemeToggle />
+          </div>
         </header>
-
-        <ThemeToggle />
 
         {children}
 
-        <footer className="rail rail-footer">
+        <footer className="rail">
           <span>© 2026 Hysteresis Research · HK</span>
-          <FooterNav />
         </footer>
 
         <Analytics />

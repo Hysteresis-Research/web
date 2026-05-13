@@ -14,7 +14,7 @@ const LABELS: Record<'en' | 'zh', Record<Slug | 'contact' | 'toggle', string>> =
 
 const CONTACT_HREF = 'mailto:contact@hysteresisresearch.com';
 
-export default function FooterNav() {
+export default function Nav() {
   const pathname = usePathname() || '/';
   const isZh = pathname === '/zh' || pathname.startsWith('/zh/');
   const labels = isZh ? LABELS.zh : LABELS.en;
@@ -51,10 +51,10 @@ export default function FooterNav() {
   ];
 
   return (
-    <nav className="footer-nav" aria-label="Site">
+    <nav className="site-nav" aria-label="Site">
       {items.map((it, i) => (
         <Fragment key={it.key}>
-          {i > 0 && <span className="footer-sep" aria-hidden="true">·</span>}
+          {i > 0 && <span className="nav-sep" aria-hidden="true">·</span>}
           {it.external ? (
             <a href={it.href} className={it.active ? 'is-active' : undefined}>
               {it.label}
