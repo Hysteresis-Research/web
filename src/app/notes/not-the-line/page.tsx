@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import WalkforwardChart from '../../components/charts/WalkforwardChart';
 
 export const metadata = {
   title: 'Not the line, the touch · Notes · Hysteresis Research',
@@ -26,15 +27,10 @@ export default function NotTheLine() {
 
         <div></div>
         <figure className="note-figure">
-          <img
-            src="/notes/not-the-line.png"
-            alt="Bar chart of Sharpe ratios across six walk-forward rounds: state-based crossovers collapse from 1.10 in-sample to 0.16 out-of-sample; event-based 15m tag-and-fail reaches walk-forward Sharpe 1.87 and holdout 2.25"
-            width={1600}
-            height={840}
-          />
+          <WalkforwardChart />
           <figcaption>
-            Sharpe by round, in-sample (grey) vs walk-forward / holdout (blue,
-            green where the form survived).
+            Sharpe by round, in-sample vs walk-forward / holdout. Surviving
+            forms highlighted.
           </figcaption>
         </figure>
 

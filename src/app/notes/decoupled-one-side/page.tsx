@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import CorrelationChart from '../../components/charts/CorrelationChart';
 
 export const metadata = {
   title: 'Decoupled, on one side · Notes · Hysteresis Research',
@@ -26,12 +27,7 @@ export default function DecoupledOneSide() {
 
         <div></div>
         <figure className="note-figure">
-          <img
-            src="/notes/decoupled-one-side.png"
-            alt="Line chart of rolling 7-day correlation of BTC against NQ and NVDA, falling from +0.71 to +0.34 between 2026-03-25 and 2026-05-05"
-            width={1600}
-            height={840}
-          />
+          <CorrelationChart />
           <figcaption>
             Rolling 7-day correlation, 2026-03-25 → 2026-05-05.
           </figcaption>

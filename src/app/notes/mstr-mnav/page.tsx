@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import MnavDurationChart from '../../components/charts/MnavDurationChart';
 
 export const metadata = {
   title: 'Discount, unwinding · Notes · Hysteresis Research',
@@ -25,12 +26,7 @@ export default function MstrMnav() {
 
         <div></div>
         <figure className="note-figure">
-          <img
-            src="/notes/mstr-mnav.png"
-            alt="Horizontal bar chart of MSTR mNAV discount episodes lasting 30 days or more, with the current 145-day ongoing episode highlighted alongside four prior closed episodes (180, 71, 52, 38 days)"
-            width={1600}
-            height={840}
-          />
+          <MnavDurationChart />
           <figcaption>
             mNAV discount episodes of 30 days or more, MSTR history.
           </figcaption>

@@ -215,13 +215,10 @@ h1 {
   max-width: 38ch;
 }
 
-.note-figure img {
+.note-figure .chart-svg {
   display: block;
   width: 100%;
   height: auto;
-  border: 0.5px solid var(--rule-soft);
-  border-radius: 2px;
-  background: #0d0d0d;
 }
 
 .note-figure figcaption {

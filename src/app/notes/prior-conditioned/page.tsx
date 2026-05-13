@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import FOMCEntryChart from '../../components/charts/FOMCEntryChart';
 
 export const metadata = {
   title: 'The prior, conditioned · Notes · Hysteresis Research',
@@ -26,12 +27,7 @@ export default function PriorConditioned() {
 
         <div></div>
         <figure className="note-figure">
-          <img
-            src="/notes/prior-conditioned.png"
-            alt="Bar chart of 5-day post-FOMC BTC returns: crowded-long entries averaged −9.2%, other entries +2.5%, pooled −3.5%, 2026-04-29 actual +2.9%"
-            width={1600}
-            height={840}
-          />
+          <FOMCEntryChart />
           <figcaption>
             5-day post-FOMC returns by entry regime. The pooled mean averages
             two opposite distributions.

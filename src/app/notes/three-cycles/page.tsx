@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import CycleDrawdownChart from '../../components/charts/CycleDrawdownChart';
 
 export const metadata = {
   title: 'Shallower, so far · Notes · Hysteresis Research',
@@ -26,12 +27,7 @@ export default function ThreeCycles() {
 
         <div></div>
         <figure className="note-figure">
-          <img
-            src="/notes/three-cycles.png"
-            alt="Peak-aligned drawdown curves of the 2017 cycle (−83% at day 364), 2021 cycle (−77% at day 378), and the current cycle (−35% at day 219)"
-            width={1600}
-            height={840}
-          />
+          <CycleDrawdownChart />
           <figcaption>
             Peak-aligned drawdown trajectories. Current cycle traced through
             day 219.

@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import VRPChart from '../../components/charts/VRPChart';
 
 export const metadata = {
   title: 'Premium, compressing · Notes · Hysteresis Research',
@@ -26,12 +27,7 @@ export default function PremiumCompressing() {
 
         <div></div>
         <figure className="note-figure">
-          <img
-            src="/notes/premium-compressing.png"
-            alt="Bar chart of the annual mean spread between DVOL and 30-day realized volatility from 2022 to 2026 year-to-date: +9.7, +7.9, +6.6, +5.1, then −2.1 vol points"
-            width={1600}
-            height={840}
-          />
+          <VRPChart />
           <figcaption>
             Annual mean of DVOL − RV30, in vol points. 2026 through 2026-04-26.
           </figcaption>
