@@ -348,7 +348,109 @@ When writing or editing any Chinese surface:
 When auditing translations (e.g. via codex), point reviewers to this
 file and ask them to check each numbered section.
 
-## 11. Living document
+## 11. Homepage philosophy (`/zh` strategic positioning)
+
+The Chinese homepage is **not** a translation of the English one. The
+English page is a brand stamp. The Chinese page is the **cognitive
+entry point** for a Chinese-language audience to a global-macro research
+firm.
+
+### 11.1 What `/zh` is for
+
+The Chinese surface aims to occupy a scarce position in the Chinese
+intellectual landscape: a Chinese-language entry into
+
+  AI × 能源 × 全球资本周期 × 稳定币与美元体系 × 核聚变与文明周期
+
+This is a position no Chinese financial media, no AI publication, and no
+sell-side research desk currently holds. The Hysteresis Chinese surface
+should read as if the firm has been writing in Chinese all along, and
+happens also to publish English.
+
+### 11.2 What `/zh` is **not**
+
+- A translated mirror of the English homepage
+- A Chinese-language financial news aggregator
+- A "China angle" page
+- A Chinese AI-content farm
+
+### 11.3 Homepage anatomy
+
+The Chinese homepage has three jobs, in order:
+
+1. **Brand stamp** — the firm name, the BHMark, the signature phrase.
+   These mirror the English page for visual consistency.
+2. **World-view statement** — what Hysteresis means as a concept. This
+   is the most important paragraph on the entire site. It tells the
+   reader the firm's framework is path-dependence and 系统迟滞, not
+   trading signals. **Never** describe hysteresis as 磁滞 (the magnetic
+   sense). Always 系统迟滞 / 路径依赖.
+3. **Four-domain anchor** — name the four (or three or five) domains
+   the firm thinks about: AI, energy, capital cycle, geopolitics,
+   stablecoins, fusion. The exact set is editable; what matters is that
+   the homepage explicitly positions the firm as a cross-domain
+   long-cycle research operation, not a single-asset shop.
+
+### 11.4 Canonical Hysteresis explanation
+
+> Hysteresis · 系统迟滞，描述路径依赖——系统在经历冲击后不会回到原点，
+> 历史路径会被吸收进结构本身，持续影响未来。这是我们理解 AI、能源、
+> 资本与地缘共同重构的视角。
+
+This single paragraph does five things:
+
+1. Names the concept in English (`Hysteresis`) and Chinese (`系统迟滞`).
+2. Names the canonical translation (`路径依赖`) — pre-empts 磁滞.
+3. Gives the world-view in one clause ("系统在经历冲击后不会回到原点").
+4. Adds the load-bearing systems-theoretic claim ("历史路径会被吸收进
+   结构本身").
+5. Lands on the four-domain anchor.
+
+Any future homepage rewrite should preserve all five functions.
+
+### 11.5 Forbidden homepage moves
+
+- ❌ Describing the firm as 量化对冲基金 / 交易公司 alone — too narrow
+- ❌ Listing recent posts / "最新" / "热门" — turns it into a CMS
+- ❌ Marketing CTAs ("立即订阅" / "了解更多") — wrong register
+- ❌ Statistics splash ("AUM" / "回测 Sharpe X.X" / "战绩")
+- ❌ "About us" pages dressed up as homepages
+- ❌ Stock financial-news vocabulary: 重磅 / 深度 / 干货 / 必读
+
+### 11.6 Future-content title rules (homepage features)
+
+When the homepage links to long-form pieces, titles must mirror the
+research-firm register, not the media register. Examples:
+
+| Bad | Good |
+|---|---|
+| 《AI 的未来》 | 《AI 扩张背后的能源约束》 |
+| 《美元与稳定币》 | 《稳定币如何重构美元流动性体系》 |
+| 《能源问题》 | 《全球能源瓶颈与资本成本重估》 |
+| 《加密的下一个十年》 | 《加密在下一轮资本周期中的位置》 |
+| 《关于 AI、能源和全球市场的研究》 | 《AI、能源与全球资本周期的长期研究》 |
+| 《最新研究》 / 《热门观点》 | (the homepage should not have such a section at all) |
+
+A research-firm title carries either (a) a structural noun
+(约束 / 周期 / 范式 / 重估 / 转换 / 重构) or (b) an explicit relation
+between two concepts ("X 与 Y" / "X 背后的 Y" / "X 如何重构 Y").
+
+### 11.7 Long-term: the Chinese cognitive entry point
+
+The strategic ambition of the Chinese surface extends beyond
+`/zh/notes`:
+
+- Chinese newsletter (long-form, monthly cadence)
+- Chinese podcast notes
+- Chinese long essays (Style D / Level 4 register)
+- Chinese-language term-base for AI × energy × macro × crypto
+- Chinese research community
+
+These do not yet exist. The style guide is meant to ensure that when
+they do, they speak with a single coherent voice — one that did not get
+flattened into AI-default phrasing somewhere along the way.
+
+## 12. Living document
 
 This guide will evolve. When new conventions are established (e.g.
 canonical translations of new AI / energy / stablecoin terms), update
