@@ -1,0 +1,215 @@
+@import '@hysres/tokens/tokens.css';
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html,
+body { height: 100%; }
+
+html {
+  background: var(--paper);
+  color: var(--ink);
+  transition: background 0.3s, color 0.3s;
+}
+
+body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::selection {
+  background: rgba(217, 124, 94, 0.22);
+  color: var(--ink);
+}
+
+.rail {
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.20em;
+  color: var(--ink-3);
+  text-transform: uppercase;
+}
+
+header.rail { border-bottom: 0.5px solid var(--rule-soft); }
+footer.rail { border-top: 0.5px solid var(--rule-soft); margin-top: auto; }
+
+.brand-mark {
+  color: var(--ink);
+  letter-spacing: 0.22em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7em;
+  text-decoration: none;
+}
+
+.toggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 50;
+  background: transparent;
+  color: var(--ink-3);
+  border: 0.5px solid var(--rule-soft);
+  padding: 6px 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.toggle:hover { color: var(--ink); border-color: var(--rule); }
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2.5rem;
+}
+
+.col {
+  width: 100%;
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0 24px;
+  align-items: start;
+}
+
+.hero-mark {
+  grid-column: 2;
+  color: var(--ink);
+  margin-bottom: 2.25rem;
+}
+
+.hero-mark svg {
+  display: block;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: draw 1.6s cubic-bezier(.6, .05, .3, 1) 0.2s forwards;
+}
+
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+.marginalia {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.10em;
+  color: var(--ink-3);
+  padding-top: 12px;
+  text-align: right;
+  padding-right: 8px;
+  border-right: 0.5px solid var(--rule-soft);
+  min-height: 50px;
+  align-self: stretch;
+}
+
+h1 {
+  grid-column: 2;
+  font-family: var(--serif);
+  font-weight: 500;
+  font-size: clamp(2.4rem, 5.6vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.014em;
+  margin-bottom: 0.3rem;
+  color: var(--ink);
+}
+
+.lede {
+  grid-column: 2;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  line-height: 1.45;
+  color: var(--ink-2);
+  margin-bottom: 2.75rem;
+  max-width: 30ch;
+  letter-spacing: 0.005em;
+}
+
+.tagline {
+  grid-column: 2;
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.6vw, 1.15rem);
+  line-height: 1.62;
+  color: var(--ink);
+  max-width: 38ch;
+  text-wrap: pretty;
+  margin-bottom: 0;
+}
+
+.tagline .em { color: var(--ink-3); font-style: normal; }
+
+.signal {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: 1px;
+  font-style: normal;
+}
+
+.signature {
+  grid-column: 2;
+  margin-top: 3.25rem;
+  padding-top: 1.5rem;
+  border-top: 0.5px solid var(--rule);
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-2);
+  letter-spacing: 0.005em;
+  max-width: 22rem;
+}
+
+.tagline a,
+.signature a {
+  color: var(--ink-2);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.tagline a:hover,
+.signature a:hover { color: var(--ink); border-bottom-color: var(--accent); }
+
+footer a {
+  color: var(--ink-3);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+footer a:hover { color: var(--ink); border-bottom-color: var(--rule); }
+
+@media (max-width: 640px) {
+  body { font-size: 16px; }
+  .rail { padding: 1.1rem 1.5rem; font-size: 0.6rem; }
+  main { padding: 3rem 1.5rem; }
+  .col { grid-template-columns: 1fr; gap: 0; }
+  .marginalia {
+    grid-column: 1;
+    border-right: none;
+    border-bottom: 0.5px solid var(--rule-soft);
+    padding: 0 0 8px 0;
+    text-align: left;
+    min-height: 0;
+    margin-bottom: 1.5rem;
+  }
+  .hero-mark, h1, .lede, .tagline, .signature { grid-column: 1; }
+  footer.rail { flex-direction: column; gap: 0.5rem; align-items: flex-start; }
+}
