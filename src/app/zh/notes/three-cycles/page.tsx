@@ -1,4 +1,5 @@
 import BHMark from '../../../components/BHMark';
+import CycleDrawdownChart from '../../../components/charts/CycleDrawdownChart';
 
 export const metadata = {
   title: '更浅，至今为止 · 札记 · Hysteresis Research · 迟滞研究',
@@ -20,6 +21,14 @@ export default function ThreeCyclesZh() {
 
         <div></div>
         <p className="lede">第 219 天回撤 −35%。前两个 cycle 在同一时间点之间在 −60% 到 −67% 之间。</p>
+
+        <div></div>
+        <figure className="note-figure">
+          <CycleDrawdownChart />
+          <figcaption>
+            顶部对齐的回撤轨迹。当前 cycle 描到第 219 天。
+          </figcaption>
+        </figure>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">比特币自成为可交易品种以来，经历过两轮完整的熊市。2017 年的顶部之后，364 天内出现 −83% 的回撤；2021 年的顶部之后，378 天内 −77%。当前 cycle 顶部出现在 2025-10-06，$124,628。今天，219 天之后，BTC 报 $80,630<span className="em">——</span>较顶部回撤 −35%。</p>

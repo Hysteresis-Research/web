@@ -1,4 +1,5 @@
 import BHMark from '../../../components/BHMark';
+import MnavDurationChart from '../../../components/charts/MnavDurationChart';
 
 export const metadata = {
   title: '折价，正在收窄 · 札记 · Hysteresis Research · 迟滞研究',
@@ -20,6 +21,14 @@ export default function MstrMnavZh() {
 
         <div></div>
         <p className="lede">4 月 7 日 0.73 倍。今天 0.94 倍。</p>
+
+        <div></div>
+        <figure className="note-figure">
+          <MnavDurationChart />
+          <figcaption>
+            ≥ 30 天的 mNAV 折价 episode，按持续时间排列。
+          </figcaption>
+        </figure>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">2025 年 12 月 10 日，MSTR 的市值跌破其资产负债表上比特币的价值。折价在春季扩大<span className="em">——</span>4 月 7 日触及 0.73 倍 mNAV 的低点<span className="em">——</span>随后开始收窄。截至 2026-05-04，公司以 0.94 倍交易：市值 $61.3B，对应比特币 NAV $65.1B。</p>

@@ -41,6 +41,34 @@ export default function NotesZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/zh/notes/three-cycles">更浅，至今为止</Link>
           </li>
+          <li>
+            <time dateTime="2026-05-06">2026-05-06</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/notes/not-the-line">不是那条线，是那一触</Link>
+          </li>
+          <li>
+            <time dateTime="2026-05-05">2026-05-05</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/notes/decoupled-one-side">脱钩，仅在单向</Link>
+          </li>
+          <li>
+            <time dateTime="2026-05-02">2026-05-02</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/notes/prior-conditioned">先验，被条件化</Link>
+          </li>
+          <li>
+            <time dateTime="2026-04-26">2026-04-26</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/notes/premium-compressing">溢价，正在压缩</Link>
+          </li>
         </ul>
 
         <div></div>
