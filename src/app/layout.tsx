@@ -33,7 +33,6 @@ export default function RootLayout({
 
         <header className="rail">
           <BrandLink />
-          <span>EST. 2026</span>
         </header>
 
         <ThemeToggle />
