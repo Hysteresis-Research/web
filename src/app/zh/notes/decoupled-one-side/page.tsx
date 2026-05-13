@@ -50,7 +50,7 @@ export default function DecoupledOneSideZh() {
 
         <div></div>
         <p className="signature">
-          脱钩不对称。对称了，就不叫脱钩。
+          脱钩按定义不对称<span className="em">——</span>对称现象不是脱钩。
         </p>
       </div>
     </main>

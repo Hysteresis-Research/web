@@ -48,12 +48,12 @@ export default function NotTheLineZh() {
           <span className="signal">
             停止度量状态。度量事件。
           </span>{' '}
-          一个具体的 15 分钟形态<span className="em">——</span>价格触碰 EMA，然后在同一根 bar 内重新穿越回去<span className="em">——</span>给出 walk-forward Sharpe 1.87。在真 holdout 上，13 笔交易，Sharpe 2.25。在它之上加的每一个 filter 都让它更差。
+          一个具体的 15 分钟形态<span className="em">——</span>价格触碰 EMA，然后在同一根 bar 内重新穿越回去<span className="em">——</span>给出 walk-forward Sharpe 1.87。真 holdout 只有 13 笔交易、Sharpe 2.25<span className="em">——</span>样本量不足以验证，仅作提示性观察保留，并非结论。在它之上加的每一个 filter 都让它更差。
         </p>
 
         <div></div>
         <p className="signature">
-          信号不是那条线。在那条线上发生的事才是。
+          信号不在那条线本身，而在那条线上发生的事。
         </p>
       </div>
     </main>

@@ -51,7 +51,7 @@ export default function PremiumCompressingZh() {
 
         <div></div>
         <p className="signature">
-          人人都收割的溢价，就是会被压缩的溢价。
+          人人都在收割的溢价，注定会被压缩。
         </p>
       </div>
     </main>

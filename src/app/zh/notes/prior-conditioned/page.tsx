@@ -51,7 +51,7 @@ export default function PriorConditionedZh() {
 
         <div></div>
         <p className="signature">
-          一个混合样本的均值不是概率。它是关于哪个子样本适用的问题。
+          混合样本的均值不是概率，是关于哪个子样本适用的问题。
         </p>
       </div>
     </main>

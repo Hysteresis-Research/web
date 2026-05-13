@@ -20,7 +20,7 @@ export default function NotesZh() {
         <h1>札记</h1>
 
         <div></div>
-        <p className="lede">关于交易之间的长形态。</p>
+        <p className="lede">两次交易之间，长篇阅读。</p>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">用于短篇文字<span className="em">——</span>案头的观察、被回收的 thesis 及其原因、regime 转换在文字沉淀之后呈现出的形状。</p>

@@ -40,7 +40,7 @@ export default function MstrMnavZh() {
         <p className="body-paragraph">历史上 ≥30 天的折价 episode 完整结束的有三段。从 mNAV 重新升破 1.0 倍那一天起算，MSTR 30 天中位数前向回报 −2%，60 天 −7%，90 天 −13%；BTC 对应为 −6%、−16%、−12%。到 180 天中位数反转<span className="em">——</span>MSTR +49%，BTC +26%<span className="em">——</span>是其中两段大涨拉动的（第三段延续了 2022 年熊市的下跌）。N=3 不构成分布；每一段都是它自己的故事。</p>
 
         <div></div>
-        <p className="signature">折价是数据，不是 thesis。我们在跟踪它。</p>
+        <p className="signature">折价是数据，不是结论。</p>
       </div>
     </main>
   );

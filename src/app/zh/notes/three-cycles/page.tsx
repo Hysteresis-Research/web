@@ -40,7 +40,7 @@ export default function ThreeCyclesZh() {
         <p className="body-paragraph">N=2 不允许任何统计推断。当前 cycle 的顶部尚未被确认为最终的熊市顶<span className="em">——</span>如果 BTC 创出新高，本轮就没有熊市阶段。当前低点（2026-02-05，$62,868）也是临时的<span className="em">——</span>价格可能回测甚至跌破。这些都不是预测，仅仅是关于三段回撤在某一个时点上相互衡量的一个观察。</p>
 
         <div></div>
-        <p className="signature">两个 cycle 不构成基准线。它们是两个故事。</p>
+        <p className="signature">两个 cycle 不构成基准线，只是两个样本。</p>
       </div>
     </main>
   );

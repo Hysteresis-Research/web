@@ -23,17 +23,18 @@ export default function Home() {
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
-          Hysteresis Research · 迟滞研究 是一家研究驱动的量化交易公司。我们工作在 regime
-          转换的迟滞处<span className="em">——</span>基本面已经移动、
-          <span className="signal">市场尚未充分计入</span>的那段距离里。
+          Hysteresis Research · 迟滞研究 是一家研究驱动的量化交易公司。
+          我们关注 regime 转换之间的迟滞段<span className="em">——</span>
+          基本面已经移动、<span className="signal">市场尚未充分计入</span>
+          的那段距离。
         </p>
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
           Hysteresis · 系统迟滞，描述路径依赖<span className="em">——</span>
-          系统在经历冲击后不会回到原点，历史路径会被吸收进结构本身，持续影响未来。
-          这是我们理解 <span className="signal">AI、能源、资本与地缘共同重构</span>{' '}
-          的视角。
+          系统在经历冲击后不会回到原点，历史被吸收进结构本身，持续影响未来。
+          我们用这套视角研究当下的传导链：
+          <span className="signal">AI 算力扩张推升能源约束，能源约束推升资本成本，资本成本重估长久期资产</span>。
         </p>
 
         <div></div>
