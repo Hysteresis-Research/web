@@ -31,7 +31,7 @@ export default function ContactZh() {
         </p>
 
         <div></div>
-        <p className="signature">迟滞研究 <span className="em">·</span> 香港。</p>
+        <p className="signature">迟滞研究。</p>
       </div>
     </main>
   );

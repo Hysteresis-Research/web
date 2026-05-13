@@ -36,9 +36,7 @@ export default function Contact() {
         </p>
 
         <div></div>
-        <p className="signature">
-          Hysteresis Research <span className="em">·</span> Hong Kong.
-        </p>
+        <p className="signature">Hysteresis Research.</p>
       </div>
     </main>
   );
