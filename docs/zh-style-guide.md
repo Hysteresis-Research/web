@@ -92,6 +92,55 @@ good version restructures it into a Chinese temporal-conditional clause
 "长久期资产", which is the actual term used by Chinese global-macro
 research.
 
+### Required argument structure (for analytical paragraphs)
+
+The rules above cover sentence-level translation. The rule below covers
+**paragraph-level argument structure**.
+
+Every analytical paragraph in a Hysteresis research note must walk the
+same four-step skeleton:
+
+1. **Claim** — a single declarative statement of what is happening
+2. **Mechanism** — the named causal pathway (not "because of X" but
+   "X drives Y through Z")
+3. **Observable marker** — the data series that will confirm or
+   falsify the claim
+4. **Portfolio implication** — what, if anything, the firm does
+   about it (and what would invalidate the position)
+
+If any of the four is missing, the paragraph is **decorative**. Either
+fill in what is missing, or cut the paragraph. Decorative paragraphs
+are how research notes drift into 公众号 / Substack register without
+the author noticing.
+
+**Bad (decorative — fails skeleton):**
+
+> AI 推动了能源需求的结构性扩张。
+
+A claim only. No mechanism, no observable, no implication. The reader
+cannot tell whether the firm has thought about this for ten minutes
+or ten years.
+
+**Good (complete skeleton):**
+
+> AI 算力扩张正推升美国数据中心电力期货曲线（claim + observable）。
+> 每瓦特训练算力背后是 2-3 倍的冷却与配电负荷，这一倍数在能源约束
+> 下不会减弱（mechanism）。我们因此对长久期电力曲线持续保持结构性
+> 偏多，直到 PJM 曲线与基础负荷增长背离（implication + invalidation）。
+
+The good version is not longer because the author was more
+verbose — it is longer because thinking takes words. The bad version
+is short because it has not been thought through.
+
+**Exceptions:**
+
+- **Definitional / philosophical paragraphs** are exempt (e.g. the
+  paragraph explaining what hysteresis is). These describe a concept,
+  not a market call.
+- **Closing aphorisms** in /notes signatures are exempt — they exist
+  to land the prose, not to make a claim. But they must not substitute
+  for analytical content earlier in the note.
+
 ## 5. Glossary — required translations
 
 Canonical translations grouped by domain. Use consistently across all
@@ -179,30 +228,73 @@ Do **not** default to 瓶颈 alone — it reads as commodity-trading slang.
 - "巨大机会" → forbidden
 - "革命" (in market context) → 结构性转换 / 重塑
 
-## 6. English passthroughs (allowed and encouraged)
+## 6. English passthroughs — restricted whitelist
 
-Some English terms function as **term-marks** that signal global-macro
-register. Keep them in English:
+The previous version of this section was "allowed and encouraged" for
+~25 English terms. In practice this produced 8-15 embedded English
+nouns per note. The cumulative effect across the corpus was
+**bilingual desk-note rhythm**, not Chinese research prose. A Chinese
+reader from a real macro fund will register this as untranslated
+working notes, not finished writing.
 
-- `regime` and `regime shift` (Regime Shift as titled concept)
-- `narrative` (especially in "narrative-rich markets", "narrative inflation")
-- `convexity` (especially in titled contexts)
-- `thesis`
-- `cycle`
-- `holdout`, `walk-forward`, `in-sample`, `out-of-sample`
-- `Sharpe`, `Sortino`, `Calmar`
-- `β`, `α`, `OI`, `IV`, `RV`, `funding`, `basis`, `skew`
-- `ETF`, `mNAV`, `BTC`, `NQ`, `SP500`
-- `AI Scaling Law` / `Scaling Law`
-- `AGI`
-- `DeepSeek Moment`
-- `Stablecoin Rails`
-- `PM practice`, `book`, `sleeve`
-- `street`, `dealer`, `desk` (when "desk" means trading desk — never 桌子)
+The revised policy: **restrict English to three narrow categories**.
+Translate everything else by default.
 
-Heuristic: if a term has no precise Chinese equivalent in the
-global-macro / quant register, keep it in English. If a Chinese term
-exists and is in active use among bilingual practitioners, prefer it.
+### 6.A Allowed — test-harness and methodology terms
+
+These have no Chinese equivalent in active use among quant
+practitioners. Keep in English:
+
+`walk-forward` · `in-sample` · `out-of-sample` · `holdout` · `bootstrap`
+· `Monte Carlo` · `Sharpe` · `Sortino` · `Calmar` · `IR`
+
+### 6.B Allowed — instrument labels and data fields
+
+These name instruments or data series, not concepts:
+
+`ETF` · `mNAV` · `BTC` · `ETH` · `NQ` · `SP500` · `DXY` · `DVOL`
+· `USDT` · `USDC` · `OI` · `IV` · `RV` · `β` · `α` · `funding`
+· `basis` · `skew` · `spread` · `bar` (in OHLC sense)
+
+### 6.C Allowed — titled / capitalised proper-name concepts
+
+These function as proper nouns; capitalisation signals term-mark
+usage. Lowercase variants must follow §6.D.
+
+`AGI` · `Scaling Law` / `AI Scaling Law` · `Stablecoin Rails`
+· `DeepSeek Moment` · `Regime Shift` (titled — see below)
+
+### 6.D Translate by default (was previously English; no longer)
+
+These previously had English passthroughs permitted. They are now
+expected in Chinese in body prose unless the term-mark usage is
+explicit and unambiguous:
+
+| English | Chinese (default in prose) |
+|---|---|
+| `regime` (lowercase, in body) | **宏观范式** / 周期环境 (English `Regime Shift` as titled concept is still fine) |
+| `narrative` (in body) | **叙事** (English `narrative` acceptable only in titles or term-mark use) |
+| `thesis` | **假设** / 论断 / 论文 (context-conditional) |
+| `cycle` | **周期** / 宏观周期 |
+| `convexity` | **凸性收益结构** |
+| `desk` | **交易台** (when trading-desk; never 桌子) |
+| `book` | **持仓账** |
+| `sleeve` | **子策略** |
+| `street` | **卖方** / 市场 |
+| `dealer` | **做市商** |
+| `PM practice` | **单基金经理模式** / 单 PM 模式 |
+| `carry` | **持有收益** / carry (allowed if titled) |
+
+### 6.E Target density
+
+Aim for **≤ 5 English nouns per note body**, excluding instrument
+labels and data fields (§6.B). The previous policy commonly produced
+12-15 per note; this density is what triggered the bilingual desk-note
+feel.
+
+When in doubt, prefer Chinese. The Hysteresis voice should sound
+**bilingually competent in Chinese**, not English-thinking in
+Chinese-character form.
 
 ## 7. Sentence-template library
 
@@ -309,16 +401,33 @@ Characteristics:
 - 长周期
 - 高信息密度
 
-Canonical example sentence:
+Canonical example paragraph (replaces the previous noun-stacking
+example):
 
-> 我们正在进入一个由能源约束、资本成本与地缘重构共同驱动的新宏观周期。
+> AI 算力扩张正推升美国数据中心电力期货曲线（每月 30-45 bp）。
+> 每瓦特训练算力背后是 2-3 倍的冷却与配电负荷；这一倍数在能源
+> 约束下不会减弱。我们因此对长久期电力曲线持续保持结构性偏多，
+> 直到 PJM 曲线与基础负荷增长背离。
 
-Note what this single sentence accomplishes: it names three structural
-drivers (in falling order of base-layer depth — energy → capital cost
-→ geopolitics), locates the moment ("正在进入" — present-progressive,
-not declarative), and lands on a canonical template ("新宏观周期"). No
-emotional adjective, no exclamation, three claims, one sentence. This
-is the density target.
+Note what this single paragraph accomplishes:
+
+1. **Claim + observable** — the AI compute → electricity-futures
+   transmission is named with a specific data series (PJM, basis
+   points), not asserted by adjective
+2. **Mechanism** — the 2-3× multiplier between training compute and
+   total facility load, with a falsifiable constraint
+3. **Implication + invalidation** — the firm holds a position and
+   specifies what would cause the position to be retired
+
+This is the **density target** for Level 3 register. Compare to the
+previous canonical sentence, which was the abstract-noun stacking
+that §4 warns against:
+
+> ~~我们正在进入一个由能源约束、资本成本与地缘重构共同驱动的新宏观周期。~~
+
+Three prestige nouns stacked. No mechanism. No observable. No
+implication. The sentence reads as macro-essay placeholder, not
+research.
 
 ### Level 4 — 文明周期叙事
 
@@ -385,28 +494,40 @@ The Chinese homepage has three jobs, in order:
    reader the firm's framework is path-dependence and 系统迟滞, not
    trading signals. **Never** describe hysteresis as 磁滞 (the magnetic
    sense). Always 系统迟滞 / 路径依赖.
-3. **Four-domain anchor** — name the four (or three or five) domains
-   the firm thinks about: AI, energy, capital cycle, geopolitics,
-   stablecoins, fusion. The exact set is editable; what matters is that
-   the homepage explicitly positions the firm as a cross-domain
-   long-cycle research operation, not a single-asset shop.
+3. **Transmission chain** — name the actual causal pathway the firm
+   studies, with arrows. **Not** a buzzword stack of prestige nouns
+   (AI × energy × capital × geopolitics is a buzzword stack). A
+   transmission chain has direction: `A drives B → B drives C → C
+   reprices D`. The reader leaves the homepage with one specific
+   testable thesis about the world, not four sponsored topics.
 
-### 11.4 Canonical Hysteresis explanation
+### 11.4 Canonical Hysteresis paragraph (homepage §3)
 
 > Hysteresis · 系统迟滞，描述路径依赖——系统在经历冲击后不会回到原点，
-> 历史路径会被吸收进结构本身，持续影响未来。这是我们理解 AI、能源、
-> 资本与地缘共同重构的视角。
+> 历史被吸收进结构本身，持续影响未来。我们用这套视角研究当下的传导链：
+> AI 算力扩张推升能源约束，能源约束推升资本成本，资本成本重估长久期
+> 资产。
 
 This single paragraph does five things:
 
 1. Names the concept in English (`Hysteresis`) and Chinese (`系统迟滞`).
 2. Names the canonical translation (`路径依赖`) — pre-empts 磁滞.
 3. Gives the world-view in one clause ("系统在经历冲击后不会回到原点").
-4. Adds the load-bearing systems-theoretic claim ("历史路径会被吸收进
-   结构本身").
-5. Lands on the four-domain anchor.
+4. Adds the load-bearing systems-theoretic claim ("历史被吸收进结构
+   本身").
+5. **Lands on a transmission chain (three arrows: AI compute →
+   energy constraint → capital cost → long-duration asset
+   repricing), not a four-noun buzzword anchor.**
 
-Any future homepage rewrite should preserve all five functions.
+The earlier version of this paragraph closed with "AI、能源、资本与
+地缘共同重构的视角" — that was buzzword-stacking, the very pattern
+§4 warns against. The current version replaces stacking with an
+explicit causal chain that is testable: the reader can in principle
+disagree with any arrow.
+
+Any future homepage rewrite must preserve all five functions, with
+particular attention to function 5: **the chain must have direction,
+not just a list of topics**.
 
 ### 11.5 Forbidden homepage moves
 
@@ -461,3 +582,5 @@ revision should be logged here:
 |---|---|---|
 | 2026-05-14 | Initial draft | Establish baseline before scaling Chinese surfaces beyond /notes |
 | 2026-05-14 | Add B/C/D/E glossary categories (AI / 能源 / 加密 / 系统论); Style D canonical sentence under §9 Level 3 | Expand vocabulary coverage beyond 宏观金融 so AI × 能源 × 加密 × 地缘 content has a stable terminology base |
+| 2026-05-14 | Add §11 Homepage philosophy + four-domain anchor convention | Position /zh as cognitive entry point distinct from /en brand stamp |
+| 2026-05-14 | **Hostile codex review pass** (audits/2026-05-14-zh-corpus-hostile-review.md). Four self-undermining patterns found in the guide itself: (a) negative-only voice model with no positive argument skeleton — fixed by adding "Required argument structure" under §4; (b) English passthrough policy too permissive ("allowed and encouraged" produced 8-15 English nouns per note) — fixed by rewriting §6 as a 3-category restricted whitelist + §6.D translate-by-default list; (c) Style D canonical sentence in §9 was itself the abstract-noun stacking §4 warns against — replaced with an AI-compute → power-futures transmission-chain example carrying claim + observable + mechanism + implication + invalidation; (d) homepage four-domain anchor in §11.3/11.4 was buzzword stack — replaced with explicit causal transmission-chain convention. | Codex flagged the guide as institutionalizing the very habits it claimed to prevent. These four edits address each finding. |
