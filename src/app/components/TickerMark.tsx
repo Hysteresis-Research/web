@@ -1,6 +1,8 @@
+import { type ReactElement } from 'react';
+
 type Ticker = 'BTC' | 'MSTR';
 
-const GLYPHS: Record<Ticker, JSX.Element> = {
+const GLYPHS: Record<Ticker, ReactElement> = {
   BTC: (
     <svg
       viewBox="0 0 24 24"
