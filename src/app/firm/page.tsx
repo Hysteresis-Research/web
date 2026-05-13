@@ -33,9 +33,7 @@ export default function Firm() {
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
           Our ambition is institutional-scale cross-asset allocation across
-          crypto and global macro, carried as a single-PM practice
-          <span className="em"> — </span>to demonstrate that, at this scale,
-          the binding constraint is craft, not org chart.
+          crypto and global macro, run as a single-PM practice.
         </p>
 
         <div className="marginalia">§4</div>
