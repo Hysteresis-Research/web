@@ -46,7 +46,7 @@ export default function PremiumCompressingZh() {
 
         <div className="marginalia">§4</div>
         <p className="body-paragraph">
-          一条条件规则活下来。跳过那些前 7 日日内最大波动超过 5% 的月份。36 笔交易而非 50 笔；Sharpe 从 1.34 升到 1.80；max drawdown 减半。溢价没有消失<span className="em">——</span>它退到了平静的 regime 里。当前状态下，spread30 处于第 41 百分位、近期实波高于隐波，规则给的指令是：等。
+          一条条件规则活下来。跳过那些前 7 日内最大单日涨跌幅超过 5% 的月份。36 笔交易而非 50 笔；Sharpe 从 1.34 升到 1.80；max drawdown 减半。溢价没有消失<span className="em">——</span>它退到了平静的 regime 里。当前状态下，spread30 处于第 41 百分位、近期实波高于隐波，规则给的指令是：等。
         </p>
 
         <div></div>

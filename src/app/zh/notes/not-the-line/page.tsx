@@ -34,7 +34,7 @@ export default function NotTheLineZh() {
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
-          信号是 400 周期指数移动均线<span className="em">——</span>这张桌子盯了好几年的一条线。第一轮测试双 EMA 交叉，4 个时间框架，49 个参数组合。in-sample 最优 Sharpe 1.10。跑到 OOS 配每月重选，跌到 0.16。
+          信号是 400 周期指数移动均线<span className="em">——</span>我们盯了好几年的一条线。第一轮测试双 EMA 交叉，4 个时间框架，49 个参数组合。in-sample 最优 Sharpe 1.10。跑到 OOS 配每月重选，跌到 0.16。
         </p>
 
         <div className="marginalia">§3</div>
@@ -48,7 +48,7 @@ export default function NotTheLineZh() {
           <span className="signal">
             停止度量状态。度量事件。
           </span>{' '}
-          一个具体的 15 分钟形态<span className="em">——</span>价格触碰 EMA，然后在同一根 bar 内收回<span className="em">——</span>给出 walk-forward Sharpe 1.87。在真 holdout 上，13 笔交易，Sharpe 2.25。在它之上加的每一个 filter 都让它更差。
+          一个具体的 15 分钟形态<span className="em">——</span>价格触碰 EMA，然后在同一根 bar 内重新穿越回去<span className="em">——</span>给出 walk-forward Sharpe 1.87。在真 holdout 上，13 笔交易，Sharpe 2.25。在它之上加的每一个 filter 都让它更差。
         </p>
 
         <div></div>

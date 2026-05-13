@@ -2,7 +2,7 @@ import BHMark from '../../../components/BHMark';
 import CorrelationChart from '../../../components/charts/CorrelationChart';
 
 export const metadata = {
-  title: '脱钩，仅在单向 · 札记 · Hysteresis Research · 迟滞研究',
+  title: '脱钩，只脱一边 · 札记 · Hysteresis Research · 迟滞研究',
   description:
     'BTC-NQ 7 日滚动相关性 +0.71 → +0.34。下行 β 保持。脱钩是单向的。',
 };
@@ -17,7 +17,7 @@ export default function DecoupledOneSideZh() {
         </div>
 
         <div className="marginalia">notes</div>
-        <h1>脱钩，仅在单向</h1>
+        <h1>脱钩，只脱一边</h1>
 
         <div></div>
         <p className="lede">
@@ -50,7 +50,7 @@ export default function DecoupledOneSideZh() {
 
         <div></div>
         <p className="signature">
-          脱钩不是对称的，直到它变成。
+          脱钩不对称。对称了，就不叫脱钩。
         </p>
       </div>
     </main>

@@ -53,14 +53,14 @@ export default function NotesZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/notes/decoupled-one-side">脱钩，仅在单向</Link>
+            <Link href="/zh/notes/decoupled-one-side">脱钩，只脱一边</Link>
           </li>
           <li>
             <time dateTime="2026-05-02">2026-05-02</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/notes/prior-conditioned">先验，被条件化</Link>
+            <Link href="/zh/notes/prior-conditioned">先验，因条件而异</Link>
           </li>
           <li>
             <time dateTime="2026-04-26">2026-04-26</time>
