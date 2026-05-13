@@ -63,8 +63,10 @@ export default function NotTheLine() {
           A specific fifteen-minute pattern <span className="em">—</span>{' '}
           price tags the EMA, then closes back through within the same bar{' '}
           <span className="em">—</span> produced a walk-forward Sharpe of
-          1.87. On a true holdout, thirteen trades, Sharpe 2.25. Every filter
-          added on top of it hurt.
+          1.87. The true holdout produced thirteen trades at Sharpe 2.25{' '}
+          <span className="em">—</span> too few to validate, kept as a
+          provisional observation, not a result. Every filter added on top of
+          it hurt.
         </p>
 
         <div></div>

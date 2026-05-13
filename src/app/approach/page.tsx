@@ -33,14 +33,18 @@ export default function Approach() {
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          Hysteresis is the technical name for this lag. In magnetism, it
-          describes the path-dependence of a magnetic field; in economics, the
-          path-dependence of expectations after a regime change. The framing is
-          borrowed; the discipline is empirical. We measure the gap between
-          fundamentals and price rather than forecast the moment of its
-          closure. We size on durability, not conviction. A thesis describes
-          the world; a position is a trade <span className="em">—</span> and a
-          correct call without a written exit rule is luck, not skill.
+          Hysteresis is the technical name not for delay, but for
+          path-dependence <span className="em">—</span> a system that, after
+          a shock, does not return to its prior state; the history is absorbed
+          into the structure itself. In magnetism, the field carries the
+          memory of how it was magnetised; in economics, expectations and
+          capital allocation carry the memory of a regime change long after
+          the regime has changed. The framing is borrowed; the discipline is
+          empirical. We measure the gap between fundamentals and price rather
+          than forecast the moment of its closure. We size on durability, not
+          conviction. A thesis describes the world; a position is a trade{' '}
+          <span className="em">—</span> and a correct call without a written
+          exit rule is luck, not skill.
         </p>
 
         <div className="marginalia">§4</div>
