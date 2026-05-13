@@ -50,7 +50,7 @@ export default function RootLayout({
         {children}
 
         <footer className="rail">
-          <span>© 2026 Hysteresis Research · HK</span>
+          <span>© 2026 Hysteresis Research</span>
         </footer>
 
         <Analytics />
