@@ -219,14 +219,24 @@ h1 {
   margin-bottom: 1.75rem;
 }
 
-.entry-list li { margin-bottom: 0.5em; }
+.entry-list li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.55em;
+  margin-bottom: 0.6em;
+}
 
 .entry-list time {
   font-family: var(--mono);
   font-size: 0.78em;
   letter-spacing: 0.08em;
   color: var(--ink-3);
-  padding-right: 0.7em;
+}
+
+.entry-list .entry-sep {
+  color: var(--ink-3);
+  opacity: 0.55;
 }
 
 .entry-list a {
@@ -239,6 +249,29 @@ h1 {
 .entry-list a:hover {
   color: var(--ink);
   border-bottom-color: var(--accent);
+}
+
+.ticker-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32em;
+  font-family: var(--mono);
+  font-size: 0.78em;
+  letter-spacing: 0.1em;
+  color: var(--ink-2);
+  white-space: nowrap;
+}
+
+.ticker-mark svg {
+  width: 0.95em;
+  height: 0.95em;
+  display: inline-block;
+  flex-shrink: 0;
+  transform: translateY(0.06em);
+}
+
+.ticker-mark-text {
+  display: inline-block;
 }
 
 .tagline a,
