@@ -4,15 +4,13 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Fragment } from 'react';
 
-const SLUGS = ['approach', 'firm', 'notes'] as const;
+const SLUGS = ['approach', 'firm', 'notes', 'contact'] as const;
 type Slug = (typeof SLUGS)[number];
 
-const LABELS: Record<'en' | 'zh', Record<Slug | 'contact' | 'toggle', string>> = {
+const LABELS: Record<'en' | 'zh', Record<Slug | 'toggle', string>> = {
   en: { approach: 'approach', firm: 'firm', notes: 'notes', contact: 'contact', toggle: '中文' },
   zh: { approach: '方法', firm: '公司', notes: '札记', contact: '联系', toggle: 'EN' },
 };
-
-const CONTACT_HREF = 'mailto:desk@hysres.com';
 
 export default function Nav() {
   const pathname = usePathname() || '/';
@@ -36,16 +34,13 @@ export default function Nav() {
         href: isZh ? zhRoot : enRoot,
         label: labels[s],
         active,
-        external: false as const,
       };
     }),
-    { key: 'contact', href: CONTACT_HREF, label: labels.contact, active: false, external: true as const },
     {
       key: 'lang',
       href: langHref,
       label: labels.toggle,
       active: false,
-      external: false as const,
       hrefLang: isZh ? 'en' : 'zh-Hans',
     },
   ];
@@ -55,19 +50,13 @@ export default function Nav() {
       {items.map((it, i) => (
         <Fragment key={it.key}>
           {i > 0 && <span className="nav-sep" aria-hidden="true">·</span>}
-          {it.external ? (
-            <a href={it.href} className={it.active ? 'is-active' : undefined}>
-              {it.label}
-            </a>
-          ) : (
-            <Link
-              href={it.href}
-              className={it.active ? 'is-active' : undefined}
-              hrefLang={'hrefLang' in it ? it.hrefLang : undefined}
-            >
-              {it.label}
-            </Link>
-          )}
+          <Link
+            href={it.href}
+            className={it.active ? 'is-active' : undefined}
+            hrefLang={'hrefLang' in it ? it.hrefLang : undefined}
+          >
+            {it.label}
+          </Link>
         </Fragment>
       ))}
     </nav>
