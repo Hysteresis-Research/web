@@ -1,8 +1,10 @@
+import Link from 'next/link';
 import BHMark from '../components/BHMark';
 
 export const metadata = {
   title: 'Notes · Hysteresis Research',
-  description: 'Shorter pieces from the desk — in preparation.',
+  description:
+    'Shorter empirical pieces from the desk — observations, retired theses, the shape of a regime transition once the prose has settled.',
 };
 
 export default function Notes() {
@@ -18,7 +20,7 @@ export default function Notes() {
         <h1>Notes</h1>
 
         <div></div>
-        <p className="lede">in preparation.</p>
+        <p className="lede">on the long form between trades.</p>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
@@ -28,17 +30,21 @@ export default function Notes() {
         </p>
 
         <div className="marginalia">§3</div>
-        <p className="body-paragraph">
-          Where a thesis paper takes a year, a note can take a week. The
-          shorter form holds what has been tested but not yet load-bearing:
-          empirical surprises, retired hypotheses, the shape of a market on a
-          given Tuesday.
-        </p>
+        <ul className="entry-list">
+          <li>
+            <time dateTime="2026-05-13">2026-05-13</time> ·{' '}
+            <Link href="/notes/mstr-mnav">Discount, unwinding</Link>
+          </li>
+          <li>
+            <time dateTime="2026-05-13">2026-05-13</time> ·{' '}
+            <Link href="/notes/three-cycles">Shallower, so far</Link>
+          </li>
+        </ul>
 
         <div></div>
         <p className="signature">
-          The first notes are being written. They will be published here when
-          they can <span className="signal">stand on their own</span>.
+          More in preparation. Each note is published when it can{' '}
+          <span className="signal">stand on its own</span>.
         </p>
       </div>
     </main>
