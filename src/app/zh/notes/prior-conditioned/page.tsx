@@ -28,7 +28,7 @@ export default function PriorConditionedZh() {
         <figure className="note-figure">
           <FOMCEntryChart />
           <figcaption>
-            按入场 regime 切片的 5 日 post-FOMC 收益。整池均值平均了两个相反的分布。
+            按入场仓位状态切片的 5 日会后收益。整池均值平均了两个相反的分布。
           </figcaption>
         </figure>
 
@@ -40,7 +40,7 @@ export default function PriorConditionedZh() {
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
           这 8 次事件中有 4 次以{' '}
-          <span className="signal">crowded long</span>{' '}
+          <span className="signal">多头拥挤</span>{' '}
           的状态进入<span className="em">——</span>funding 付溢价、OI 高位伸张、价格贴近区间顶。这 4 次主导了整池均值。按入场仓位切片，drift 的方向翻转。
         </p>
 

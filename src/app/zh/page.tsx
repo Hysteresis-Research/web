@@ -24,7 +24,7 @@ export default function Home() {
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           Hysteresis Research · 迟滞研究 是一家研究驱动的量化交易公司。
-          我们关注 regime 转换之间的迟滞段<span className="em">——</span>
+          我们关注宏观范式转换之间的迟滞段<span className="em">——</span>
           基本面已经移动、<span className="signal">市场尚未充分计入</span>
           的那段距离。
         </p>

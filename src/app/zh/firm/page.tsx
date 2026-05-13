@@ -21,7 +21,7 @@ export default function FirmZh() {
         <p className="lede">关于规模。</p>
 
         <div className="marginalia">§2</div>
-        <p className="body-paragraph">研究驱动的交易公司是一种纪律<span className="em">——</span>其上限由方法、而非规模决定。在 narrative 过剩的市场里，撑起一支策略的从来不是团队规模，而是<span className="signal">方法的严谨</span>。</p>
+        <p className="body-paragraph">研究驱动的交易公司是一种纪律<span className="em">——</span>其上限由方法、而非规模决定。在叙事过剩的市场里，撑起一支策略的从来不是团队规模，而是<span className="signal">方法的严谨</span>。</p>
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">我们的志向，是以单基金经理模式，把跨资产配置<span className="em">——</span>覆盖加密与全球宏观<span className="em">——</span>承担到机构级别的体量。</p>

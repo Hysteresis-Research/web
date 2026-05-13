@@ -4,7 +4,7 @@ import TickerMark from '../../components/TickerMark';
 
 export const metadata = {
   title: '札记 · Hysteresis Research · 迟滞研究',
-  description: '来自交易台的短篇——观察、被回收的 thesis、regime 转换的形状。',
+  description: '来自交易台的短篇——观察、被回收的假设、宏观范式转换的形状。',
 };
 
 export default function NotesZh() {
@@ -23,7 +23,7 @@ export default function NotesZh() {
         <p className="lede">两次交易之间，长篇阅读。</p>
 
         <div className="marginalia">§2</div>
-        <p className="body-paragraph">用于短篇文字<span className="em">——</span>交易台的观察、被回收的 thesis 及其原因、regime 转换在文字沉淀之后呈现出的形状。</p>
+        <p className="body-paragraph">用于短篇文字<span className="em">——</span>交易台的观察、被回收的假设及其原因、宏观范式转换在文字沉淀之后呈现出的形状。</p>
 
         <div className="marginalia">§3</div>
         <ul className="entry-list">
