@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import BHMark from './components/BHMark';
+import BrandLink from './components/BrandLink';
+import FooterNav from './components/FooterNav';
 import ThemeToggle from './components/ThemeToggle';
 import './globals.css';
 
@@ -40,26 +40,16 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: MODE_INIT_SCRIPT }} />
 
         <header className="rail">
-          <Link href="/" className="brand-mark">
-            <BHMark />
-            Hysteresis Research
-          </Link>
-          <span>EST. 2026</span>
+          <BrandLink />
         </header>
 
         <ThemeToggle />
 
         {children}
 
-        <footer className="rail">
+        <footer className="rail rail-footer">
           <span>© 2026 Hysteresis Research · HK</span>
-          <span>
-            <Link href="/approach">approach</Link>
-            {' · '}
-            <Link href="/zh">中文</Link>
-            {' · '}
-            <a href="mailto:contact@hysteresisresearch.com">contact</a>
-          </span>
+          <FooterNav />
         </footer>
 
         <Analytics />

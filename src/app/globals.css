@@ -45,6 +45,24 @@ body {
 header.rail { border-bottom: 0.5px solid var(--rule-soft); }
 footer.rail { border-top: 0.5px solid var(--rule-soft); margin-top: auto; }
 
+footer.rail-footer {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0 0.55em;
+}
+
+.footer-sep {
+  color: var(--ink-3);
+  opacity: 0.55;
+}
+
 .brand-mark {
   color: var(--ink);
   letter-spacing: 0.22em;
@@ -199,6 +217,11 @@ footer a {
 }
 
 footer a:hover { color: var(--ink); border-bottom-color: var(--rule); }
+
+footer a.is-active {
+  color: var(--ink);
+  border-bottom-color: var(--accent);
+}
 
 @media (max-width: 640px) {
   body { font-size: 16px; }
