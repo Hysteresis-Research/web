@@ -1,12 +1,19 @@
 import ChartFrame from './ChartFrame';
 
-const DATA = [
+type Episode = {
+  label: string;
+  sub: string;
+  days: number;
+  highlight?: boolean;
+};
+
+const DATA: readonly Episode[] = [
   { label: '2018-12', sub: 'closed', days: 38 },
   { label: '2020-03', sub: 'closed', days: 52 },
   { label: '2021-Q4', sub: 'closed', days: 71 },
   { label: '2022-01', sub: 'closed', days: 180 },
   { label: '2025-12', sub: 'ongoing', days: 145, highlight: true },
-] as const;
+];
 
 const M = { top: 36, right: 60, bottom: 44, left: 96 };
 const W = 600;

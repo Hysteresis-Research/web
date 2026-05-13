@@ -1,11 +1,19 @@
 import ChartFrame from './ChartFrame';
 
-const DATA = [
+type Bar = {
+  label: string;
+  sub: string;
+  value: number;
+  muted?: boolean;
+  highlight?: boolean;
+};
+
+const DATA: readonly Bar[] = [
   { label: 'Crowded long', sub: 'entry (n=4)', value: -9.2 },
   { label: 'Other', sub: 'entry (n=4)', value: 2.5 },
   { label: 'Pooled', sub: '(n=8)', value: -3.5, muted: true },
   { label: '2026-04-29', sub: 'actual', value: 2.9, highlight: true },
-] as const;
+];
 
 const M = { top: 36, right: 30, bottom: 56, left: 56 };
 const W = 600;

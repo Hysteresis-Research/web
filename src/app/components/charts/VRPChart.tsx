@@ -1,12 +1,14 @@
 import ChartFrame from './ChartFrame';
 
-const DATA = [
+type Bar = { year: string; value: number; sub?: string };
+
+const DATA: readonly Bar[] = [
   { year: '2022', value: 9.7 },
   { year: '2023', value: 7.9 },
   { year: '2024', value: 6.6 },
   { year: '2025', value: 5.1 },
   { year: '2026', value: -2.1, sub: 'YTD' },
-] as const;
+];
 
 const M = { top: 36, right: 30, bottom: 50, left: 56 };
 const W = 600;
