@@ -24,6 +24,20 @@ export default function PriorConditioned() {
           squeeze.
         </p>
 
+        <div></div>
+        <figure className="note-figure">
+          <img
+            src="/notes/prior-conditioned.png"
+            alt="Bar chart of 5-day post-FOMC BTC returns: crowded-long entries averaged −9.2%, other entries +2.5%, pooled −3.5%, 2026-04-29 actual +2.9%"
+            width={1600}
+            height={840}
+          />
+          <figcaption>
+            5-day post-FOMC returns by entry regime. The pooled mean averages
+            two opposite distributions.
+          </figcaption>
+        </figure>
+
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           Between April 2025 and April 2026, BTC moved through eight FOMC

@@ -23,6 +23,19 @@ export default function MstrMnav() {
           0.73<span className="em">×</span> on April 7. 0.94<span className="em">×</span> today.
         </p>
 
+        <div></div>
+        <figure className="note-figure">
+          <img
+            src="/notes/mstr-mnav.png"
+            alt="Horizontal bar chart of MSTR mNAV discount episodes lasting 30 days or more, with the current 145-day ongoing episode highlighted alongside four prior closed episodes (180, 71, 52, 38 days)"
+            width={1600}
+            height={840}
+          />
+          <figcaption>
+            mNAV discount episodes of 30 days or more, MSTR history.
+          </figcaption>
+        </figure>
+
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           On 2025-12-10, MSTR&rsquo;s market capitalization fell below the

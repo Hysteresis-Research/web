@@ -24,6 +24,19 @@ export default function DecoupledOneSide() {
           half of that correlation is gone. Only on the upside.
         </p>
 
+        <div></div>
+        <figure className="note-figure">
+          <img
+            src="/notes/decoupled-one-side.png"
+            alt="Line chart of rolling 7-day correlation of BTC against NQ and NVDA, falling from +0.71 to +0.34 between 2026-03-25 and 2026-05-05"
+            width={1600}
+            height={840}
+          />
+          <figcaption>
+            Rolling 7-day correlation, 2026-03-25 → 2026-05-05.
+          </figcaption>
+        </figure>
+
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           On 2026-04-08, the rolling seven-day BTC-NQ correlation was +0.71. On

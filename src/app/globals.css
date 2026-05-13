@@ -208,6 +208,31 @@ h1 {
   max-width: 22rem;
 }
 
+.note-figure {
+  grid-column: 2;
+  margin: 0 0 2.5rem 0;
+  padding: 0;
+  max-width: 38ch;
+}
+
+.note-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 0.5px solid var(--rule-soft);
+  border-radius: 2px;
+  background: #0d0d0d;
+}
+
+.note-figure figcaption {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--ink-3);
+  margin-top: 0.65rem;
+  line-height: 1.5;
+}
+
 .entry-list {
   grid-column: 2;
   list-style: none;

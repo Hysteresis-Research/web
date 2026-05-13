@@ -67,6 +67,13 @@ export default function Notes() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/notes/prior-conditioned">The prior, conditioned</Link>
           </li>
+          <li>
+            <time dateTime="2026-04-26">2026-04-26</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/notes/premium-compressing">Premium, compressing</Link>
+          </li>
         </ul>
 
         <div></div>

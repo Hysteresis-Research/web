@@ -24,6 +24,20 @@ export default function NotTheLine() {
           rounds of walk-forward; one form survived.
         </p>
 
+        <div></div>
+        <figure className="note-figure">
+          <img
+            src="/notes/not-the-line.png"
+            alt="Bar chart of Sharpe ratios across six walk-forward rounds: state-based crossovers collapse from 1.10 in-sample to 0.16 out-of-sample; event-based 15m tag-and-fail reaches walk-forward Sharpe 1.87 and holdout 2.25"
+            width={1600}
+            height={840}
+          />
+          <figcaption>
+            Sharpe by round, in-sample (grey) vs walk-forward / holdout (blue,
+            green where the form survived).
+          </figcaption>
+        </figure>
+
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           The signal was the 400-period exponential moving average{' '}
