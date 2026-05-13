@@ -12,7 +12,7 @@ const LABELS: Record<'en' | 'zh', Record<Slug | 'contact' | 'toggle', string>> =
   zh: { approach: '方法', firm: '公司', notes: '札记', contact: '联系', toggle: 'EN' },
 };
 
-const CONTACT_HREF = 'mailto:contact@hysteresisresearch.com';
+const CONTACT_HREF = 'mailto:desk@hysres.com';
 
 export default function Nav() {
   const pathname = usePathname() || '/';

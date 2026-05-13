@@ -36,8 +36,8 @@ body {
   justify-content: space-between;
   align-items: baseline;
   font-family: var(--mono);
-  font-size: 0.66rem;
-  letter-spacing: 0.20em;
+  font-size: 0.80rem;
+  letter-spacing: 0.18em;
   color: var(--ink-3);
   text-transform: uppercase;
 }
@@ -217,14 +217,15 @@ h1 {
   color: var(--ink);
   max-width: 38ch;
   margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto 1fr;
+  column-gap: 0.55em;
+  row-gap: 0.6em;
+  align-items: baseline;
 }
 
 .entry-list li {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 0 0.55em;
-  margin-bottom: 0.6em;
+  display: contents;
 }
 
 .entry-list time {
