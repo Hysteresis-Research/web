@@ -345,5 +345,6 @@ h1 {
     min-height: 0;
     margin-bottom: 1.5rem;
   }
-  .hero-mark, h1, .lede, .tagline, .body-paragraph, .signature, .entry-list { grid-column: 1; }
+  .hero-mark, h1, .lede, .tagline, .body-paragraph, .signature, .entry-list, .note-figure { grid-column: 1; }
+  .note-figure { max-width: 100%; }
 }
