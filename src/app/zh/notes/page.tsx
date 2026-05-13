@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BHMark from '../../components/BHMark';
+import TickerMark from '../../components/TickerMark';
 
 export const metadata = {
   title: '札记 · Hysteresis Research · 迟滞研究',
@@ -27,11 +28,17 @@ export default function NotesZh() {
         <div className="marginalia">§3</div>
         <ul className="entry-list">
           <li>
-            <time dateTime="2026-05-13">2026-05-13</time> ·{' '}
+            <time dateTime="2026-05-13">2026-05-13</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="MSTR" />
+            <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/zh/notes/mstr-mnav">折价，正在收窄</Link>
           </li>
           <li>
-            <time dateTime="2026-05-13">2026-05-13</time> ·{' '}
+            <time dateTime="2026-05-13">2026-05-13</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/zh/notes/three-cycles">更浅，至今为止</Link>
           </li>
         </ul>

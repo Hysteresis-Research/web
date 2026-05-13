@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import BHMark from '../components/BHMark';
+import TickerMark from '../components/TickerMark';
 
 export const metadata = {
   title: 'Notes · Hysteresis Research',
@@ -32,11 +33,17 @@ export default function Notes() {
         <div className="marginalia">§3</div>
         <ul className="entry-list">
           <li>
-            <time dateTime="2026-05-13">2026-05-13</time> ·{' '}
+            <time dateTime="2026-05-13">2026-05-13</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="MSTR" />
+            <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/notes/mstr-mnav">Discount, unwinding</Link>
           </li>
           <li>
-            <time dateTime="2026-05-13">2026-05-13</time> ·{' '}
+            <time dateTime="2026-05-13">2026-05-13</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
             <Link href="/notes/three-cycles">Shallower, so far</Link>
           </li>
         </ul>
