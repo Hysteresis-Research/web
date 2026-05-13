@@ -37,7 +37,7 @@ export default function ThreeCyclesZh() {
         <p className="body-paragraph">在同一时间点（第 219 天），2017 年周期处于 −60%；2021 年周期处于 −67%。前两个周期的中位数是 −63%。当前周期的回撤<span className="signal">较该中位数浅 28 个百分点</span>。</p>
 
         <div className="marginalia">§4</div>
-        <p className="body-paragraph">N=2 不允许任何统计推断。当前周期的顶部尚未被确认为最终的熊市顶<span className="em">——</span>如果 BTC 创出新高，本轮就没有熊市阶段。当前低点（2026-02-05，$62,868）也是临时的<span className="em">——</span>价格可能回测甚至跌破。这些都不是预测，仅仅是关于三段回撤在某一个时点上相互衡量的一个观察。</p>
+        <p className="body-paragraph">N=2 不允许任何统计推断。当前周期的顶部尚未被确认为最终的熊市顶<span className="em">——</span>如果 BTC 创出新高，本轮就没有熊市阶段。当前低点（2026-02-05，$62,868）也是临时的<span className="em">——</span>价格可能回测甚至跌破。这些都不是预测，仅仅是关于三段回撤在某一个时点上相互衡量的一个观察。本轮顶部尚未确认；无持仓动作。若 BTC 突破 $124,728 上方并持稳，本轮重新归为延续，无熊市阶段。</p>
 
         <div></div>
         <p className="signature">两个周期不构成基准线，只是两个样本。</p>

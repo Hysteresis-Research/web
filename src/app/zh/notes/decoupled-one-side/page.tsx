@@ -45,7 +45,7 @@ export default function DecoupledOneSideZh() {
 
         <div className="marginalia">§4</div>
         <p className="body-paragraph">
-          机制是单向的。自 2026-04-01 以来，funding 在 66% 的 8 小时窗口里是负的，最低 −13.4% 年化。这是单向燃料<span className="em">——</span>逼空潜力，股票端没有对称对应物。只要它持续，BTC 就拥有一根股票不具备的轴。
+          机制是单向的。自 2026-04-01 以来，funding 在 66% 的 8 小时窗口里是负的，最低 −13.4% 年化。这是单向燃料<span className="em">——</span>逼空潜力，股票端没有对称对应物。只要它持续，BTC 就拥有一根股票不具备的轴。正在跟踪；失效条件是 BTC-NQ 7 日相关性在 +0.55 上方稳定 5 个交易日，或负 funding 累计窗口跌破近 30 天的 30%。
         </p>
 
         <div></div>

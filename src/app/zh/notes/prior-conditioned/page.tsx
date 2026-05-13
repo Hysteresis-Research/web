@@ -46,7 +46,7 @@ export default function PriorConditionedZh() {
 
         <div className="marginalia">§4</div>
         <p className="body-paragraph">
-          2026-04-29 以相反的画像进入。Funding 在零附近震荡。Top traders 仓位偏空。Spot 在区间中部。相关的条件先验是逼空，不是冲洗。BTC 在打印后第 44 小时见顶 +3.70%。
+          2026-04-29 以相反的画像进入。Funding 在零附近震荡。Top traders 仓位偏空。Spot 在区间中部。相关的条件先验是逼空，不是冲洗。BTC 在打印后第 44 小时见顶 +3.70%。本次事件作为 FOMC 入场状态先验的一个样本计入；若下两到三次类似入场配置下未再现挤压，则该先验需要重新评估。
         </p>
 
         <div></div>
