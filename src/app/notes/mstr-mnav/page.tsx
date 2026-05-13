@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import MnavDurationChart from '../../components/charts/MnavDurationChart';
 
 export const metadata = {
   title: 'Discount, unwinding · Notes · Hysteresis Research',
@@ -22,6 +23,14 @@ export default function MstrMnav() {
         <p className="lede">
           0.73<span className="em">×</span> on April 7. 0.94<span className="em">×</span> today.
         </p>
+
+        <div></div>
+        <figure className="note-figure">
+          <MnavDurationChart />
+          <figcaption>
+            mNAV discount episodes of 30 days or more, MSTR history.
+          </figcaption>
+        </figure>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">

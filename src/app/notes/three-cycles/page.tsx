@@ -1,4 +1,5 @@
 import BHMark from '../../components/BHMark';
+import CycleDrawdownChart from '../../components/charts/CycleDrawdownChart';
 
 export const metadata = {
   title: 'Shallower, so far · Notes · Hysteresis Research',
@@ -23,6 +24,15 @@ export default function ThreeCycles() {
           −35% at day 219. The prior two cycles, at the same elapsed time,
           sat between −60% and −67%.
         </p>
+
+        <div></div>
+        <figure className="note-figure">
+          <CycleDrawdownChart />
+          <figcaption>
+            Peak-aligned drawdown trajectories. Current cycle traced through
+            day 219.
+          </figcaption>
+        </figure>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
