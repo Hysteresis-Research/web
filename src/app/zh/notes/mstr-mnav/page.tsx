@@ -1,11 +1,15 @@
 import BHMark from '../../../components/BHMark';
 import MnavDurationChart from '../../../components/charts/MnavDurationChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '折价，正在收窄 · 札记 · Hysteresis Research · 迟滞研究',
-  description:
-    '关于 MSTR 历史上第二长的 mNAV 折价 episode。第 145 天，4 月 7 日触底 0.73 倍，截至 2026-05-04 恢复至 0.94 倍。',
-};
+  description: '关于 MSTR 历史上第二长的 mNAV 折价 episode。第 145 天，4 月 7 日触底 0.73 倍，截至 2026-05-04 恢复至 0.94 倍。',
+  path: '/zh/notes/mstr-mnav',
+  lang: 'zh-Hans',
+  type: 'article',
+});
 
 export default function MstrMnavZh() {
   return (

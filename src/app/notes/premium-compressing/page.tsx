@@ -1,11 +1,15 @@
 import BHMark from '../../components/BHMark';
 import VRPChart from '../../components/charts/VRPChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Premium, compressing · Notes · Hysteresis Research',
-  description:
-    "BTC's variance risk premium has compressed every year since 2022. 2026 year-to-date: −2.1 vol points. The structural premium has crossed zero.",
-};
+  description: "BTC's variance risk premium has compressed every year since 2022. 2026 year-to-date: −2.1 vol points. The structural premium has crossed zero.",
+  path: '/notes/premium-compressing',
+  lang: 'en',
+  type: 'article',
+});
 
 export default function PremiumCompressing() {
   return (

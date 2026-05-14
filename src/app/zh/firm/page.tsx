@@ -1,9 +1,13 @@
 import BHMark from '../../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '公司 · Hysteresis Research · 迟滞研究',
   description: '关于规模——一种纪律，其上限由方法设定，而非由规模设定。',
-};
+  path: '/zh/firm',
+  lang: 'zh-Hans',
+});
 
 export default function FirmZh() {
   return (

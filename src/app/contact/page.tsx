@@ -1,9 +1,13 @@
 import BHMark from '../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Contact · Hysteresis Research',
   description: 'Correspondence — write to the desk.',
-};
+  path: '/contact',
+  lang: 'en',
+});
 
 export default function Contact() {
   return (

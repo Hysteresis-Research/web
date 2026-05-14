@@ -1,10 +1,13 @@
 import BHMark from '../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Approach · Hysteresis Research',
-  description:
-    'On method — measuring the gap between fundamentals and price, sizing on durability not conviction.',
-};
+  description: 'On method — measuring the gap between fundamentals and price, sizing on durability not conviction.',
+  path: '/approach',
+  lang: 'en',
+});
 
 export default function Approach() {
   return (

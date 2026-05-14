@@ -1,11 +1,15 @@
 import BHMark from '../../components/BHMark';
 import WalkforwardChart from '../../components/charts/WalkforwardChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Not the line, the touch · Notes · Hysteresis Research',
-  description:
-    'Six rounds of walk-forward on a long-EMA signal. State-based crossovers fail out of sample. A specific event at the line survives.',
-};
+  description: 'Six rounds of walk-forward on a long-EMA signal. State-based crossovers fail out of sample. A specific event at the line survives.',
+  path: '/notes/not-the-line',
+  lang: 'en',
+  type: 'article',
+});
 
 export default function NotTheLine() {
   return (

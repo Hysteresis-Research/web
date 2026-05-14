@@ -1,10 +1,13 @@
 import BHMark from '../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Hysteresis Research · 迟滞研究',
-  description:
-    'Hysteresis Research · 迟滞研究 是一家研究驱动的量化交易公司，在价格滞后基本面之处运作。',
-};
+  description: 'Hysteresis Research · 迟滞研究 是一家研究驱动的量化交易公司，在价格滞后基本面之处运作。',
+  path: '/zh',
+  lang: 'zh-Hans',
+});
 
 export default function Home() {
   return (

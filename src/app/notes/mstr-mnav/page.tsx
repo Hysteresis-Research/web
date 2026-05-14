@@ -1,11 +1,15 @@
 import BHMark from '../../components/BHMark';
 import MnavDurationChart from '../../components/charts/MnavDurationChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Discount, unwinding · Notes · Hysteresis Research',
-  description:
-    "On the second-longest mNAV discount in MSTR's history. Day 145, trough at 0.73× on 2026-04-07, recovering to 0.94× as of 2026-05-04.",
-};
+  description: "On the second-longest mNAV discount in MSTR's history. Day 145, trough at 0.73× on 2026-04-07, recovering to 0.94× as of 2026-05-04.",
+  path: '/notes/mstr-mnav',
+  lang: 'en',
+  type: 'article',
+});
 
 export default function MstrMnav() {
   return (

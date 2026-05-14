@@ -1,4 +1,13 @@
 import BHMark from './components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../lib/seo';
+
+export const metadata: Metadata = pageMetadata({
+  title: 'Hysteresis Research',
+  description: 'A research-driven quantitative trading firm operating where price lags fundamentals.',
+  path: '/',
+  lang: 'en',
+});
 
 export default function Home() {
   return (

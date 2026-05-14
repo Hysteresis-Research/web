@@ -1,11 +1,15 @@
 import BHMark from '../../../components/BHMark';
 import WalkforwardChart from '../../../components/charts/WalkforwardChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '不是那条线，是那一触 · 札记 · Hysteresis Research · 迟滞研究',
-  description:
-    '长 EMA 信号经过六轮 walk-forward。基于"状态"的交叉规则在 OOS 失效；基于"事件"的版本活下来。',
-};
+  description: '长 EMA 信号经过六轮 walk-forward。基于"状态"的交叉规则在 OOS 失效；基于"事件"的版本活下来。',
+  path: '/zh/notes/not-the-line',
+  lang: 'zh-Hans',
+  type: 'article',
+});
 
 export default function NotTheLineZh() {
   return (

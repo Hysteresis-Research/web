@@ -1,11 +1,15 @@
 import BHMark from '../../components/BHMark';
 import CycleDrawdownChart from '../../components/charts/CycleDrawdownChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Shallower, so far · Notes · Hysteresis Research',
-  description:
-    'At day 219 from peak, the current BTC drawdown sits 28 percentage points shallower than the prior-cycle median. N=2; not a forecast.',
-};
+  description: 'At day 219 from peak, the current BTC drawdown sits 28 percentage points shallower than the prior-cycle median. N=2; not a forecast.',
+  path: '/notes/three-cycles',
+  lang: 'en',
+  type: 'article',
+});
 
 export default function ThreeCycles() {
   return (

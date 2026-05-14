@@ -1,11 +1,15 @@
 import BHMark from '../../../components/BHMark';
 import CorrelationChart from '../../../components/charts/CorrelationChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '脱钩，只脱一边 · 札记 · Hysteresis Research · 迟滞研究',
-  description:
-    'BTC-NQ 7 日滚动相关性 +0.71 → +0.34。下行 β 保持。脱钩是单向的。',
-};
+  description: 'BTC-NQ 7 日滚动相关性 +0.71 → +0.34。下行 β 保持。脱钩是单向的。',
+  path: '/zh/notes/decoupled-one-side',
+  lang: 'zh-Hans',
+  type: 'article',
+});
 
 export default function DecoupledOneSideZh() {
   return (

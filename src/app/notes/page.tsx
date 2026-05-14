@@ -1,12 +1,15 @@
 import Link from 'next/link';
 import BHMark from '../components/BHMark';
 import TickerMark from '../components/TickerMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Notes · Hysteresis Research',
-  description:
-    'Shorter empirical pieces from the desk — observations, retired theses, the shape of a regime transition once the prose has settled.',
-};
+  description: 'Shorter empirical pieces from the desk — observations, retired theses, the shape of a regime transition once the prose has settled.',
+  path: '/notes',
+  lang: 'en',
+});
 
 export default function Notes() {
   return (

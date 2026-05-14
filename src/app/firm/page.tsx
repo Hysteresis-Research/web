@@ -1,10 +1,13 @@
 import BHMark from '../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Firm · Hysteresis Research',
-  description:
-    'On scale — a discipline whose limit is set by its method, not its size.',
-};
+  description: 'On scale — a discipline whose limit is set by its method, not its size.',
+  path: '/firm',
+  lang: 'en',
+});
 
 export default function Firm() {
   return (

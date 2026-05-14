@@ -1,11 +1,15 @@
 import BHMark from '../../../components/BHMark';
 import VRPChart from '../../../components/charts/VRPChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '溢价，正在压缩 · 札记 · Hysteresis Research · 迟滞研究',
-  description:
-    'BTC variance risk premium 自 2022 年起年年压缩。2026 年至今：−2.1 vol points。结构性溢价已穿越零线。',
-};
+  description: 'BTC variance risk premium 自 2022 年起年年压缩。2026 年至今：−2.1 vol points。结构性溢价已穿越零线。',
+  path: '/zh/notes/premium-compressing',
+  lang: 'zh-Hans',
+  type: 'article',
+});
 
 export default function PremiumCompressingZh() {
   return (

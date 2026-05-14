@@ -1,11 +1,15 @@
 import BHMark from '../../components/BHMark';
 import CorrelationChart from '../../components/charts/CorrelationChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Decoupled, on one side · Notes · Hysteresis Research',
-  description:
-    'Four-week BTC-NQ correlation: +0.71 to +0.34. Down-side beta intact. The decoupling is one-sided.',
-};
+  description: 'Four-week BTC-NQ correlation: +0.71 to +0.34. Down-side beta intact. The decoupling is one-sided.',
+  path: '/notes/decoupled-one-side',
+  lang: 'en',
+  type: 'article',
+});
 
 export default function DecoupledOneSide() {
   return (
