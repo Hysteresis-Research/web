@@ -32,7 +32,7 @@ export default function ChartFrame({ title, ariaLabel, children }: Props) {
       <g transform="translate(440 300)" opacity={0.7}>
         <g transform="scale(0.18)">
           <path
-            d="M 10 6 C 30 6, 38 7, 58 30 C 70 47, 78 53, 90 54 C 70 54, 62 53, 42 30 C 30 13, 22 7, 10 6 Z"
+            d="M 10 54 C 30 54, 38 53, 58 30 C 70 13, 78 7, 90 6 C 70 6, 62 7, 42 30 C 30 47, 22 53, 10 54 Z"
             fill="none"
             stroke="var(--ink-3)"
             strokeWidth={2}
