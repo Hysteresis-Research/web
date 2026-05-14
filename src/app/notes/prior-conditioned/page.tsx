@@ -1,11 +1,15 @@
 import BHMark from '../../components/BHMark';
 import FOMCEntryChart from '../../components/charts/FOMCEntryChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'The prior, conditioned · Notes · Hysteresis Research',
-  description:
-    'Eight historical FOMC meetings averaged −3.5% over five days. The 2026-04-29 outcome was +3.7%. The prior, conditioned on entry positioning, flipped sign.',
-};
+  description: 'Eight historical FOMC meetings averaged −3.5% over five days. The 2026-04-29 outcome was +3.7%. The prior, conditioned on entry positioning, flipped sign.',
+  path: '/notes/prior-conditioned',
+  lang: 'en',
+  type: 'article',
+});
 
 export default function PriorConditioned() {
   return (

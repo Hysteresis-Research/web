@@ -1,11 +1,15 @@
 import Link from 'next/link';
 import BHMark from '../../components/BHMark';
 import TickerMark from '../../components/TickerMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '札记 · Hysteresis Research · 迟滞研究',
   description: '来自交易台的短篇——观察、被回收的假设、宏观范式转换的形状。',
-};
+  path: '/zh/notes',
+  lang: 'zh-Hans',
+});
 
 export default function NotesZh() {
   return (

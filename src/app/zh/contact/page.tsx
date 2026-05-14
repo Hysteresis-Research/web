@@ -1,9 +1,13 @@
 import BHMark from '../../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '联系 · Hysteresis Research · 迟滞研究',
   description: '通信——写信至交易台。',
-};
+  path: '/zh/contact',
+  lang: 'zh-Hans',
+});
 
 export default function ContactZh() {
   return (

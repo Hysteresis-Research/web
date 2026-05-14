@@ -1,11 +1,15 @@
 import BHMark from '../../../components/BHMark';
 import FOMCEntryChart from '../../../components/charts/FOMCEntryChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '先验，因条件而异 · 札记 · Hysteresis Research · 迟滞研究',
-  description:
-    '8 次 FOMC 历史平均给出 5 日 −3.5%。按入场仓位切片之后，先验翻号。2026-04-29 走出 +3.7% 的逼空。',
-};
+  description: '8 次 FOMC 历史平均给出 5 日 −3.5%。按入场仓位切片之后，先验翻号。2026-04-29 走出 +3.7% 的逼空。',
+  path: '/zh/notes/prior-conditioned',
+  lang: 'zh-Hans',
+  type: 'article',
+});
 
 export default function PriorConditionedZh() {
   return (

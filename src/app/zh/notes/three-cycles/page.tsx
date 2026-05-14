@@ -1,11 +1,15 @@
 import BHMark from '../../../components/BHMark';
 import CycleDrawdownChart from '../../../components/charts/CycleDrawdownChart';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '更浅，至今为止 · 札记 · Hysteresis Research · 迟滞研究',
-  description:
-    '从顶部起第 219 天，当前 BTC 回撤较前两轮周期同期中位数浅 28 个百分点。N=2，非预测。',
-};
+  description: '从顶部起第 219 天，当前 BTC 回撤较前两轮周期同期中位数浅 28 个百分点。N=2，非预测。',
+  path: '/zh/notes/three-cycles',
+  lang: 'zh-Hans',
+  type: 'article',
+});
 
 export default function ThreeCyclesZh() {
   return (

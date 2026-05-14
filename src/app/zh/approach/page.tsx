@@ -1,10 +1,13 @@
 import BHMark from '../../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = pageMetadata({
   title: '方法 · Hysteresis Research · 迟滞研究',
-  description:
-    '关于方法——度量基本面与价格之间的差距，按持久度而非信心配仓。',
-};
+  description: '关于方法——度量基本面与价格之间的差距，按持久度而非信心配仓。',
+  path: '/zh/approach',
+  lang: 'zh-Hans',
+});
 
 export default function ApproachZh() {
   return (
