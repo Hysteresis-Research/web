@@ -17,8 +17,27 @@ export default function Nav() {
   const isZh = pathname === '/zh' || pathname.startsWith('/zh/');
   const labels = isZh ? LABELS.zh : LABELS.en;
 
+  // Routes that exist but are not surfaced in the public nav (internal-only,
+  // direct-URL access). Both /desk and /zh/desk mirror each other, so the
+  // language toggle on these routes swaps language normally — but we still
+  // omit hrefLang on the toggle and rely on per-page noindex to keep crawlers
+  // out, since these routes are not in sitemap and not meant for discovery.
+  const INTERNAL_ROUTES_EN = ['/desk'];
+  const isOnInternalRoute =
+    INTERNAL_ROUTES_EN.some(
+      (p) => pathname === p || pathname.startsWith(`${p}/`),
+    ) ||
+    INTERNAL_ROUTES_EN.some(
+      (p) =>
+        pathname === `/zh${p}` || pathname.startsWith(`/zh${p}/`),
+    );
+
   const enPath = isZh ? (pathname === '/zh' ? '/' : pathname.slice(3)) : pathname;
-  const langHref = isZh ? enPath : pathname === '/' ? '/zh' : `/zh${pathname}`;
+  const langHref = isZh
+    ? enPath
+    : pathname === '/'
+    ? '/zh'
+    : `/zh${pathname}`;
 
   const items = [
     ...SLUGS.map((s) => {
@@ -41,7 +60,9 @@ export default function Nav() {
       href: langHref,
       label: labels.toggle,
       active: false,
-      hrefLang: isZh ? 'en' : 'zh-Hans',
+      // On internal routes the toggle drops to the language root, which is
+      // not a translated alternate — omit hrefLang to avoid lying to crawlers.
+      hrefLang: isOnInternalRoute ? undefined : isZh ? 'en' : 'zh-Hans',
     },
   ];
 
