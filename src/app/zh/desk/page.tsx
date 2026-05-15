@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '../../../lib/seo';
 
 // 内部路由：不在公共 nav，不在 sitemap，noindex/nofollow。
-// 仅通过直链给交易台成员访问；中文版与英文版互为镜像，两版均不索引。
+// 仅通过直链给交易台成员访问；中英文版互为镜像，两版均不索引。
 export const metadata: Metadata = {
   ...pageMetadata({
     title: '交易台 · Hysteresis Research · 迟滞研究',
@@ -36,19 +36,21 @@ export default function DeskZh() {
 
         <div></div>
         <p className="lede">
-          带日期的盘口读数。数据到位就讲水位，数据不齐就讲框架。
+          按日期归档的盘口读数。数据齐就写水位，数据不齐就写 framework。
         </p>
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
-          一份日级的工作底稿<span className="em">——</span>状态、仓位结构、做市商图、交易清单、止损条件。
-          每一节数字分别带时间戳；当某项主张超出其数据所能支撑时，明确降级为「仅为框架」。
-          备忘退色得很快，发布之后不再回改。先看清单条带，再看正文。
+          日级的台面记录<span className="em">——</span>regime、仓位结构、
+          dealer map、trade book、失效条件。每一节数字分别带时间戳；
+          一项主张超出它的数据所能支撑时，明确降级为 framework only。
+          备忘失效很快，发布之后不再回改。先看上方的数据来源区，再读正文。
         </p>
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          仅作内部参考<span className="em">——</span>非投资建议。每篇备忘自带 NFA 免责声明与审计追踪。
+          仅作内部参考<span className="em">——</span>非投资建议。
+          每篇备忘自带 NFA 免责声明与审计追踪。
         </p>
 
         <div className="marginalia">§4</div>
@@ -58,13 +60,13 @@ export default function DeskZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-05-15">两面墙之间</Link>
+            <Link href="/zh/desk/2026-05-15">两道墙之间</Link>
           </li>
         </ul>
 
         <div></div>
         <p className="signature">
-          盘口给出备忘时它才出现，无日历。
+          盘口有话说才写，不按日历凑数。
         </p>
       </div>
     </main>
