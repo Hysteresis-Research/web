@@ -4,7 +4,7 @@ import { pageMetadata } from '../../../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: '公司 · Hysteresis Research · 迟滞研究',
-  description: '关于规模——一种纪律，其上限由方法设定，而非由规模设定。',
+  description: '关于规模——一门纪律，方法决定上限，规模不决定。',
   path: '/zh/firm',
   lang: 'zh-Hans',
 });
@@ -25,16 +25,16 @@ export default function FirmZh() {
         <p className="lede">关于规模。</p>
 
         <div className="marginalia">§2</div>
-        <p className="body-paragraph">研究驱动的交易公司是一种纪律<span className="em">——</span>其上限由方法、而非规模决定。在叙事过剩的市场里，撑起一支策略的从来不是团队规模，而是<span className="signal">方法的严谨</span>。</p>
+        <p className="body-paragraph">研究驱动的交易公司，在我们这儿，本质是一门纪律<span className="em">——</span>方法决定上限，规模不决定。市场不缺故事；撑住一条策略的，是<span className="signal">方法的严谨</span>，不是团队的大小。</p>
 
         <div className="marginalia">§3</div>
-        <p className="body-paragraph">我们的志向，是以单基金经理模式，把跨资产配置<span className="em">——</span>覆盖加密与全球宏观<span className="em">——</span>承担到机构级别的体量。</p>
+        <p className="body-paragraph">我们想做的，是单 PM 架构下，把跨资产配置（加密 + 全球宏观）做到机构级体量。</p>
 
         <div className="marginalia">§4</div>
-        <p className="body-paragraph">三年内<span className="em">——</span>跨资产主要品种的统一宏观范式模型形成可复用版本，并由日常运行流程持续检验。五年内<span className="em">——</span>多子策略并行运作，首篇公开研究论文发表，记录方法的核心结构。十年内<span className="em">——</span>方法在多轮市场环境下被验证，并具备可被外部继承的形态。</p>
+        <p className="body-paragraph">三年内<span className="em">——</span>主要品种做出一套统一的宏观范式模型，可复用，由日常流程不断校验。五年内<span className="em">——</span>多个子策略并行运行，第一篇公开研究文字发表，把方法的核心记下来。十年内<span className="em">——</span>方法在几轮市场环境里被验证，做成可以被外部继承的方法形态。</p>
 
         <div></div>
-        <p className="signature">研究自循环，资本跟随。</p>
+        <p className="signature">研究在前，资本在后。</p>
       </div>
     </main>
   );

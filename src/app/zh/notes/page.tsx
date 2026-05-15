@@ -6,7 +6,7 @@ import { pageMetadata } from '../../../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: '札记 · Hysteresis Research · 迟滞研究',
-  description: '来自交易台的短篇——观察、被回收的假设、宏观范式转换的形状。',
+  description: '盘面短文——观察、被回收的假设、宏观范式转换沉下来的样子。',
   path: '/zh/notes',
   lang: 'zh-Hans',
 });
@@ -24,10 +24,10 @@ export default function NotesZh() {
         <h1>札记</h1>
 
         <div></div>
-        <p className="lede">两次交易之间，长篇阅读。</p>
+        <p className="lede">两单之间，慢读。</p>
 
         <div className="marginalia">§2</div>
-        <p className="body-paragraph">用于短篇文字<span className="em">——</span>交易台的观察、被回收的假设及其原因、宏观范式转换在文字沉淀之后呈现出的形状。</p>
+        <p className="body-paragraph">这里放短文<span className="em">——</span>盘面观察、被回收的假设和它们被回收的原因、宏观范式转换沉下来之后呈现的样子。</p>
 
         <div className="marginalia">§3</div>
         <ul className="entry-list">
@@ -43,7 +43,7 @@ export default function NotesZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/notes/three-cycles">更浅，至今为止</Link>
+            <Link href="/zh/notes/three-cycles">更浅，目前为止</Link>
           </li>
           <li>
             <time dateTime="2026-05-06">2026-05-06</time>
@@ -76,7 +76,7 @@ export default function NotesZh() {
         </ul>
 
         <div></div>
-        <p className="signature">更多正在准备。每一篇等到它<span className="signal">能够独立成篇</span>时发表。</p>
+        <p className="signature">还有更多在写。每一篇等到它<span className="signal">能独立成篇</span>，再发。</p>
       </div>
     </main>
   );

@@ -172,8 +172,8 @@ export default function DeskZh20260515() {
               <span className="dn-tag stale">$82.3k（陈旧 2 日）</span> 与日线
               EMA200 <span className="dn-tag stale">$82.0k（陈旧 2 日）</span>
               。0-gamma flip 在 <span className="dn-tag">$76,547</span>{' '}
-              （相对现货 <span className="dn-tag">−5.4%</span>，GEX 源文件以
-              其自身 $81,078 参考价显示 +5.9%）。flip 下方，前 10 大墙里唯一
+              （相对现货 <span className="dn-tag">−5.4%</span>，GEX 源文件
+              以 $81,078 为参考价，显示 +5.9%）。flip 下方，前 10 大墙里唯一
               显示的下行 pocket 是 $75k{' '}
               <span className="dn-tag bear">−14M GEX</span>{' '}
               这一档；完整 strike 分布未载入。regime 分界点很清楚
@@ -226,7 +226,7 @@ export default function DeskZh20260515() {
               宏观盘口的诚实读法：
               <span className="dn-signal">利率向上</span>（事件 +1.83σ），
               叠加 DXY 偏紧（事件 +1.16σ）
-              <span className="dn-em">——</span>一个本该构成逆风的轻滞胀特征。
+              <span className="dn-em">——</span>理论上是个轻滞胀的逆风组合。
               但风险没死，因为 Fed net liquidity 刚印出 +2.47σ 的事件 surge，
               HY 信用又不愿走阔。
               <span className="dn-em">
@@ -235,7 +235,7 @@ export default function DeskZh20260515() {
               本台对 HY OAS 的主观警戒线是 3.20%（当前 2.82%）；这个阈值不是
               历史回测推出来的，只作触发线用，不作已检验水位。JGB 虽然挂
               +2.47σ 的 regime tag，但源文件标这条 series 已 75 日陈旧，
-              我们不放进战术读数。
+              我们不算进战术读数。
             </p>
 
             <h2 className="dn-sec">
