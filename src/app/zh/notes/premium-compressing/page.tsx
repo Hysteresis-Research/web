@@ -43,14 +43,14 @@ export default function PremiumCompressingZh() {
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          这个差每年都在收窄。2022 年 +9.7。+7.9、+6.6、+5.1。2026 年至今是{' '}
+          这一差距每年都在收窄。2022 年 +9.7。+7.9、+6.6、+5.1。2026 年至今为{' '}
           <span className="signal">−2.1 vol points</span>{' '}
-          <span className="em">——</span>结构性溢价穿过了零线。ETF 上线吃掉了散户的尾部对冲需求。DVOL 期货给了卖方另一条做空指数的路。做市商之间的竞争把剩下的部分也收掉了。
+          <span className="em">——</span>结构性溢价穿过了零线。ETF 上线吸收了散户的尾部对冲需求。DVOL 期货给了卖方另一条做空指数的路径。做市商之间的竞争把剩余部分也收掉了。
         </p>
 
         <div className="marginalia">§4</div>
         <p className="body-paragraph">
-          一条条件规则活了下来。跳过前 7 日内最大单日涨跌超过 5% 的月份。36 笔，不是 50 笔；Sharpe 从 1.34 升到 1.80；最大回撤减半。溢价没消失<span className="em">——</span>它退到了平静的 regime 里。现在这个状态下，spread30 在 41 百分位、近期实波高于隐波，规则的指令是：等。
+          一条条件规则活了下来。跳过前 7 日内最大单日涨跌超过 5% 的月份。36 笔，而非 50 笔；Sharpe 从 1.34 升至 1.80；最大回撤减半。溢价并未消失<span className="em">——</span>它退到了平静的 regime 里。当前状态下，spread30 处于 41 百分位、近期实波高于隐波，规则的指令是：等。
         </p>
 
         <div></div>
