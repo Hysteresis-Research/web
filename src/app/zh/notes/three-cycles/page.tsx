@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '../../../../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
-  title: '更浅，至今为止 · 札记 · Hysteresis Research · 迟滞研究',
-  description: '从顶部起第 219 天，当前 BTC 回撤较前两轮周期同期中位数浅 28 个百分点。N=2，非预测。',
+  title: '更浅，目前为止 · 札记 · Hysteresis Research · 迟滞研究',
+  description: '从顶部起第 219 天，当前 BTC 回撤比前两轮周期同期的中位数浅 28 个 pt。N=2，不是预测。',
   path: '/zh/notes/three-cycles',
   lang: 'zh-Hans',
   type: 'article',
@@ -21,10 +21,10 @@ export default function ThreeCyclesZh() {
         </div>
 
         <div className="marginalia">notes</div>
-        <h1>更浅，至今为止</h1>
+        <h1>更浅，目前为止</h1>
 
         <div></div>
-        <p className="lede">第 219 天回撤 −35%。前两个周期在同一时间点之间在 −60% 到 −67% 之间。</p>
+        <p className="lede">第 219 天回撤 −35%。前两轮周期在同一时点分别落在 −60% 到 −67% 之间。</p>
 
         <div></div>
         <figure className="note-figure">
@@ -35,16 +35,16 @@ export default function ThreeCyclesZh() {
         </figure>
 
         <div className="marginalia">§2</div>
-        <p className="body-paragraph">比特币自成为可交易品种以来，经历过两轮完整的熊市。2017 年的顶部之后，364 天内出现 −83% 的回撤；2021 年的顶部之后，378 天内 −77%。当前周期顶部出现在 2025-10-06，$124,628。今天，219 天之后，BTC 报 $80,630<span className="em">——</span>较顶部回撤 −35%。</p>
+        <p className="body-paragraph">比特币能交易以来，经历过两轮完整的熊市。2017 年的顶之后，364 天里出现 −83% 的回撤；2021 年的顶之后，378 天 −77%。当前周期的顶在 2025-10-06，$124,628。今天，219 天之后，BTC 报 $80,630<span className="em">——</span>距顶部回撤 −35%。</p>
 
         <div className="marginalia">§3</div>
-        <p className="body-paragraph">在同一时间点（第 219 天），2017 年周期处于 −60%；2021 年周期处于 −67%。前两个周期的中位数是 −63%。当前周期的回撤<span className="signal">较该中位数浅 28 个百分点</span>。</p>
+        <p className="body-paragraph">在同一个时间点（第 219 天），2017 周期在 −60%；2021 周期在 −67%。前两轮的中位数是 −63%。当前回撤<span className="signal">比这个中位数浅 28 个 pt</span>。</p>
 
         <div className="marginalia">§4</div>
-        <p className="body-paragraph">N=2 不允许任何统计推断。当前周期的顶部尚未被确认为最终的熊市顶<span className="em">——</span>如果 BTC 创出新高，本轮就没有熊市阶段。当前低点（2026-02-05，$62,868）也是临时的<span className="em">——</span>价格可能回测甚至跌破。这些都不是预测，仅仅是关于三段回撤在某一个时点上相互衡量的一个观察。本轮顶部尚未确认；无持仓动作。若 BTC 突破 $124,728 上方并持稳，本轮重新归为延续，无熊市阶段。</p>
+        <p className="body-paragraph">N=2 撑不起任何统计推断。当前周期的顶还没被确认为最终的熊市顶<span className="em">——</span>BTC 一旦再创新高，本轮就没有熊市段。当前低点（2026-02-05，$62,868）也是临时的<span className="em">——</span>价格可能回测，甚至跌破。这些都不是预测，只是三段回撤在同一时点上互相对照的一个观察。本轮的顶还没确认；没有动作。BTC 站上 $124,728 并持稳的话，本轮重新归为延续，没有熊市段。</p>
 
         <div></div>
-        <p className="signature">两个周期不构成基准线，只是两个样本。</p>
+        <p className="signature">两个周期撑不起基准线，只是两个样本。</p>
       </div>
     </main>
   );
