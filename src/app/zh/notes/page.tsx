@@ -6,7 +6,7 @@ import { pageMetadata } from '../../../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: '札记 · Hysteresis Research · 迟滞研究',
-  description: '盘面短文——观察、被回收的假设、宏观范式转换沉下来的样子。',
+  description: '盘面短文——观察、被回收的假设、宏观范式转换沉淀之后的样子。',
   path: '/zh/notes',
   lang: 'zh-Hans',
 });
@@ -24,10 +24,10 @@ export default function NotesZh() {
         <h1>札记</h1>
 
         <div></div>
-        <p className="lede">两单之间，慢读。</p>
+        <p className="lede">两单之间，长读。</p>
 
         <div className="marginalia">§2</div>
-        <p className="body-paragraph">这里放短文<span className="em">——</span>盘面观察、被回收的假设和它们被回收的原因、宏观范式转换沉下来之后呈现的样子。</p>
+        <p className="body-paragraph">此处放置短文<span className="em">——</span>盘面观察、被回收的假设与它们被回收的原因、宏观范式转换沉淀之后呈现的样子。</p>
 
         <div className="marginalia">§3</div>
         <ul className="entry-list">
@@ -76,7 +76,7 @@ export default function NotesZh() {
         </ul>
 
         <div></div>
-        <p className="signature">还有更多在写。每一篇等到它<span className="signal">能独立成篇</span>，再发。</p>
+        <p className="signature">还有更多在写。每一篇等到它<span className="signal">能独立成篇</span>，再发表。</p>
       </div>
     </main>
   );
