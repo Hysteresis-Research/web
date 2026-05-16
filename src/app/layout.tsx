@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
+import GatedAnalytics from './components/GatedAnalytics';
 import BrandLink from './components/BrandLink';
 import Nav from './components/Nav';
 import ThemeToggle from './components/ThemeToggle';
@@ -125,8 +124,7 @@ export default async function RootLayout({
           <span>© 2026 Hysteresis Research</span>
         </footer>
 
-        <Analytics />
-        <SpeedInsights />
+        <GatedAnalytics />
       </body>
     </html>
   );
