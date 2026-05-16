@@ -1,30 +1,53 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useSyncExternalStore } from 'react';
 
 const KEY = 'hr-mode';
 
-export default function ThemeToggle() {
-  const [mounted, setMounted] = useState(false);
-  const [mode, setMode] = useState<'dark' | 'light'>('dark');
+type Mode = 'dark' | 'light';
 
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem(KEY);
-      if (stored === 'light' || stored === 'dark') setMode(stored);
-    } catch {}
-    setMounted(true);
-  }, []);
+const listeners = new Set<() => void>();
+
+function subscribe(callback: () => void): () => void {
+  listeners.add(callback);
+  const onStorage = (e: StorageEvent) => {
+    if (e.key === KEY) callback();
+  };
+  window.addEventListener('storage', onStorage);
+  return () => {
+    listeners.delete(callback);
+    window.removeEventListener('storage', onStorage);
+  };
+}
+
+function emit() {
+  for (const callback of listeners) callback();
+}
+
+function getSnapshot(): Mode {
+  try {
+    const stored = localStorage.getItem(KEY);
+    if (stored === 'light' || stored === 'dark') return stored;
+  } catch {}
+  return 'dark';
+}
+
+function getServerSnapshot(): Mode {
+  return 'dark';
+}
+
+export default function ThemeToggle() {
+  const mode = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   function toggle() {
-    const next = mode === 'dark' ? 'light' : 'dark';
-    setMode(next);
+    const next: Mode = mode === 'dark' ? 'light' : 'dark';
     const root = document.documentElement;
     root.classList.remove('va-dark', 'va-light');
     root.classList.add(`va-${next}`);
     try {
       localStorage.setItem(KEY, next);
     } catch {}
+    emit();
   }
 
   return (
@@ -34,7 +57,7 @@ export default function ThemeToggle() {
       aria-label="Toggle light / dark"
       suppressHydrationWarning
     >
-      {mounted ? (mode === 'dark' ? '— Light' : '— Dark') : '— Mode'}
+      {mode === 'dark' ? '— Light' : '— Dark'}
     </button>
   );
 }
