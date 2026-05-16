@@ -3,6 +3,7 @@ import BHMark from '../../components/BHMark';
 import TickerMark from '../../components/TickerMark';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../../lib/seo';
+import { requireViewer } from '@/lib/gate';
 
 // 内部路由：不在公共 nav，不在 sitemap，noindex/nofollow。
 // 仅通过直链给交易台成员访问；中英文版互为镜像，两版均不索引。
@@ -22,7 +23,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DeskZh() {
+export const dynamic = 'force-dynamic';
+
+export default async function DeskZh() {
+  await requireViewer('/zh/desk');
   return (
     <main lang="zh-Hans">
       <div className="col">

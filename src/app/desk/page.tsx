@@ -3,6 +3,7 @@ import BHMark from '../components/BHMark';
 import TickerMark from '../components/TickerMark';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../lib/seo';
+import { requireViewer } from '@/lib/gate';
 
 // Internal-only route: not in public nav, not in sitemap, noindex/nofollow.
 // Accessible by direct URL for desk principals; intentionally invisible to
@@ -23,7 +24,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Desk() {
+export const dynamic = 'force-dynamic';
+
+export default async function Desk() {
+  await requireViewer('/desk');
   return (
     <main>
       <div className="col">
