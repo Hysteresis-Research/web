@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../../lib/seo';
+import { requireViewer } from '@/lib/gate';
 
 // Internal-only route: not in public nav, not in sitemap, noindex/nofollow.
 // Description deliberately anodyne — any future external share (Slack/email
@@ -21,7 +22,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Desk20260517() {
+export const dynamic = 'force-dynamic';
+
+export default async function Desk20260517() {
+  await requireViewer('/desk/2026-05-17');
   return (
     <main className="desk-stage">
       <article className="desk-letter">

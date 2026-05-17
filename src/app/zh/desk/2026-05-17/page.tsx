@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../../../lib/seo';
+import { requireViewer } from '@/lib/gate';
 
 // 内部路由：不在公共 nav，不在 sitemap，noindex/nofollow。
 // 描述故意中性化——任何后续外部分享（Slack/邮件链接预览）显示中性文本，
@@ -21,7 +22,10 @@ export const metadata: Metadata = {
   },
 };
 
-export default function DeskZh20260517() {
+export const dynamic = 'force-dynamic';
+
+export default async function DeskZh20260517() {
+  await requireViewer('/zh/desk/2026-05-17');
   return (
     <main className="desk-stage" lang="zh-Hans">
       <article className="desk-letter">
