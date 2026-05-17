@@ -31,8 +31,8 @@ export default async function DeskZh20260517() {
       <article className="desk-letter">
 
         <header className="dn-titleband">
-          <span>HR · BTC · 交易台备忘 · 2026-05-17 · v1</span>
-          <span>内部 · 仅供讨论 · 未审计</span>
+          <span>HR · BTC · 交易台备忘 · 2026-05-17 · v2</span>
+          <span>内部 · 仅供讨论 · 经敌对式审计</span>
         </header>
 
         <div className="dn-body">
@@ -156,15 +156,15 @@ export default async function DeskZh20260517() {
             </div>
             <div>
               <span className="dn-k">距 0γ flip</span>
-              <span className="dn-v bear">+2.0%</span>
-              <span className="dn-src">GEX · flip $76,496</span>
+              <span className="dn-v bear">−1.9%</span>
+              <span className="dn-src">flip $76,496 对现货 · 源文件 +2.0% 对 idx</span>
             </div>
           </div>
 
           <div className="dn-prose">
             <p className="dn-lead">
               05-15 那篇偏多，押的是「$82.3k 干净拿下」的 squeeze。盘口走了
-              反方向。两天后，funding 从付空头翻成付多头，SM 砍掉四分之一净
+              反方向。两天后，funding 从付空头翻成付多头，SM 砍掉超过一半净
               book，dealer 卸掉五分之四的 long gamma，0-gamma flip 现在
               <span className="dn-em">——</span>
               <span className="dn-signal">在下方 2%，不再是下方 5%</span>
@@ -523,7 +523,7 @@ export default async function DeskZh20260517() {
               </div>
               <div className="dn-gating">
                 <b>R/R：</b>入场中点 $77,850，止损 $77,300 = 约 $550 风险，
-                目标 $79,000–79,300 = 约 $1,200–1,450 ≈ 2.2–2.6:1。
+                目标 $79,000–79,300 = 约 $1,150–1,450 ≈ 2.1–2.6:1。
                 <b>硬规则：</b>这笔和 flip-break 空互斥——$77.3k 的 1h
                 收盘是两者之间唯一的开关。不向下加仓；D-SMA150 一收破，
                 反弹立即失效。
@@ -545,7 +545,7 @@ export default async function DeskZh20260517() {
                 <div><span className="dn-lvl-k">结构</span><span className="dn-lvl-v">long $75k / short $71k put</span></div>
                 <div><span className="dn-lvl-k">到期</span><span className="dn-lvl-v">29-MAY-26（12d）— 第一个正 GEX 到期</span></div>
                 <div><span className="dn-lvl-k">加仓 trigger</span><span className="dn-lvl-v bear">HY OAS &gt; 约 3.0–3.2% 收盘（watch）</span></div>
-                <div><span className="dn-lvl-k">规模</span><span className="dn-lvl-v">0.15R（05-15 是 0.10R）</span></div>
+                <div><span className="dn-lvl-k">规模（示意）</span><span className="dn-lvl-v">0.15R · 最终待 chain 拉取</span></div>
               </div>
               <div className="dn-gating">
                 <b>说明：</b>3.0–3.2% 的 HY 阈值是主观警戒，不是已检验的
@@ -591,16 +591,26 @@ export default async function DeskZh20260517() {
 
           <div className="dn-audit-trace">
             <span className="dn-at-head">
-              审计追踪 · v1 · 未审计
+              审计追踪 · v2 来自 2026-05-17 敌对式审计
             </span>
-            本备忘<b>尚未</b>经过跨模型敌对式审计。与 05-15 v2（在 codex
-            26 项发现的审计后才发布，其中 funding ×100 单位错误为 CRITICAL）
-            不同，这是基于单一原子快照（2026-05-17 01:30Z）的单模型综合。
-            这里的 funding 年化是 field × 1095（8h 利率已是百分比：
-            +0.0046%/8h → +5.0% 年化），与 05-15 的 F-02 修正及实时快照
-            banner 一致——但敌对式审计者应重新核验它、SM net-BTC 增量、
-            MA 锚点偏移以及 GEX flip 距离，再当作 desk-final。codex 敌对式
-            审计待跑；跑完后连同完整审计追踪升级为 v2。
+            codex CLI 0.125.0（gpt-5.5, xhigh）敌对式审计共 4 项发现
+            （2 HIGH, 1 MED, 1 LOW）。两个正确性阻断项本版已修：
+            <b>F-01</b>——lead 写 SM「砍掉四分之一」净 book；备忘自身的
+            算术（39.9k → 16.1k，Δ −23.8k）是砍掉 59.6%，中英两版均改为
+            「超过一半」；<b>F-02</b>——dist-to-flip meta tile 显示 +2.0%
+            （GEX 源文件对其 Deribit-index 参考价算的），而集群正文对同一
+            flip 写 −1.9%（对现货），tile 现改为对现货 −1.9% 并在 tile 内
+            披露 +2.0%-对-idx 的口径，消除符号翻转。二级：<b>F-03</b>——
+            put-spread「规模 0.15R」与其自身「规模待 chain」自相矛盾，
+            改标「规模（示意）」；<b>F-04</b>——反弹 scout R/R 下界修正
+            $1,200→$1,150 / 2.2→2.1:1。codex 明确放行：funding 年化
+            （field × 1095 = +5.0% 年化，无 05-15 F-02 那个 ×100 地雷
+            复现）、SM 净额减法、所有 MA 对现货偏移的符号与量级、
+            claims-vs-loaded-data 纪律（NTT / max-pain / strike-IV / BTC-NQ
+            全 framework-only；JGB 月度「不作依据」；IV 链中位数非可交易
+            spread）、中英数值零漂移、requireViewer gating 模式（与 05-15
+            完全同构）以及 Next.js build。原始审计记录留在 desk 仓库
+            audits/2026-05-17-desk-note.md。
           </div>
 
           <div className="dn-nfa">
@@ -641,7 +651,7 @@ export default async function DeskZh20260517() {
         <footer className="dn-foot">
           <span>Hysteresis Research · 迟滞研究 · HK</span>
           <span>
-            v1 · 2026-05-17 01:30Z · 数据源：live_db.json · mtf_div_latest.html ·
+            v2 · 2026-05-17 01:30Z · 数据源：live_db.json · mtf_div_latest.html ·
             btc_gex.html · macro_dashboard.html ·
             cross_asset_correlation_summary.md · btcusdt_1m_*.parquet · FRED ·
             Yahoo · Hyperliquid xyz

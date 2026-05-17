@@ -31,8 +31,8 @@ export default async function Desk20260517() {
       <article className="desk-letter">
 
         <header className="dn-titleband">
-          <span>HR · BTC · DESK NOTE · 2026-05-17 · v1</span>
-          <span>internal · for discussion · pre-audit</span>
+          <span>HR · BTC · DESK NOTE · 2026-05-17 · v2</span>
+          <span>internal · for discussion · post-hostile-audit</span>
         </header>
 
         <div className="dn-body">
@@ -156,8 +156,8 @@ export default async function Desk20260517() {
             </div>
             <div>
               <span className="dn-k">dist to 0γ flip</span>
-              <span className="dn-v bear">+2.0%</span>
-              <span className="dn-src">GEX · flip $76,496</span>
+              <span className="dn-v bear">−1.9%</span>
+              <span className="dn-src">flip $76,496 vs spot · file +2.0% off idx</span>
             </div>
           </div>
 
@@ -165,9 +165,10 @@ export default async function Desk20260517() {
             <p className="dn-lead">
               The 05-15 note leaned long on a squeeze that needed $82.3k taken
               cleanly. The tape did the opposite. Two days later funding has
-              flipped from short-pay to long-pay, smart money has cut a quarter
-              of its net book, dealers have shed four-fifths of their long
-              gamma, and the 0-gamma flip is now <span className="dn-em">—</span>{' '}
+              flipped from short-pay to long-pay, smart money has cut more
+              than half its net book, dealers have shed four-fifths of their
+              long gamma, and the 0-gamma flip is now{' '}
+              <span className="dn-em">—</span>{' '}
               <span className="dn-signal">two percent away, not five below</span>
               . This note does not defend the prior call; it marks where the
               first kill condition fired and what the post-kill structure is.
@@ -563,7 +564,7 @@ export default async function Desk20260517() {
               </div>
               <div className="dn-gating">
                 <b>R/R:</b> entry mid $77,850, stop $77,300 = ~$550 risk,
-                target $79,000–79,300 = ~$1,200–1,450 ≈ 2.2–2.6:1.{' '}
+                target $79,000–79,300 = ~$1,150–1,450 ≈ 2.1–2.6:1.{' '}
                 <b>Hard rule:</b> this and the flip-break short are mutually
                 exclusive — the $77.3k 1h close is the single switch between
                 them. No averaging down; the bounce is invalid the moment
@@ -587,7 +588,7 @@ export default async function Desk20260517() {
                 <div><span className="dn-lvl-k">structure</span><span className="dn-lvl-v">long $75k / short $71k put</span></div>
                 <div><span className="dn-lvl-k">expiry</span><span className="dn-lvl-v">29-MAY-26 (12d) — first positive-GEX expiry</span></div>
                 <div><span className="dn-lvl-k">grow-trigger</span><span className="dn-lvl-v bear">HY OAS &gt; ~3.0–3.2% close (watch)</span></div>
-                <div><span className="dn-lvl-k">size</span><span className="dn-lvl-v">0.15R (up from 0.10R on 05-15)</span></div>
+                <div><span className="dn-lvl-k">size (indicative)</span><span className="dn-lvl-v">0.15R · final pending chain pull</span></div>
               </div>
               <div className="dn-gating">
                 <b>Caveats:</b> the 3.0–3.2% HY threshold is a discretionary
@@ -635,19 +636,31 @@ export default async function Desk20260517() {
 
           <div className="dn-audit-trace">
             <span className="dn-at-head">
-              Audit trace · v1 · pre-audit
+              Audit trace · v2 derived from hostile audit 2026-05-17
             </span>
-            This note has <b>not</b> yet been through cross-model hostile
-            audit. Unlike the 05-15 v2 (which shipped only after a 26-finding
-            codex review, including the funding ×100 unit error as a CRITICAL),
-            this is a single-model synthesis off one atomic snapshot
-            (2026-05-17 01:30Z). The funding annualization here is{' '}
-            field × 1095 (8h rate already in percent: +0.0046%/8h → +5.0% ann),
-            consistent with the 05-15 F-02 correction and the live snapshot
-            banner — but a hostile reviewer should re-verify it, the SM
-            net-BTC delta, the MA anchor offsets, and the GEX flip distance
-            before this is treated as desk-final. Codex hostile review pending;
-            promote to v2 with a full audit trace once run.
+            Hostile audit by codex CLI 0.125.0 (gpt-5.5, xhigh) returned 4
+            findings (2 HIGH, 1 MED, 1 LOW). Both correctness blockers fixed
+            in this revision: <b>F-01</b> — the lead said smart money &ldquo;cut
+            a quarter&rdquo; of its net book; the note&rsquo;s own arithmetic
+            (39.9k → 16.1k, Δ −23.8k) is a 59.6% cut, corrected to &ldquo;more
+            than half&rdquo; in both languages; <b>F-02</b> — the dist-to-flip
+            meta tile read +2.0% (GEX file&rsquo;s own Deribit-index reference)
+            while the cluster prose cites −1.9% vs live spot for the same flip;
+            the tile is now stated −1.9% vs spot with the +2.0%-off-index basis
+            disclosed in-tile, removing the sign-flip. Secondary: <b>F-03</b> —
+            the put-spread &ldquo;size 0.15R&rdquo; contradicted its own
+            &ldquo;sizing pending chain&rdquo; gate, relabelled
+            &ldquo;size (indicative)&rdquo;; <b>F-04</b> — bounce-scout R/R
+            lower bound corrected $1,200→$1,150 / 2.2→2.1:1. Codex explicitly
+            cleared: funding annualization (field × 1095 = +5.0% ann, no ×100
+            recurrence of the 05-15 F-02 landmine), the SM net subtraction, all
+            MA offset signs/magnitudes vs live spot, claims-vs-loaded-data
+            discipline (NTT / max-pain / strike-IV / BTC-NQ all framework-only;
+            JGB monthly &ldquo;do not lean&rdquo;; IV chain-median not a
+            tradable spread), EN/ZH numeric parity (zero drift), the
+            requireViewer gating pattern (exact match to 05-15), and the
+            Next.js build. Source audit record kept at{' '}
+            audits/2026-05-17-desk-note.md in the desk repository.
           </div>
 
           <div className="dn-nfa">
@@ -693,7 +706,7 @@ export default async function Desk20260517() {
         <footer className="dn-foot">
           <span>Hysteresis Research · 迟滞研究 · HK</span>
           <span>
-            v1 · 2026-05-17 01:30Z · sources: live_db.json · mtf_div_latest.html ·
+            v2 · 2026-05-17 01:30Z · sources: live_db.json · mtf_div_latest.html ·
             btc_gex.html · macro_dashboard.html ·
             cross_asset_correlation_summary.md · btcusdt_1m_*.parquet · FRED ·
             Yahoo · Hyperliquid xyz
