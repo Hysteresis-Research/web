@@ -12,8 +12,9 @@ const NOTES = [
   'three-cycles',
 ];
 
-// `/desk/*` is intentionally omitted from the sitemap. The route exists for
-// direct-URL access only and is marked `robots: noindex` on the page level.
+// `/desk/*` and `/lp/*` (+ `/deck`) are intentionally omitted from the
+// sitemap. They exist for direct-URL / allowlist access only and are marked
+// `robots: noindex` at the page/route level. Do NOT add them to PAGES.
 
 function pair(p: string) {
   return {

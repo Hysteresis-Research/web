@@ -13,10 +13,11 @@ export const dynamic = 'force-dynamic';
 export default async function SignInPage({
   searchParams,
 }: {
-  searchParams: Promise<{ from?: string }>;
+  searchParams: Promise<{ from?: string; denied?: string }>;
 }) {
   const sp = await searchParams;
   const from = safeRelativePath(sp.from, '/desk');
+  const denied = sp.denied === '1';
 
   return (
     <main>
@@ -27,6 +28,13 @@ export default async function SignInPage({
         </div>
         <h1>Sign in</h1>
         <p className="lede">Desk notes and the LP introduction are private.</p>
+        {denied && (
+          <p className="body-paragraph">
+            The signed-in account is not on the access list for that area.
+            <span className="em">—</span> Continue with a different Google
+            account, or contact us to request access.
+          </p>
+        )}
         <p className="body-paragraph">
           Continue with a Google account to view shared material. Access is
           logged. <span className="em">—</span> Not financial advice.

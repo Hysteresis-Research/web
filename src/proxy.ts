@@ -5,7 +5,10 @@ import type { NextRequest } from 'next/server';
 const SESSION_COOKIES = ['authjs.session-token', '__Secure-authjs.session-token'];
 
 // Gated prefixes. /signin itself is NEVER gated (would be unreachable).
-const GATED = ['/desk', '/zh/desk', '/deck'];
+// This is the optimistic cookie-presence pre-filter only — the allowlist
+// tier (/lp, /zh/lp, /deck) is enforced server-side in requireViewer
+// (gate.ts); middleware cannot decode the JWT, by design.
+const GATED = ['/desk', '/zh/desk', '/deck', '/lp', '/zh/lp'];
 
 function isGated(pathname: string): boolean {
   return GATED.some((p) => pathname === p || pathname.startsWith(`${p}/`));

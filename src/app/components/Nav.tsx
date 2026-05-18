@@ -22,7 +22,7 @@ export default function Nav() {
   // language toggle on these routes swaps language normally — but we still
   // omit hrefLang on the toggle and rely on per-page noindex to keep crawlers
   // out, since these routes are not in sitemap and not meant for discovery.
-  const INTERNAL_ROUTES_EN = ['/desk'];
+  const INTERNAL_ROUTES_EN = ['/desk', '/lp'];
   const isOnInternalRoute =
     INTERNAL_ROUTES_EN.some(
       (p) => pathname === p || pathname.startsWith(`${p}/`),

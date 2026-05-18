@@ -13,10 +13,11 @@ export const dynamic = 'force-dynamic';
 export default async function ZhSignInPage({
   searchParams,
 }: {
-  searchParams: Promise<{ from?: string }>;
+  searchParams: Promise<{ from?: string; denied?: string }>;
 }) {
   const sp = await searchParams;
   const from = safeRelativePath(sp.from, '/zh/desk');
+  const denied = sp.denied === '1';
 
   return (
     <main>
@@ -27,6 +28,12 @@ export default async function ZhSignInPage({
         </div>
         <h1>登录</h1>
         <p className="lede">桌面笔记与 LP 材料不公开。</p>
+        {denied && (
+          <p className="body-paragraph">
+            当前登录的账号不在该区域的访问名单内。
+            <span className="em">—</span> 换一个 Google 账号继续，或与我们联系申请权限。
+          </p>
+        )}
         <p className="body-paragraph">
           用 Google 账号继续，即可查看分享的内容。访问会被记录。
           <span className="em">—</span> 非投资建议。
