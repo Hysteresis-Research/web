@@ -269,14 +269,16 @@ h1 {
   opacity: 0.55;
 }
 
-.entry-list a {
+.entry-list a,
+.body-paragraph a {
   color: var(--ink);
   text-decoration: none;
   border-bottom: 1px solid var(--rule);
   transition: border-color 0.2s, color 0.2s;
 }
 
-.entry-list a:hover {
+.entry-list a:hover,
+.body-paragraph a:hover {
   color: var(--ink);
   border-bottom-color: var(--accent);
 }
