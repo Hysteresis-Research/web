@@ -7,7 +7,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 // in the server layout — layouts don't re-render on client navigation, so a
 // public→/desk <Link> would otherwise leak the gated path (codex MAJOR).
 // beforeSend runs client-side on every event, invariant under navigation.
-const GATED = /^\/(zh\/)?(desk|deck|signin)(\/|$)/;
+const GATED = /^\/(zh\/)?(desk|deck|lp|signin)(\/|$)/;
 
 function isGated(url: string | undefined): boolean {
   if (!url) return false;
