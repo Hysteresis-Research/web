@@ -40,12 +40,13 @@ export default async function LpFirmZh() {
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           <span className="signal">愿景 — 北极星目标</span>
-          <span className="em">——</span>让 $50&ndash;100B 的跨资产资本，
-          穿过一台单 PM 的工业级认知引擎运作；以此证明在叙事密集的市场里，
-          约束在纪律，不在人头。既定轨迹（公司的志向，非对投资者回报的
-          预测）：3 年，覆盖加密与宏观主标的的统一范式模型，流程基础设施
-          上线；5 年，多策略分支运作（范式·事件驱动·边界），首篇公开
-          thesis 论文；10 年，单 PM 工业化流程被验证、可迁移。
+          <span className="em">——</span>证明在叙事密集的市场里，约束在方法，
+          不在资本、也不在人头：一台单 PM 的工业级认知引擎，运行在被刻意
+          设上限的规模上<span className="em">——</span>容量纪律本身就是产品，
+          而非一个要长大摆脱的阶段。既定轨迹（公司的志向，非对投资者回报的
+          预测，也非规模目标）：3 年，覆盖加密与宏观主标的的统一范式模型，
+          流程基础设施上线；5 年，多策略分支运作（范式·事件驱动·边界），
+          首篇公开 thesis 论文；10 年，单 PM 工业化流程被验证、可迁移。
         </p>
 
         <div className="marginalia">§3</div>
@@ -64,7 +65,7 @@ export default async function LpFirmZh() {
           P&amp;L：流程质量独立于它产出的结果来评判。可证伪先于信心：无法被
           证伪的命题，我们不持有。交叉验证先于速度：结论不从单一事例外推。
           存活先于最优：回撤上限高于回报优化。容量纪律先于增长：宁可拒绝
-          资本，不稀释边际。
+          资本，不稀释纪律。
         </p>
 
         <div className="marginalia">§5</div>
@@ -73,13 +74,13 @@ export default async function LpFirmZh() {
           会交易的：跨资产范式转换交易（主仓）；以持仓结构为条件的事件驱动
           交易；加密与传统市场之间的数据口径错位；以形式化方法交易的派发／
           吸筹结构。不会的：流动性提供或做市（与容量冲突）；高频微结构套利
-          （不是我们的边际所在）；叙事或情绪驱动交易；无跨事件复现的「独特
+          （不是我们的方法）；叙事或情绪驱动交易；无跨事件复现的「独特
           机会」；框架无法解释的 P&amp;L<span className="em">——</span>不在
           范围内。
         </p>
 
         <div></div>
-        <p className="signature">交易是研究的副产品。</p>
+        <p className="signature">研究自循环，资本跟随。</p>
       </div>
     </main>
   );

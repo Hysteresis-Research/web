@@ -40,15 +40,17 @@ export default async function LpFirm() {
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
           <span className="signal">Vision — North Star</span>{' '}
-          <span className="em">—</span> to drive $50&ndash;100B of cross-asset
-          capital through a single-PM industrial epistemic engine, proving
-          that in narrative-rich markets discipline is the binding
-          constraint, not headcount. Stated trajectory, the firm&rsquo;s
-          ambition and not a projection of investor returns: 3y, a unified
-          regime model across crypto + macro majors with process
-          infrastructure live; 5y, a multi-sleeve operation (regime /
-          event-driven / boundary) and a first public thesis paper; 10y, the
-          single-PM industrial process proven and transferable.
+          <span className="em">—</span> to prove that in narrative-rich
+          markets the binding constraint is method, not capital and not
+          headcount: a single-PM industrial epistemic engine run at a
+          deliberately capped size, where capacity discipline is the product
+          rather than a phase to grow out of. Stated trajectory, the
+          firm&rsquo;s ambition and not a projection of investor returns or a
+          scale target: 3y, a unified regime model across crypto + macro
+          majors with process infrastructure live; 5y, a multi-sleeve
+          operation (regime / event-driven / boundary) and a first public
+          thesis paper; 10y, the single-PM industrial process proven and
+          transferable.
         </p>
 
         <div className="marginalia">§3</div>
@@ -73,7 +75,8 @@ export default async function LpFirm() {
           hold. Cross-validation before speed: conclusions are not
           extrapolated from single instances. Survival before optimality: the
           drawdown ceiling outranks return optimization. Capacity discipline
-          before growth: capital is refused rather than the edge diluted.
+          before growth: capital is refused rather than the discipline
+          diluted.
         </p>
 
         <div className="marginalia">§5</div>
@@ -84,14 +87,14 @@ export default async function LpFirm() {
           crypto&ndash;TradFi boundary data-hygiene dislocations; distribution
           / accumulation structure traded on a formalized method. What we
           will not: liquidity provision or market making (capacity conflict);
-          high-frequency microstructure arbitrage (not our edge); narrative-
-          or sentiment-driven trades; &ldquo;unique opportunities&rdquo;
-          without cross-event replication; P&amp;L the framework cannot
-          explain — out of scope.
+          high-frequency microstructure arbitrage (not our method);
+          narrative- or sentiment-driven trades; &ldquo;unique
+          opportunities&rdquo; without cross-event replication; P&amp;L the
+          framework cannot explain — out of scope.
         </p>
 
         <div></div>
-        <p className="signature">Trading is a byproduct of research.</p>
+        <p className="signature">Research compounds; capital follows.</p>
       </div>
     </main>
   );

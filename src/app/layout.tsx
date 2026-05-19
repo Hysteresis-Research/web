@@ -4,6 +4,7 @@ import GatedAnalytics from './components/GatedAnalytics';
 import BrandLink from './components/BrandLink';
 import Nav from './components/Nav';
 import ThemeToggle from './components/ThemeToggle';
+import FooterLegalLinks from './components/FooterLegalLinks';
 import { SITE_URL, SITE_NAME } from '../lib/seo';
 import './globals.css';
 
@@ -122,6 +123,7 @@ export default async function RootLayout({
 
         <footer className="rail">
           <span>© 2026 Hysteresis Research</span>
+          <FooterLegalLinks />
         </footer>
 
         <GatedAnalytics />

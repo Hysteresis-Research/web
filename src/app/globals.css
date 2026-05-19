@@ -45,6 +45,14 @@ body {
 header.rail { border-bottom: 0.5px solid var(--rule-soft); }
 footer.rail { border-top: 0.5px solid var(--rule-soft); margin-top: auto; }
 
+footer.rail a {
+  color: var(--ink-3);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+footer.rail a:hover { color: var(--ink); border-bottom-color: var(--rule); }
+
 .brand-mark {
   color: var(--ink);
   letter-spacing: 0.22em;

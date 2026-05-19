@@ -32,6 +32,13 @@ export default function NotesZh() {
         <div className="marginalia">§3</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-05-16">2026-05-16</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="MACRO" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/notes/power-constrained-compute">电力是算力的硬约束</Link>
+          </li>
+          <li>
             <time dateTime="2026-05-13">2026-05-13</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="MSTR" />

@@ -36,6 +36,13 @@ export default function Notes() {
         <div className="marginalia">§3</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-05-16">2026-05-16</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="MACRO" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/notes/power-constrained-compute">Power Is the Binding Constraint on Compute</Link>
+          </li>
+          <li>
             <time dateTime="2026-05-13">2026-05-13</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="MSTR" />

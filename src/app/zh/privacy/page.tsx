@@ -1,0 +1,152 @@
+import BHMark from '../../components/BHMark';
+import type { Metadata } from 'next';
+import { pageMetadata } from '../../../lib/seo';
+
+export const metadata: Metadata = pageMetadata({
+  title: '隐私政策 · Hysteresis Research · 迟滞研究',
+  description: 'Hysteresis Research 如何在 hysteresisresearch.com 及 LP 门户收集、使用、披露和处理个人数据。',
+  path: '/zh/privacy',
+  lang: 'zh-Hans',
+});
+
+const css = `
+.lgl{max-width:46rem;margin:0 auto;padding:4rem 1.5rem 6rem;color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.78}
+.lgl .lgl-mark{color:var(--ink);margin-bottom:1.75rem}
+.lgl .lgl-mark svg{display:block}
+.lgl .lgl-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .75rem}
+.lgl h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.15;letter-spacing:.01em;color:var(--ink);margin:0 0 .4rem}
+.lgl .lgl-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--ink-3);margin:0 0 2.75rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--rule)}
+.lgl h2{font-family:var(--serif);font-weight:500;font-size:1.25rem;line-height:1.4;color:var(--ink);margin:2.75rem 0 .85rem;padding-top:1.75rem;border-top:.5px solid var(--rule-soft)}
+.lgl h2:first-of-type{border-top:0;padding-top:0;margin-top:1.5rem}
+.lgl h3{font-family:var(--serif);font-weight:600;font-size:1rem;color:var(--ink-2);margin:1.6rem 0 .5rem}
+.lgl p{margin:0 0 1.1rem;color:var(--ink);text-wrap:pretty}
+.lgl ul{margin:0 0 1.1rem;padding-left:1.35rem;list-style:disc}
+.lgl li{margin:0 0 .5rem;color:var(--ink);text-wrap:pretty}
+@media (max-width:640px){.lgl{padding:2.5rem 1.25rem 4rem}}
+`;
+
+export default function PrivacyZh() {
+  return (
+    <main lang="zh-Hans">
+      <style>{css}</style>
+      <div className="lgl">
+        <div className="lgl-mark">
+          <BHMark width={140} height={84} strokeWidth={2.2} />
+        </div>
+        <div className="lgl-eyebrow">legal</div>
+        <h1>{`隐私政策`}</h1>
+        <p className="lgl-meta">{`最后修订日期：2026年5月`}</p>
+
+        <h2>{`一、简介`}</h2>
+        <p>{`本隐私政策（"本政策"）说明 Hysteresis Research（"本公司"、"我们"）如何在您使用 https://www.hysteresisresearch.com（"本网站"）及（如适用）LP门户过程中收集、使用、披露和处理个人数据。`}</p>
+        <p>{`本公司致力于保护本网站所有用户的隐私，并依据适用的数据保护法律处理个人数据。请仔细阅读本政策。访问或使用本网站，即表示您已阅读并理解本政策。如不同意本政策，请勿使用本网站。`}</p>
+
+        <h2>{`二、定义`}</h2>
+        <p>{`"个人数据"是指与已识别或可识别自然人相关的任何信息，包括可直接或间接识别某人身份的信息。`}</p>
+        <p>{`"LP门户"是指本网站中仅供 Hysteresis Research 特别指定的授权有限合伙人及其他人员访问的受限区域。`}</p>
+        <p>{`"服务"是指本网站、LP门户及 Hysteresis Research 提供的任何相关服务。`}</p>
+        <p>{`"数据主体"是指个人数据所涉及的自然人。`}</p>
+
+        <h2>{`三、我们收集的个人数据`}</h2>
+        <h3>{`3.1 您主动提供的信息`}</h3>
+        <p>{`我们可能收集您自愿提供的个人数据，包括：`}</p>
+        <ul>
+          <li>{`联系信息：当您联系我们或订阅研究出版物时提供的姓名、电子邮件地址及机构名称；`}</li>
+          <li>{`LP相关信息：对于授权有限合伙人，包括身份证明文件、税务居住地信息、分配所需的银行账户信息，以及基金管理和监管合规（包括KYC/AML目的）所需的其他信息；`}</li>
+          <li>{`通信记录：您向我们发送的消息、咨询或反馈。`}</li>
+        </ul>
+        <h3>{`3.2 自动收集的信息`}</h3>
+        <p>{`当您访问本网站时，我们可能自动收集某些技术和使用数据，包括：`}</p>
+        <ul>
+          <li>{`IP地址及大致地理位置；`}</li>
+          <li>{`浏览器类型、版本及操作系统；`}</li>
+          <li>{`访问的页面、在页面上停留的时间及引用URL；`}</li>
+          <li>{`设备标识符及其他技术信息。`}</li>
+        </ul>
+        <p>{`上述信息通过标准服务器日志以及（如适用）Cookie或类似跟踪技术收集。有关Cookie的更多信息，请参见第七节。`}</p>
+        <h3>{`3.3 来自第三方的信息`}</h3>
+        <p>{`我们可能从第三方获取您的个人数据，例如为基金管理或监管合规目的而委托的身份核实服务提供商、制裁筛查提供商或其他服务提供商。`}</p>
+
+        <h2>{`四、个人数据的使用`}</h2>
+        <p>{`我们将个人数据用于以下目的：`}</p>
+        <ul>
+          <li>{`运营和改善本网站及其内容；`}</li>
+          <li>{`回应您的咨询并与您沟通；`}</li>
+          <li>{`向订阅用户分发研究出版物和更新内容；`}</li>
+          <li>{`管理LP账户，包括通过LP门户处理资本催缴、分配事项及提供财务报表和基金文件；`}</li>
+          <li>{`依据适用法律要求进行身份核实及KYC/AML审查；`}</li>
+          <li>{`遵守适用司法管辖区的法律和监管义务；`}</li>
+          <li>{`执行本政策及服务条款；`}</li>
+          <li>{`检测并防止欺诈或其他违法行为；以及`}</li>
+          <li>{`在收集时向您披露或经您同意的其他目的。`}</li>
+        </ul>
+
+        <h2>{`五、处理的法律依据`}</h2>
+        <p>{`在适用的数据保护法律要求提供处理个人数据法律依据的情况下，我们依据以下依据：`}</p>
+        <ul>
+          <li>{`合同必要性：履行相关基金协议项下对LP投资者义务所需的处理；`}</li>
+          <li>{`法律义务：遵守适用法律法规（包括KYC/AML要求）所需的处理；`}</li>
+          <li>{`合法利益：为我们的合法商业利益而进行的处理，例如运营和改善本网站、开展研究及管理安全，前提是此类利益不凌驾于您的权利之上；以及`}</li>
+          <li>{`同意：在您已提供同意的情况下，例如接收研究出版物。`}</li>
+        </ul>
+
+        <h2>{`六、个人数据的披露`}</h2>
+        <p>{`我们可能向以下类别的接收方披露个人数据：`}</p>
+        <ul>
+          <li>{`服务提供商及专业顾问：包括法律、会计、审计、IT、托管、基金管理、身份核实及其他为协助我们运营而委托的服务提供商。这些方仅被允许在为我们提供服务所必要的范围内使用个人数据；`}</li>
+          <li>{`监管及政府机构：包括税务机关、金融监管机构、执法机构及法院，在适用法律要求或允许披露的情况下；`}</li>
+          <li>{`关联实体：与 Hysteresis Research 共同所有或受共同控制的实体，用于内部行政目的；以及`}</li>
+          <li>{`经您同意或按您指示的第三方。`}</li>
+        </ul>
+        <p>{`本公司不会将个人数据出售给第三方。`}</p>
+
+        <h2>{`七、Cookie及跟踪技术`}</h2>
+        <p>{`本网站可能使用Cookie或类似技术以提升用户体验并收集使用数据。Cookie是存储在您设备上的小型文本文件。我们可能使用：`}</p>
+        <ul>
+          <li>{`严格必要的Cookie：本网站正常运行所必需的Cookie，无法禁用；`}</li>
+          <li>{`分析类Cookie：用于了解用户如何与本网站互动（例如页面浏览量、流量来源），以汇总的匿名形式使用；以及`}</li>
+          <li>{`偏好类Cookie：用于记住您的设置和偏好。`}</li>
+        </ul>
+        <p>{`您可以配置浏览器拒绝Cookie或在发送Cookie时提示您。请注意，禁用某些Cookie可能影响本网站的功能。`}</p>
+
+        <h2>{`八、个人数据的跨境传输`}</h2>
+        <p>{`本公司在香港运营，可能委托位于其他司法管辖区的服务提供商。个人数据可能被传输至您所在国以外的国家并在当地存储。如发生此类传输，我们将采取适当措施，确保个人数据依据本政策及适用数据保护法律得到充分保护，并在必要时采用合同保障措施。`}</p>
+
+        <h2>{`九、数据保留`}</h2>
+        <p>{`我们仅在收集目的所必要的期限内或为遵守法律、监管、会计或报告义务所需的期限内保留个人数据。在确定适当保留期限时，我们会考虑个人数据的性质和敏感程度、未经授权使用或披露的潜在风险，以及适用法律要求。`}</p>
+        <p>{`对于LP投资者，本公司将在相关基金关系存续期间及其后适用法律（包括KYC/AML记录保存要求）规定的期限内保留个人数据。`}</p>
+        <p>{`个人数据不再需要时，本公司将予以安全删除、销毁或匿名化处理。`}</p>
+
+        <h2>{`十、数据安全`}</h2>
+        <p>{`本公司实施适当的技术和组织措施，以保护个人数据免遭未经授权的访问、披露、更改或销毁。这些措施包括访问控制、传输中数据加密，以及依据知情需要原则管理对个人数据访问的内部政策。`}</p>
+        <p>{`尽管本公司重视数据安全，但任何电子存储或互联网传输方式均无法保证绝对安全。本公司无法保证个人数据的绝对安全，您向我们提供信息的风险由您自行承担。若您认为您的个人数据可能已遭泄露，请立即通过 contact@hysteresisresearch.com 通知我们。`}</p>
+
+        <h2>{`十一、您的权利`}</h2>
+        <p>{`根据您所在司法管辖区的不同，您可能就您的个人数据享有以下权利：`}</p>
+        <ul>
+          <li>{`访问权：要求获得我们持有的关于您的个人数据副本；`}</li>
+          <li>{`更正权：要求我们更正不准确或不完整的个人数据；`}</li>
+          <li>{`删除权：在适用法律保留要求的前提下，要求删除您的个人数据；`}</li>
+          <li>{`限制处理权：在特定情形下要求我们限制对您个人数据的处理；`}</li>
+          <li>{`数据可携权：以结构化、机器可读的格式接收您向我们提供的个人数据；`}</li>
+          <li>{`反对权：反对我们基于合法利益对您个人数据的处理；以及`}</li>
+          <li>{`撤回同意权：在处理基于同意的情况下，随时撤回同意，而不影响撤回前基于同意的处理的合法性。`}</li>
+        </ul>
+        <p>{`如需行使上述任何权利，请联系我们的数据保护专员：legal@hysteresisresearch.com。我们将在合理时间内（且不超过三十（30）天，除非适用法律允许更长期限）回应您的请求。我们可能需要在处理您的请求前核实您的身份。`}</p>
+
+        <h2>{`十二、儿童隐私`}</h2>
+        <p>{`本网站不面向18岁以下儿童。本公司不会故意收集儿童的个人数据。若您认为本公司无意中收集了儿童的个人数据，请通过 legal@hysteresisresearch.com 联系我们，本公司将采取措施删除相关信息。`}</p>
+
+        <h2>{`十三、第三方网站`}</h2>
+        <p>{`本网站可能包含指向第三方网站的链接。本政策仅适用于本网站。本公司不对第三方网站的隐私做法负责，建议您在向第三方网站提供任何个人数据前查阅其隐私政策。`}</p>
+
+        <h2>{`十四、本政策的变更`}</h2>
+        <p>{`本公司可能不时更新本政策。本政策顶部的"最后修订日期"将反映任何变更。如变更重大，本公司将采取合理步骤通知受影响的用户。变更发布后您继续使用本网站，即视为接受更新后的政策。`}</p>
+
+        <h2>{`十五、联系我们`}</h2>
+        <p>{`如对本政策或我们的数据处理做法有任何疑问、关切或请求，请联系我们的数据保护专员：`}</p>
+        <p>{`电子邮件：legal@hysteresisresearch.com`}</p>
+      </div>
+    </main>
+  );
+}

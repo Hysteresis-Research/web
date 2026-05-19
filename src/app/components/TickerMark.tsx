@@ -1,6 +1,6 @@
 import { type ReactElement } from 'react';
 
-type Ticker = 'BTC' | 'MSTR';
+type Ticker = 'BTC' | 'MSTR' | 'MACRO';
 
 const GLYPHS: Record<Ticker, ReactElement> = {
   BTC: (
@@ -38,6 +38,26 @@ const GLYPHS: Record<Ticker, ReactElement> = {
         strokeLinejoin="round"
       >
         <path d="M4 19.5V4.5l8 9 8-9v15" />
+      </g>
+    </svg>
+  ),
+  MACRO: (
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1.8}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <circle cx="12" cy="12" r="9" />
+        <path d="M3 12h18" />
+        <ellipse cx="12" cy="12" rx="4" ry="9" />
       </g>
     </svg>
   ),
