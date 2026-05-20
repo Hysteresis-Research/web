@@ -1,0 +1,142 @@
+name: Daily BTC desk note
+
+# Daily run at 00:05 UTC (Beijing 08:05).
+# Replaces the /schedule remote-routine path (claude.ai service was unreachable
+# 6 days running across 6 attempts 2026-05-15..05-20). See docs/desk-note-cron-setup.md.
+on:
+  schedule:
+    - cron: '5 0 * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: desk-note-daily
+  cancel-in-progress: false
+
+jobs:
+  desk-note:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write   # commit + push the new desk note to main
+      actions: read
+
+    steps:
+      - name: Checkout repo (with token that can push back)
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Configure git identity (for the bot commit)
+        run: |
+          git config user.name "hysres-deskbot"
+          git config user.email "deskbot@hysteresisresearch.com"
+
+      - name: Set up Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Connect to Tailscale (for btc-fetcher SSH)
+        uses: tailscale/github-action@v3
+        with:
+          oauth-client-id: ${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TAILSCALE_OAUTH_SECRET }}
+          tags: tag:ci-deskbot
+          version: latest
+
+      - name: Set up SSH for btc-fetcher
+        env:
+          BTC_FETCHER_SSH_KEY: ${{ secrets.BTC_FETCHER_SSH_KEY }}
+        run: |
+          install -m 700 -d ~/.ssh
+          printf '%s\n' "$BTC_FETCHER_SSH_KEY" > ~/.ssh/btc-fetcher
+          chmod 600 ~/.ssh/btc-fetcher
+          cat >> ~/.ssh/config <<'EOF'
+          Host btc
+            HostName 100.78.238.8
+            User root
+            IdentityFile ~/.ssh/btc-fetcher
+            StrictHostKeyChecking accept-new
+            ServerAliveInterval 30
+          EOF
+          # Sanity ping (non-fatal)
+          ssh btc 'date -u' || echo "warning: btc-fetcher ssh probe failed; runbook will retry"
+
+      - name: Install web deps (requires @hysres/tokens via GitHub Packages)
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm ci
+
+      - name: Install Claude Code CLI + codex CLI
+        run: |
+          npm install -g @anthropic-ai/claude-code
+          npm install -g @openai/codex
+          claude --version
+          codex --version
+
+      - name: Run daily desk-note runbook
+        id: runbook
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          # Where the runbook expects to live. Override the absolute Mac
+          # path baked into the runbook text.
+          REPO_ROOT: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          # Read the runbook and prepend a CI shim that remaps the Mac
+          # absolute path to $GITHUB_WORKSPACE.
+          PROMPT=$(cat <<EOF
+          You are running headless in GitHub Actions, NOT on the user's Mac.
+
+          - Treat every reference to '/Users/moonman/Desktop/web' in the runbook
+            below as '${GITHUB_WORKSPACE}'. The cwd is already the repo root.
+          - The 'ssh btc' alias is configured (Tailscale + SSH key). Use it as
+            the runbook describes.
+          - For codex CLI invocations: pipe empty stdin to avoid the
+            interactive-stdin hang seen 2026-05-20 from subagent context:
+              echo "" | codex exec ...
+            Do NOT spawn the codex-reviewer subagent; invoke codex CLI directly
+            as a Bash step after authoring + before promoting v2, capturing
+            stdout into the audit record under audits/.
+          - Git: identity is already set ('hysres-deskbot'). 'git push origin main'
+            is authorized for this run; PUBLISH GATE from the runbook applies
+            (unresolved CRITICAL → do NOT push; commit locally and exit non-zero
+            so the workflow surfaces the gate failure).
+          - Never edit other contributors' WIP. Stage named files only.
+
+          Now execute the runbook below in full:
+
+          ---BEGIN RUNBOOK---
+          $(cat docs/desk-note-runbook.md)
+          ---END RUNBOOK---
+          EOF
+          )
+          # Permission mode: allow Bash + edits inside the repo.
+          # --max-turns is set generously; the runbook is ~15-30 min of work.
+          claude \
+            --print \
+            --permission-mode acceptEdits \
+            --max-turns 200 \
+            --allowedTools "Bash,Read,Edit,Write,Grep,Glob" \
+            "$PROMPT"
+
+      - name: Post-run build sanity
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npx next build
+
+      - name: HTTP verify the new gated route
+        run: |
+          DATE=$(date -u +%F)
+          for u in \
+            "https://www.hysteresisresearch.com/desk/${DATE}" \
+            "https://www.hysteresisresearch.com/zh/desk/${DATE}"; do
+            code=$(curl -s -o /dev/null -w "%{http_code}" --max-redirs 0 "$u")
+            loc=$(curl -s -o /dev/null -w "%{redirect_url}" --max-redirs 0 "$u")
+            echo "$u -> HTTP $code → $loc"
+            # Allow a few minutes for Vercel deploy to propagate; do not fail
+            # the job on a non-307 here — the runbook already verified pre-push.
+          done
