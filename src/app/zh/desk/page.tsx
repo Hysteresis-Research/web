@@ -53,12 +53,20 @@ export default async function DeskZh() {
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
+          中英双版镜像发布（英文版在 <Link href="/desk">/desk</Link>）。
           仅作内部参考<span className="em">——</span>非投资建议。
           每篇备忘自带 NFA 免责声明与审计追踪。
         </p>
 
         <div className="marginalia">§4</div>
         <ul className="entry-list">
+          <li>
+            <time dateTime="2026-05-21">2026-05-21</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-05-21">聪明钱卖了反弹</Link>
+          </li>
           <li>
             <time dateTime="2026-05-20">2026-05-20</time>
             <span className="entry-sep" aria-hidden="true">·</span>

@@ -56,13 +56,20 @@ export default async function Desk() {
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          Published in English only. <span className="em">Not financial
-          advice.</span> Each note carries its own NFA disclaimer and audit
-          trace.
+          Published in English with a parallel <Link href="/zh/desk">中文
+          镜像</Link>. <span className="em">Not financial advice.</span>{' '}
+          Each note carries its own NFA disclaimer and audit trace.
         </p>
 
         <div className="marginalia">§4</div>
         <ul className="entry-list">
+          <li>
+            <time dateTime="2026-05-21">2026-05-21</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-05-21">SM sold the reclaim</Link>
+          </li>
           <li>
             <time dateTime="2026-05-20">2026-05-20</time>
             <span className="entry-sep" aria-hidden="true">·</span>
