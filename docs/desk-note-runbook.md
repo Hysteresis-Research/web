@@ -66,10 +66,31 @@ The agent has **zero conversation context** — everything needed is here.
   Deribit-index reference. Keep the `dn-meta` tile sign **consistent with the
   cluster prose** (05-17 F-02: tile said +2.0% off idx while prose said −1.9%
   vs spot — must not sign-flip).
-- ZH = **native Chinese trader voice** per `docs/zh-style-guide.md`, not a
-  translation. Same numbers + same caveats as EN (zero drift).
+- ZH = **native Chinese trader voice** — generated forward in CN, NOT
+  translated from the EN draft. `docs/zh-style-guide.md` is the /zh/notes
+  long-form register and is **wrong-register here**. Same numbers + same
+  caveats as EN (zero drift), but sentence shape comes from CN.
 
 ## 4 · Author the pages
+
+**Authoring order (sequencing — separate from the visual order on the rendered
+page).** Visual order is fixed by the template (titleband → dn-head →
+dn-manifest → 8 dn-meta tiles → dn-prose §I–VI → dn-trade → dn-audit-trace →
+…). But author in this order:
+
+1. Write `dn-prose` §I–VI in **both languages first**, each generated forward
+   from the raw data — not from the other-language draft. EN reads EN context;
+   ZH reads CN context; neither reads the sibling paragraph mid-write. Numbers
+   + caveats stay identical across the two; sentence shape comes from each
+   language's own register.
+2. Fill `dn-meta` tiles, `dn-trade` book, `dn-manifest`, `dn-audit-trace` **last**.
+   These disclosure blocks are 报告体 by construction and will bleed register
+   backward into §I–VI if written first.
+
+Rationale: 2026-05-24 confirmed exemplar — in-chat CN analysis (no template
+scaffolding) read native; the 05-15..05-20 published desk pages with
+scaffolding-first authoring read 怪异. The fix is writing order, NOT vocab
+rules or EN-density caps.
 
 - `src/app/desk/YYYY-MM-DD/page.tsx` (EN) + `src/app/zh/desk/YYYY-MM-DD/page.tsx`
   (ZH), structure copied from the **current `2026-05-17` v2** pages: titleband,
