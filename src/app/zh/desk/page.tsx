@@ -45,17 +45,16 @@ export default async function DeskZh() {
 
         <div className="marginalia">§2</div>
         <p className="body-paragraph">
-          日级的台面记录<span className="em">——</span>regime、仓位结构、
-          dealer map、trade book、失效条件。每一节数字分别带时间戳；
-          一项主张超出它的数据所能支撑时，明确降级为 framework only。
+          每日的台面备忘<span className="em">——</span>regime、仓位结构、
+          dealer map、trade book、失效条件。每一节的数字各自带时间戳；
+          一项主张超出了数据能撑住的范围，就明确降级为 framework only。
           备忘失效很快，发布之后不再回改。先看上方的数据来源区，再读正文。
         </p>
 
         <div className="marginalia">§3</div>
         <p className="body-paragraph">
-          中英双版镜像发布（英文版在 <Link href="/desk">/desk</Link>）。
-          仅作内部参考<span className="em">——</span>非投资建议。
-          每篇备忘自带 NFA 免责声明与审计追踪。
+          中英双版同步发布（英文版在 <Link href="/desk">/desk</Link>）。
+          仅作内部参考、非投资建议。每篇备忘自带 NFA 免责声明与审计追踪。
         </p>
 
         <div className="marginalia">§4</div>
