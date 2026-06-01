@@ -70,6 +70,11 @@ The agent has **zero conversation context** — everything needed is here.
   translated from the EN draft. `docs/zh-style-guide.md` is the /zh/notes
   long-form register and is **wrong-register here**. Same numbers + same
   caveats as EN (zero drift), but sentence shape comes from CN.
+  After writing, pass the CN through the `humanizer-zh` skill as a **light**
+  lint — strip mechanical tells only (破折号 `——`, 否定式排比 `不是X而是Y` /
+  `不仅…而且`, emoji, over-bold, forced three-item 排比). It is **not** a voice
+  rewrite; native-first generation stays the primary fix; re-read for voice
+  after. (Full rationale in §4.)
 
 ## 4 · Author the pages
 
