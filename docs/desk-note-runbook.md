@@ -108,6 +108,15 @@ rules or EN-density caps.
   first) with `<TickerMark ticker="BTC" />`; title = short noun phrase (EN) /
   native CN (ZH), in the established spare register.
 - `metadata` + `robots` noindex/nofollow + anodyne description (copy 05-17).
+- **ZH AI-味 light lint** (after authoring, before §5; added 2026-06-01). CN is
+  generated native-first per §3/§4 — that stays the primary fix. Then run the CN
+  prose through the `humanizer-zh` skill (`~/.claude/skills/humanizer-zh`, from
+  Wikipedia *Signs of AI writing*) as a **light** final lint: strip ONLY mechanical
+  tells — 破折号 (`——`), 否定式排比 (`不是X而是Y` / `不仅…而且`), emoji, over-bolding,
+  forced three-item 排比. It is **not** a voice rewrite. A full scrub re-creates the
+  generate-then-scrub trap and flattens the trader register, so keep it light and
+  re-read for voice after. (2026-06-01: verified on the `compute_scarcity` deck —
+  native rewrite + light lint → 0 破折号 / 0 heavy antithesis, voice intact.)
 
 ## 5 · Codex hostile audit (quality gate — mandatory)
 
