@@ -60,6 +60,13 @@ export default async function DeskZh() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-02">2026-06-02</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-06-02">周期锚收盘破位 · 本子翻回净空 γ · scout 递延</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-01">2026-06-01</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
