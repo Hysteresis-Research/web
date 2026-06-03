@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-03">2026-06-03</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-03">Cycle ladder extended a tier, $70k wall cleared to new $65k magnet, funding cumulative off-cap gate cleared, mean-revert scout framework-only</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-02">2026-06-02</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
