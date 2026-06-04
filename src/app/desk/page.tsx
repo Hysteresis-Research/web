@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-04">2026-06-04</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-04">Cycle ladder a third tier deeper, multi-TF TD9 BUY simultaneous across 5 frames, funding fully off cap (~22.15h cumulative), mean-revert long scout 2 of 3 promotion legs cleared</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-03">2026-06-03</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
