@@ -27,6 +27,7 @@ The agent has **zero conversation context** — everything needed is here.
 | GEX/IV | `/opt/btc-data/output/btc_gex.html` | flip, walls, by-expiry, IV median |
 | cross-asset | `/opt/btc-data/cross_asset_correlation_summary.md` | 7d 1h corr + asset moves |
 | MA/RV | `/opt/btc-data/data/btcusdt_1m_*.parquet` | last ~3 yearly files |
+| 200W watch | `/opt/btc-data/output/weekly_200sma.json` | weekly-close 200W break/reclaim: `sma200 ratio ratio_pctile state last_event dist_pct` · pinnable `asof` |
 | venv | `/opt/btc-data/.venv/bin/python3` | has pandas |
 
 - HTML files: strip `<script>/<style>`, regex tags to text, `html.unescape`.
@@ -50,6 +51,14 @@ The agent has **zero conversation context** — everything needed is here.
   (`cb_cvd`), futCVD Δ (`fut_cvd`), bigNet sum, takerNet sum.
 - **Full MA matrix**: Daily AND Weekly, SMA AND EMA, n ∈ {20,50,100,150,200},
   offsets vs **live spot**. Disclose anchor (parquet last-bar ts + close).
+- **200W support read** (from the 200W-watch JSON above): the weekly 200-SMA is
+  BTC's cycle floor (weekly closes below it ~9% of history, clustered at deep
+  capitulations). When it sits within ~5% of spot, OR the weekly close has just
+  flipped it (`state` differs from the prior note, or small `last_event.weeks_since`),
+  surface the break/reclaim `state` + `ratio_pctile` as a macro-support line and pin
+  the JSON `asof`. Slow level (~$250/wk), so an hours-stale JSON is fine. If the JSON
+  is absent, write "200W watch unavailable" and fall back to the matrix value — never
+  fabricate the percentile or last-event.
 - 30D close-to-close RV: `logret.std()*sqrt(365)*100` on daily closes.
 
 ## 3 · Synthesis discipline (the desk voice)
