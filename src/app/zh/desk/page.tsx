@@ -60,6 +60,13 @@ export default async function DeskZh() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-05">2026-06-05</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-06-05">下腿停止延伸但底没起 · dealer 本子松 $13.4M 而现货守住低位 · 周期延续五印 CLOSED-VINDICATED · mean-revert 长 scout 在 $68k inflection 上 R/R 失 1.5:1 门 NON-ACTIONABLE</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-04">2026-06-04</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />

@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-05">2026-06-05</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-05">Down-leg paused without recovering, dealer book eased $13.4M but spot held the lows, cycle continuation CLOSED-VINDICATED on five prints, mean-revert long scout R/R fails the 1.5:1 gate at the $68k inflection (NON-ACTIONABLE)</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-04">2026-06-04</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
