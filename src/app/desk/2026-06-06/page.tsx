@@ -1441,7 +1441,7 @@ export default async function Desk20260606() {
             <span className="dn-at-head">
               Audit trace · v2 (post codex hostile audit)
             </span>
-            <b>v2 status:</b> v1 EN was authored by STAGE A on the
+            <b>Caveat (this v2):</b>{' '}STAGE B and STAGE D codex audits did <b>NOT</b> execute on this 04:34Z draft. The runner's resume detection saw <code>audits/2026-06-06-desk-note.md</code> preserved on main from commit <code>2d1fa17</code> (the morning-run audit artifact, anchored to 00:05Z) and skipped both stages. The findings list below describes the morning v1 anchored to <code>2026-06-05 16:05Z</code> (mislabeled as 00:05Z, the original DN-001 bug), NOT this v2 anchored to 04:34Z. STAGE A applied the BJ-local <code>t</code> rule independently (per runbook §2 LIVE-TAPE landmine, <code>2db202c</code>) and STAGE C passed the <code>tsc</code> gate; every number on this page reconciles with a fresh re-derivation from <code>/opt/btc-monitor/live_db.json</code> row <code>t == &ldquo;06-06 12:34&rdquo;</code> (BJ-local → UTC 04:34Z). The cross-model hostile-audit guarantee that normally gates these notes is <b>NOT in force</b> for this single publish. Run.sh resume logic is the underlying defect and will be patched separately.{' '}<b>v2 status (preserved from auto-trace):</b> v1 EN was authored by STAGE A on the
             btc-fetcher server at the 2026-06-06 04:34Z snapshot anchor
             (BJ 12:34 06-06 per live_db <code>t</code> BJ-local
             convention — runbook §2 LIVE-TAPE `t` LANDMINE applied

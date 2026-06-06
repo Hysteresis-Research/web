@@ -1220,7 +1220,7 @@ export default async function DeskZh20260606() {
             <span className="dn-at-head">
               审计跟踪 · v2（已过 codex 敌对式审计）
             </span>
-            <b>v2 状态：</b>v1 中文初稿与 EN v2 在 STAGE C 同时写出
+            <b>重要 caveat（仅限本篇）：</b>{' '}STAGE B / STAGE D 的 codex 敌对审计<b>未</b>在 04:34Z 这份稿上跑过。run.sh 的 resume 检测看到 main 上从提交 <code>2d1fa17</code>（早上那版 audit 产品）保留着 <code>audits/2026-06-06-desk-note.md</code>，于是跳过了两个 stage。下面的 findings 描述的是早上那篇错锥在 <code>2026-06-05 16:05Z</code>（误标为 00:05Z，原 DN-001 bug）的 v1，不是今天这篇锥在 04:34Z 的 v2。STAGE A 独立应用了 BJ-local <code>t</code> 规则（合 runbook §2 LIVE-TAPE landmine，<code>2db202c</code>），STAGE C 走了 <code>tsc</code> 门；本页所有数字都能从 <code>/opt/btc-monitor/live_db.json</code> 的 <code>t == &ldquo;06-06 12:34&rdquo;</code>（BJ 本地 = UTC 04:34Z）那一行重新推导出来。这篇拿不到平时那个跨模型 hostile-audit 门的保证。run.sh resume 逻辑是根源，下一步另打。{' '}<b>v2 状态（原自动追迹保留）：</b>v1 中文初稿与 EN v2 在 STAGE C 同时写出
             （非翻译、按 runbook §3 中文母语生成）、原子快照
             2026-06-06 04:34Z（BJ 12:34 06-06、按 live_db{' '}
             <code>t</code> BJ-local 约定 —— runbook §2 LIVE-TAPE
