@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-06">2026-06-06</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-06">5JUN settle resolved but 6JUN replaced it inside the same 24h, spot lost the 200W cycle floor on the print, longs bottom-fished into a −5.41% wick, four-concurrent TD9 BUY cluster with first negative 24h funding mean of the lineage, mean-revert long scout R/R reframed at $63,778 flip passes 1.5:1 gate at 2.00:1 (still NON-ACTIONABLE pending leg-3 print)</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-05">2026-06-05</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />

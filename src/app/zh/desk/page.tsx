@@ -60,6 +60,13 @@ export default async function DeskZh() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-06">2026-06-06</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-06-06">5JUN 结算解但 6JUN 在同一 24h 内替进 · 现货在印上丢 200W 周期地板 · 多头在 −5.41% 插针里抄底 · 四根并发 TD9 BUY 簇加谱系首根负 24h funding 均值 · mean-revert 长 scout R/R reframed 到 $63,778 flip 过 1.5:1 门到 2.00:1（仍 NON-ACTIONABLE 待 leg-3 印）</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-05">2026-06-05</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
