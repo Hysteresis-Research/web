@@ -64,35 +64,35 @@ export default async function DeskZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-07">6JUN 前段放大器干净结清且 7JUN 替换块挂正向（+3.87M、下腿首根正向前段块）· 插针没延伸（24h 低在 06-06 投降低上方）· dealer 本子修了下腿单篇最大一根 +$14.8M γ 动作 · 4h 回补形在 00:05Z 锚上印干净 · SM 本子在引擎反弹上反回空堆 · 200W 周期地板缝在现货上收窄到 −1.73% 但日收仍下方 · mean-revert 长 scout R/R 在重 framing $63,538 flip 上改善到 2.15:1（仍 NON-ACTIONABLE 待 leg-3 印）</Link>
+            <Link href="/zh/desk/2026-06-07">周期底上反弹</Link>
           </li>
           <li>
             <time dateTime="2026-06-06">2026-06-06</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-06">5JUN 结算解但 6JUN 在同一 24h 内替进 · 现货在印上丢 200W 周期地板 · 多头在 −5.41% 插针里抄底 · 四根并发 TD9 BUY 簇加谱系首根负 24h funding 均值 · mean-revert 长 scout R/R reframed 到 $63,778 flip 过 1.5:1 门到 2.00:1（仍 NON-ACTIONABLE 待 leg-3 印）</Link>
+            <Link href="/zh/desk/2026-06-06">底破在印上</Link>
           </li>
           <li>
             <time dateTime="2026-06-05">2026-06-05</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-05">下腿停止延伸但底没起 · dealer 本子松 $13.4M 而现货守住低位 · 周期延续五印 CLOSED-VINDICATED · mean-revert 长 scout 在 $68k inflection 上 R/R 失 1.5:1 门 NON-ACTIONABLE</Link>
+            <Link href="/zh/desk/2026-06-05">停了但底没起</Link>
           </li>
           <li>
             <time dateTime="2026-06-04">2026-06-04</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-04">阶梯再下一层（第三层）· 多 TF TD9 BUY 五框架同步印 · funding 全脱顶（累积 ~22.15h）· mean-revert 长 scout 3 腿过 2</Link>
+            <Link href="/zh/desk/2026-06-04">再下一层，TD9 五框架</Link>
           </li>
           <li>
             <time dateTime="2026-06-03">2026-06-03</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-03">阶梯再下一层 · $70k 墙穿干净到新 $65k 磁石 · funding 累积脱顶门 CLEARED · mean-revert scout 框架监控</Link>
+            <Link href="/zh/desk/2026-06-03">墙穿过去，新磁下移</Link>
           </li>
           <li>
             <time dateTime="2026-06-02">2026-06-02</time>

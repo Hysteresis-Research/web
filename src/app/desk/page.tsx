@@ -68,35 +68,35 @@ export default async function Desk() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-07">6JUN front amplifier settled clean and 7JUN replacement chunk landed positive (+3.87M, first positive front chunk of the down-leg), wick did not extend (24h low above 06-06 capitulation), dealer book repaired the largest single-note +$14.8M gamma move of the down-leg, 4h cover-shape printed clean at the 00:05Z anchor, SM book reverted to short-add against the engine bounce, 200W cycle floor gap narrowed to −1.73% on spot but daily closes still below, mean-revert long scout R/R improved to 2.15:1 on reframed $63,538 flip (still NON-ACTIONABLE pending leg-3 print)</Link>
+            <Link href="/desk/2026-06-07">Bounce off the cycle floor</Link>
           </li>
           <li>
             <time dateTime="2026-06-06">2026-06-06</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-06">5JUN settle resolved but 6JUN replaced it inside the same 24h, spot lost the 200W cycle floor on the print, longs bottom-fished into a −5.41% wick, four-concurrent TD9 BUY cluster with first negative 24h funding mean of the lineage, mean-revert long scout R/R reframed at $63,778 flip passes 1.5:1 gate at 2.00:1 (still NON-ACTIONABLE pending leg-3 print)</Link>
+            <Link href="/desk/2026-06-06">Through the floor on the print</Link>
           </li>
           <li>
             <time dateTime="2026-06-05">2026-06-05</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-05">Down-leg paused without recovering, dealer book eased $13.4M but spot held the lows, cycle continuation CLOSED-VINDICATED on five prints, mean-revert long scout R/R fails the 1.5:1 gate at the $68k inflection (NON-ACTIONABLE)</Link>
+            <Link href="/desk/2026-06-05">Pause without recovery</Link>
           </li>
           <li>
             <time dateTime="2026-06-04">2026-06-04</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-04">Cycle ladder a third tier deeper, multi-TF TD9 BUY simultaneous across 5 frames, funding fully off cap (~22.15h cumulative), mean-revert long scout 2 of 3 promotion legs cleared</Link>
+            <Link href="/desk/2026-06-04">Third tier deeper, TD9 across five frames</Link>
           </li>
           <li>
             <time dateTime="2026-06-03">2026-06-03</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-03">Cycle ladder extended a tier, $70k wall cleared to new $65k magnet, funding cumulative off-cap gate cleared, mean-revert scout framework-only</Link>
+            <Link href="/desk/2026-06-03">Wall cleared, new magnet below</Link>
           </li>
           <li>
             <time dateTime="2026-06-02">2026-06-02</time>
