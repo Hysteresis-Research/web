@@ -148,6 +148,30 @@ rules or EN-density caps.
 - Update EN+ZH `src/app/desk/page.tsx` `entry-list`: prepend a `<li>` (newest
   first) with `<TickerMark ticker="BTC" />`; title = short noun phrase (EN) /
   native CN (ZH), in the established spare register.
+- **TITLE LENGTH HARD CAP (2026-06-07).** Index `<li>` title MUST be **≤ 80
+  characters** (target 25-55). Single noun phrase, NOT a clause chain. **NO
+  comma chains, NO dollar figures, NO R/R numbers, NO % values, NO parenthetical
+  qualifiers, NO "but" / "and" / "with" mid-title.** The title is the spine of
+  the note in 3-7 words — the body of the note carries the details. The commit
+  subject (per Stage C `/tmp/desk-note-subject-$TODAY`) is allowed to be the
+  full one-line thesis; the **index title is a separately-chosen short
+  noun phrase**.
+- **TITLE REGISTER ANCHOR.** The "established spare register" means the
+  May-era exemplars below, NOT recent bloated examples. Stage C must read
+  these and *NOT* model on the most-recent index `<li>` (titles inflated
+  monotonically from 2026-06-01 onward by template-drift):
+  - `Pinned at the cluster` (21 chars)
+  - `Long-add at the cluster` (23 chars)
+  - `Between two walls` (17)
+  - `Kill condition one` (18)
+  - `The short re-stacked` (20)
+  - `Smart money short` (17)
+  - `Coiled on the anchor` (20)
+  - `Macro joins` (11)
+  - `Gate fired clean, target tagged to the dollar` (45)
+  - `Book flipped to net-long-gamma, anchor held on close, scout deferred` (68) — at the upper limit
+  When the day's thesis legitimately has two beats (e.g. structure + dealer),
+  the upper-limit pattern above is acceptable. Otherwise prefer 25-45 chars.
 - `metadata` + `robots` noindex/nofollow + anodyne description (copy 05-17).
 - **ZH AI-味 light lint** (after authoring, before §5; added 2026-06-01). CN is
   generated native-first per §3/§4 — that stays the primary fix. Then run the CN
