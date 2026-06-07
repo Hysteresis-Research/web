@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-07">2026-06-07</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-07">6JUN front amplifier settled clean and 7JUN replacement chunk landed positive (+3.87M, first positive front chunk of the down-leg), wick did not extend (24h low above 06-06 capitulation), dealer book repaired the largest single-note +$14.8M gamma move of the down-leg, 4h cover-shape printed clean at the 00:05Z anchor, SM book reverted to short-add against the engine bounce, 200W cycle floor gap narrowed to −1.73% on spot but daily closes still below, mean-revert long scout R/R improved to 2.15:1 on reframed $63,538 flip (still NON-ACTIONABLE pending leg-3 print)</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-06">2026-06-06</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />

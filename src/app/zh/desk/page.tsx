@@ -60,6 +60,13 @@ export default async function DeskZh() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-07">2026-06-07</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-06-07">6JUN 前段放大器干净结清且 7JUN 替换块挂正向（+3.87M、下腿首根正向前段块）· 插针没延伸（24h 低在 06-06 投降低上方）· dealer 本子修了下腿单篇最大一根 +$14.8M γ 动作 · 4h 回补形在 00:05Z 锚上印干净 · SM 本子在引擎反弹上反回空堆 · 200W 周期地板缝在现货上收窄到 −1.73% 但日收仍下方 · mean-revert 长 scout R/R 在重 framing $63,538 flip 上改善到 2.15:1（仍 NON-ACTIONABLE 待 leg-3 印）</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-06">2026-06-06</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
