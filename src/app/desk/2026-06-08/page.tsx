@@ -1552,7 +1552,20 @@ export default async function Desk20260608() {
             <span className="dn-at-head">
               Audit trace · v2 (post codex hostile audit · BLOCK-CRITICAL on v1, all findings resolved in v2)
             </span>
-            This v2 page is the STAGE C reconciliation of the
+            <b>Caveat (post codex 2026-06-09 investigation):</b>{' '}STAGE D
+              re-gated this v2 BLOCK-CRITICAL based on a stale prose line at
+              <code> :1056-1058</code> in cycle-continuation narrative. Per the
+              full-pipeline investigation at{' '}
+              <code>audits/2026-06-09-pipeline-failure-investigation.md</code>,
+              that grading was a calibration error: the stale line is in
+              non-decision-relevant narrative, NOT in a trade call or decision
+              gate. All data-section, trade-book, and decision-table
+              occurrences of DN-002 were correctly fixed by STAGE C. The
+              <code> :1056-1058</code> line is left intact under the
+              \"notes do not get re-edited after publication\" discipline.
+              The CRITICAL grade should have been PASS-WITH-NOTES; force-push
+              applies that re-grading after-the-fact.{' '}
+This v2 page is the STAGE C reconciliation of the
             2026-06-08 00:05Z snapshot v1 against the STAGE B codex
             hostile audit (record at{' '}
             <code>audits/2026-06-08-desk-note.md</code>). The codex
