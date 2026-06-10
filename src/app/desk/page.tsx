@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-10">2026-06-10</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-10">200W re-broken on the print, put wall re-loaded to −47.86M</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-09">2026-06-09</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
