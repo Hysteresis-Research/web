@@ -1,4 +1,3 @@
-import BHMark from '../components/BHMark';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../lib/seo';
 
@@ -9,30 +8,14 @@ export const metadata: Metadata = pageMetadata({
   lang: 'en',
 });
 
-const css = `
-.lgl{max-width:46rem;margin:0 auto;padding:4rem 1.5rem 6rem;color:var(--ink);font-family:var(--serif);font-size:1.0625rem;line-height:1.68}
-.lgl .lgl-mark{color:var(--ink);margin-bottom:1.75rem}
-.lgl .lgl-mark svg{display:block}
-.lgl .lgl-eyebrow{font-family:var(--mono);font-size:.65rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 .75rem}
-.lgl h1{font-family:var(--serif);font-weight:500;font-size:clamp(1.9rem,4vw,2.6rem);line-height:1.1;letter-spacing:-.01em;color:var(--ink);margin:0 0 .4rem}
-.lgl .lgl-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;color:var(--ink-3);margin:0 0 2.75rem;padding-bottom:1.5rem;border-bottom:.5px solid var(--rule)}
-.lgl h2{font-family:var(--serif);font-weight:500;font-size:1.25rem;line-height:1.3;color:var(--ink);margin:2.75rem 0 .85rem;padding-top:1.75rem;border-top:.5px solid var(--rule-soft)}
-.lgl h2:first-of-type{border-top:0;padding-top:0;margin-top:1.5rem}
-.lgl h3{font-family:var(--serif);font-weight:600;font-size:1rem;color:var(--ink-2);margin:1.6rem 0 .5rem}
-.lgl p{margin:0 0 1.1rem;color:var(--ink);text-wrap:pretty}
-.lgl ul{margin:0 0 1.1rem;padding-left:1.35rem;list-style:disc}
-.lgl li{margin:0 0 .5rem;color:var(--ink);text-wrap:pretty}
-@media (max-width:640px){.lgl{padding:2.5rem 1.25rem 4rem}}
-`;
+// Visual styling for the .lgl* legal vocabulary lives in globals.css (the
+// Signal Issue design system), so it stays consistent across Terms / Privacy
+// and both editions. This page carries only the markup.
 
 export default function Terms() {
   return (
     <main>
-      <style>{css}</style>
       <div className="lgl">
-        <div className="lgl-mark">
-          <BHMark width={140} height={84} strokeWidth={2.2} />
-        </div>
         <div className="lgl-eyebrow">legal</div>
         <h1>{`TERMS OF SERVICE`}</h1>
         <p className="lgl-meta">{`Last Modified: May 2026`}</p>

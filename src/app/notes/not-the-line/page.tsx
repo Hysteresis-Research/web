@@ -1,7 +1,8 @@
-import BHMark from '../../components/BHMark';
 import WalkforwardChart from '../../components/charts/WalkforwardChart';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../../lib/seo';
+import Reveal from '../../components/Reveal';
+import SectionHead from '../../components/SectionHead';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Not the line, the touch · Notes · Hysteresis Research',
@@ -14,70 +15,87 @@ export const metadata: Metadata = pageMetadata({
 export default function NotTheLine() {
   return (
     <main>
-      <div className="col">
-        <div className="marginalia">2026<br/>05-06</div>
-        <div className="hero-mark">
-          <BHMark width={180} height={108} strokeWidth={2.2} />
+      <article className="article wrap" id="not-the-line">
+        <SectionHead
+          numeral="V"
+          title="Not the line, the touch"
+          folio="Notes · BTC · 2026-05-06"
+        />
+
+        <Reveal as="p" className="standfirst">
+          <span className="cap">A long-EMA signal</span> &ldquo;felt
+          useful&rdquo; across timeframes. Six rounds of walk-forward; one form
+          survived.
+        </Reveal>
+
+        <div className="essay">
+          <Reveal as="figure" className="fig-plate">
+            <figcaption>
+              <span className="fig-label">
+                <b>Fig.</b> — Sharpe by round
+              </span>
+              <p className="fig-cap">
+                Sharpe by round, in-sample vs walk-forward / holdout. Surviving
+                forms highlighted.
+              </p>
+            </figcaption>
+            <WalkforwardChart />
+          </Reveal>
+
+          <Reveal as="p" className="lede">
+            <span className="leadin">The signal</span> was the 400-period
+            exponential moving average — a line this desk has looked at for
+            years. Round one tested dual-EMA crossovers, four timeframes,
+            forty-nine parameter combinations. The in-sample winner reached a
+            Sharpe of 1.10. Out of sample, with monthly re-selection, it fell to
+            0.16.
+          </Reveal>
+
+          <Reveal as="aside" className="marginnote">
+            <span className="mn-rule" />
+            Stop measuring state. Measure events. A rule that wins in one regime
+            is the wrong rule in the next.
+          </Reveal>
+
+          <Reveal as="p">
+            The state of being above or below a line is regime-dependent. A rule
+            that wins in one regime is the wrong rule in the next, and a
+            walk-forward selector thrashes between them. Three rounds of variants
+            — single-line versions, daily timeframe, four mechanism splits —
+            produced the same shape.
+          </Reveal>
+
+          <Reveal as="p">
+            Round four reframed the question. Stop measuring state. Measure
+            events. A specific fifteen-minute pattern — price tags the EMA, then
+            closes back through within the same bar — produced a walk-forward
+            Sharpe of 1.87. The true holdout produced thirteen trades at Sharpe
+            2.25
+            <sup className="fn">
+              <a href="#fn1" id="ref1">
+                1
+              </a>
+            </sup>{' '}
+            — too few to validate, kept as a provisional observation, not a
+            result. Every filter added on top of it hurt.
+          </Reveal>
+
+          <Reveal as="p" className="close">
+            The line is not the signal. What happens at the line is.
+          </Reveal>
+
+          <Reveal as="ol" className="footnotes">
+            <li id="fn1">
+              <span className="fnum">1</span>Thirteen trades is too few to
+              validate. We keep the holdout result as a provisional observation,
+              not a result; every filter added on top of it hurt.{' '}
+              <a href="#ref1" aria-label="Back to text">
+                ↩
+              </a>
+            </li>
+          </Reveal>
         </div>
-
-        <div className="marginalia">notes</div>
-        <h1>Not the line, the touch</h1>
-
-        <div></div>
-        <p className="lede">
-          A long-EMA signal &ldquo;felt useful&rdquo; across timeframes. Six
-          rounds of walk-forward; one form survived.
-        </p>
-
-        <div></div>
-        <figure className="note-figure">
-          <WalkforwardChart />
-          <figcaption>
-            Sharpe by round, in-sample vs walk-forward / holdout. Surviving
-            forms highlighted.
-          </figcaption>
-        </figure>
-
-        <div className="marginalia">§2</div>
-        <p className="body-paragraph">
-          The signal was the 400-period exponential moving average{' '}
-          <span className="em">—</span> a line this desk has looked at for
-          years. Round one tested dual-EMA crossovers, four timeframes,
-          forty-nine parameter combinations. The in-sample winner reached a
-          Sharpe of 1.10. Out of sample, with monthly re-selection, it fell to
-          0.16.
-        </p>
-
-        <div className="marginalia">§3</div>
-        <p className="body-paragraph">
-          The state of being above or below a line is regime-dependent. A rule
-          that wins in one regime is the wrong rule in the next, and a
-          walk-forward selector thrashes between them. Three rounds of
-          variants <span className="em">—</span> single-line versions, daily
-          timeframe, four mechanism splits <span className="em">—</span>{' '}
-          produced the same shape.
-        </p>
-
-        <div className="marginalia">§4</div>
-        <p className="body-paragraph">
-          Round four reframed the question.{' '}
-          <span className="signal">
-            Stop measuring state. Measure events.
-          </span>{' '}
-          A specific fifteen-minute pattern <span className="em">—</span>{' '}
-          price tags the EMA, then closes back through within the same bar{' '}
-          <span className="em">—</span> produced a walk-forward Sharpe of
-          1.87. The true holdout produced thirteen trades at Sharpe 2.25{' '}
-          <span className="em">—</span> too few to validate, kept as a
-          provisional observation, not a result. Every filter added on top of
-          it hurt.
-        </p>
-
-        <div></div>
-        <p className="signature">
-          The line is not the signal. What happens at the line is.
-        </p>
-      </div>
+      </article>
     </main>
   );
 }

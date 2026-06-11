@@ -45,14 +45,14 @@ export default function FOMCEntryChart() {
             x2={W - M.right}
             y1={yScale(v)}
             y2={yScale(v)}
-            stroke="var(--rule-soft)"
+            stroke="var(--gridline)"
             strokeWidth={0.5}
           />
           <text
             x={M.left - 6}
             y={yScale(v) + 3}
             fill="var(--ink-3)"
-            fontFamily="var(--mono)"
+            fontFamily="var(--grot)"
             fontSize={9}
             textAnchor="end"
           >
@@ -65,7 +65,7 @@ export default function FOMCEntryChart() {
         x2={W - M.right}
         y1={yZero}
         y2={yZero}
-        stroke="var(--rule)"
+        stroke="var(--hair)"
         strokeWidth={1}
       />
       {DATA.map((d, i) => {
@@ -73,7 +73,7 @@ export default function FOMCEntryChart() {
         const top = d.value >= 0 ? yScale(d.value) : yZero;
         const h = Math.abs(yScale(d.value) - yZero);
         const fill = d.highlight
-          ? 'var(--accent)'
+          ? 'var(--signal)'
           : d.muted
             ? 'var(--ink-3)'
             : 'var(--ink-2)';
@@ -91,7 +91,7 @@ export default function FOMCEntryChart() {
               x={cx}
               y={d.value >= 0 ? top - 6 : top + h + 12}
               fill="var(--ink)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={10}
               textAnchor="middle"
             >
@@ -101,7 +101,7 @@ export default function FOMCEntryChart() {
               x={cx}
               y={H - M.bottom + 16}
               fill="var(--ink-2)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={9.5}
               textAnchor="middle"
             >
@@ -111,7 +111,7 @@ export default function FOMCEntryChart() {
               x={cx}
               y={H - M.bottom + 28}
               fill="var(--ink-3)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={8}
               textAnchor="middle"
               opacity={0.7}
@@ -126,7 +126,7 @@ export default function FOMCEntryChart() {
         y={M.top + innerH / 2}
         transform={`rotate(-90 14 ${M.top + innerH / 2})`}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >

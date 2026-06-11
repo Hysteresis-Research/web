@@ -69,14 +69,14 @@ export default function CycleDrawdownChart() {
             x2={W - M.right}
             y1={yScale(v)}
             y2={yScale(v)}
-            stroke="var(--rule-soft)"
+            stroke="var(--gridline)"
             strokeWidth={0.5}
           />
           <text
             x={M.left - 6}
             y={yScale(v) + 3}
             fill="var(--ink-3)"
-            fontFamily="var(--mono)"
+            fontFamily="var(--grot)"
             fontSize={9}
             textAnchor="end"
           >
@@ -90,7 +90,7 @@ export default function CycleDrawdownChart() {
           x={xScale(d)}
           y={H - M.bottom + 16}
           fill="var(--ink-3)"
-          fontFamily="var(--mono)"
+          fontFamily="var(--grot)"
           fontSize={9.5}
           textAnchor="middle"
         >
@@ -105,10 +105,10 @@ export default function CycleDrawdownChart() {
         strokeWidth={1.4}
         strokeDasharray="4 3"
       />
-      <path d={toPath(Y_CURR)} fill="none" stroke="var(--accent)" strokeWidth={2.2} />
+      <path d={toPath(Y_CURR)} fill="none" stroke="var(--signal)" strokeWidth={2.2} />
       <g transform={`translate(${W - M.right + 12} ${M.top + 8})`}>
         <line x1={0} x2={18} y1={6} y2={6} stroke="var(--ink-3)" strokeWidth={1.4} />
-        <text x={24} y={9} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={8.5}>
+        <text x={24} y={9} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={8.5}>
           2017 (−83%)
         </text>
         <line
@@ -120,11 +120,11 @@ export default function CycleDrawdownChart() {
           strokeWidth={1.4}
           strokeDasharray="4 3"
         />
-        <text x={24} y={25} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={8.5}>
+        <text x={24} y={25} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={8.5}>
           2021 (−77%)
         </text>
-        <line x1={0} x2={18} y1={38} y2={38} stroke="var(--accent)" strokeWidth={2.2} />
-        <text x={24} y={41} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={8.5}>
+        <line x1={0} x2={18} y1={38} y2={38} stroke="var(--signal)" strokeWidth={2.2} />
+        <text x={24} y={41} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={8.5}>
           Current (−35%)
         </text>
       </g>
@@ -133,7 +133,7 @@ export default function CycleDrawdownChart() {
         y={M.top + innerH / 2}
         transform={`rotate(-90 14 ${M.top + innerH / 2})`}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >
@@ -143,7 +143,7 @@ export default function CycleDrawdownChart() {
         x={M.left + innerW / 2}
         y={H - 6}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >

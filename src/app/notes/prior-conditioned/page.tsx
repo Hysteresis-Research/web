@@ -1,7 +1,8 @@
-import BHMark from '../../components/BHMark';
 import FOMCEntryChart from '../../components/charts/FOMCEntryChart';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../../lib/seo';
+import Reveal from '../../components/Reveal';
+import SectionHead from '../../components/SectionHead';
 
 export const metadata: Metadata = pageMetadata({
   title: 'The prior, conditioned · Notes · Hysteresis Research',
@@ -14,61 +15,65 @@ export const metadata: Metadata = pageMetadata({
 export default function PriorConditioned() {
   return (
     <main>
-      <div className="col">
-        <div className="marginalia">2026<br/>05-02</div>
-        <div className="hero-mark">
-          <BHMark width={180} height={108} strokeWidth={2.2} />
+      <article className="article wrap" id="prior-conditioned">
+        <SectionHead
+          numeral="V"
+          title="The prior, conditioned"
+          folio="Notes · BTC · 2026-05-02"
+        />
+
+        <Reveal as="p" className="standfirst">
+          <span className="cap">The historical prior</span> pointed short. The
+          actual move was a +3.7% squeeze.
+        </Reveal>
+
+        <div className="essay">
+          <Reveal as="figure" className="fig-plate">
+            <figcaption>
+              <span className="fig-label">
+                <b>Fig.</b> — Returns by entry regime
+              </span>
+              <p className="fig-cap">
+                5-day post-FOMC returns by entry regime. The pooled mean
+                averages two opposite distributions.
+              </p>
+            </figcaption>
+            <FOMCEntryChart />
+          </Reveal>
+
+          <Reveal as="p" className="lede">
+            <span className="leadin">Between April 2025</span> and April 2026,
+            BTC moved through eight FOMC meetings. Pooled, the five-day
+            post-meeting return averaged −3.5%. Mechanically, the rule said to
+            short the next one. 2026-04-29 was the next one.
+          </Reveal>
+
+          <Reveal as="aside" className="marginnote">
+            <span className="mn-rule" />
+            Four of the eight were entered with crowded longs. Those four
+            dominated the pooled mean. Sliced by entry, the drift sign flips.
+          </Reveal>
+
+          <Reveal as="p">
+            Four of those eight events had been entered with crowded longs —
+            funding paying premium, open interest extended, price near the range
+            high. Those four dominated the pooled mean. Sliced by entry
+            positioning, the drift sign flips.
+          </Reveal>
+
+          <Reveal as="p">
+            2026-04-29 entered with the opposite profile. Funding wobbled near
+            zero. Top traders sat position-tilted short. Spot was mid-range. The
+            relevant conditional prior was a squeeze, not a flush. BTC peaked at
+            +3.70% on hour 44 after the print.
+          </Reveal>
+
+          <Reveal as="p" className="close">
+            A mean over a mixed sample is not a probability. It is a question
+            about which sample applies.
+          </Reveal>
         </div>
-
-        <div className="marginalia">notes</div>
-        <h1>The prior, conditioned</h1>
-
-        <div></div>
-        <p className="lede">
-          The historical prior pointed short. The actual move was a +3.7%
-          squeeze.
-        </p>
-
-        <div></div>
-        <figure className="note-figure">
-          <FOMCEntryChart />
-          <figcaption>
-            5-day post-FOMC returns by entry regime. The pooled mean averages
-            two opposite distributions.
-          </figcaption>
-        </figure>
-
-        <div className="marginalia">§2</div>
-        <p className="body-paragraph">
-          Between April 2025 and April 2026, BTC moved through eight FOMC
-          meetings. Pooled, the five-day post-meeting return averaged −3.5%.
-          Mechanically, the rule said to short the next one. 2026-04-29 was the
-          next one.
-        </p>
-
-        <div className="marginalia">§3</div>
-        <p className="body-paragraph">
-          Four of those eight events had been entered with{' '}
-          <span className="signal">crowded longs</span>{' '}
-          <span className="em">—</span> funding paying premium, open interest
-          extended, price near the range high. Those four dominated the pooled
-          mean. Sliced by entry positioning, the drift sign flips.
-        </p>
-
-        <div className="marginalia">§4</div>
-        <p className="body-paragraph">
-          2026-04-29 entered with the opposite profile. Funding wobbled near
-          zero. Top traders sat position-tilted short. Spot was mid-range. The
-          relevant conditional prior was a squeeze, not a flush. BTC peaked at
-          +3.70% on hour 44 after the print.
-        </p>
-
-        <div></div>
-        <p className="signature">
-          A mean over a mixed sample is not a probability. It is a question
-          about which sample applies.
-        </p>
-      </div>
+      </article>
     </main>
   );
 }

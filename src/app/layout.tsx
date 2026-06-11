@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { headers } from 'next/headers';
 import GatedAnalytics from './components/GatedAnalytics';
-import BrandLink from './components/BrandLink';
-import Nav from './components/Nav';
-import ThemeToggle from './components/ThemeToggle';
-import FooterLegalLinks from './components/FooterLegalLinks';
+import Masthead from './components/Masthead';
+import ScrollProgress from './components/ScrollProgress';
+import CoverArm from './components/CoverArm';
+import Colophon from './components/Colophon';
 import { SITE_URL, SITE_NAME } from '../lib/seo';
 import './globals.css';
 
@@ -59,8 +59,12 @@ export const metadata: Metadata = {
   },
 };
 
-// Read mode from localStorage before hydration to avoid flash.
-const MODE_INIT_SCRIPT = `(function(){try{var m=localStorage.getItem('hr-mode');if(m==='light'){var r=document.documentElement;r.classList.remove('va-dark');r.classList.add('va-light');}}catch(e){}})();`;
+// Resolve the edition (theme) before first paint to avoid a flash. Read the
+// stored choice ('hr-theme'); when unset, default to the OS preference. The
+// server renders theme-light, so we only need to swap when the resolved theme
+// is dark. Also tag .js so the cover's pre-armed (offset) state never shows
+// without JS to release it.
+const THEME_INIT_SCRIPT = `(function(){try{var r=document.documentElement;r.classList.add('js');var t=localStorage.getItem('hr-theme');if(t!=='light'&&t!=='dark'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){r.classList.remove('theme-light');r.classList.add('theme-dark');}}catch(e){}})();`;
 
 const orgSchema = {
   '@context': 'https://schema.org',
@@ -96,10 +100,12 @@ export default async function RootLayout({
 }) {
   const h = await headers();
   const pathname = h.get('x-pathname') || '/';
-  const lang = pathname.startsWith('/zh') ? 'zh-Hans' : 'en';
+  const isZh = pathname.startsWith('/zh');
+  const lang = isZh ? 'zh-Hans' : 'en';
+  const locale: 'en' | 'zh' = isZh ? 'zh' : 'en';
 
   return (
-    <html lang={lang} className="va-dark" suppressHydrationWarning>
+    <html lang={lang} className="theme-light" suppressHydrationWarning>
       <body>
         <script
           type="application/ld+json"
@@ -109,22 +115,19 @@ export default async function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }}
         />
-        <script dangerouslySetInnerHTML={{ __html: MODE_INIT_SCRIPT }} />
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
 
-        <header className="rail rail-header">
-          <BrandLink />
-          <div className="header-right">
-            <Nav />
-            <ThemeToggle />
-          </div>
-        </header>
+        <a className="skip" href="#toc">
+          {locale === 'zh' ? '跳到正文' : 'Skip to contents'}
+        </a>
+        <ScrollProgress />
+        <CoverArm />
+
+        <Masthead locale={locale} />
 
         {children}
 
-        <footer className="rail">
-          <span>© 2026 Hysteresis Research</span>
-          <FooterLegalLinks />
-        </footer>
+        <Colophon locale={locale} />
 
         <GatedAnalytics />
       </body>
