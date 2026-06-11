@@ -258,6 +258,33 @@ button{ font:inherit; color:inherit; background:none; border:none; }
 [lang="zh-Hans"] .masthead nav a{ font-size:.86rem; letter-spacing:.08em; }
 [lang="zh-Hans"] .masthead nav a em{ margin-right:.3em; }
 
+/* LP section rail (<LpNav>) — a quiet "contents" line under the masthead on
+   /lp/* + /zh/lp/*. The vocabulary (.lp-rail/.site-nav/.nav-sep) lived in the
+   pre-rebrand globals; re-create it in the Signal Issue idiom. Without the
+   horizontal padding the rail clips at the viewport edge and crowds the
+   masthead's absolute edition-switch. */
+.lp-rail{
+  display:flex; justify-content:center;
+  padding:.7rem var(--gutter);
+  border-bottom:1px solid var(--hair);
+  font-family:var(--grot);
+  font-size:.7rem; letter-spacing:.16em; text-transform:uppercase;
+}
+.lp-rail .site-nav{
+  display:flex; align-items:baseline; flex-wrap:wrap; justify-content:center;
+  gap:.3rem .75rem;
+}
+.lp-rail .site-nav.is-zh{ font-size:.86rem; letter-spacing:.06em; text-transform:none; }
+.lp-rail .site-nav a{
+  color:var(--ink-60); text-decoration:none;
+  border-bottom:1px solid transparent;
+  transition:color .2s ease, border-color .2s ease;
+}
+.lp-rail .site-nav a:hover,
+.lp-rail .site-nav a:focus-visible,
+.lp-rail .site-nav a.is-active{ color:var(--signal); border-bottom-color:var(--signal); }
+.lp-rail .nav-sep{ color:var(--ink-3); }
+
 .masthead .clock{
   position:absolute; right:0; top:50%; transform:translateY(-50%);
   font-family:var(--grot);
