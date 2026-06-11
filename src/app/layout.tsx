@@ -100,7 +100,7 @@ export default async function RootLayout({
 }) {
   const h = await headers();
   const pathname = h.get('x-pathname') || '/';
-  const isZh = pathname.startsWith('/zh');
+  const isZh = /^\/zh(\/|$)/.test(pathname); // exact /zh subtree — not /zheng etc.
   const lang = isZh ? 'zh-Hans' : 'en';
   const locale: 'en' | 'zh' = isZh ? 'zh' : 'en';
 
@@ -123,7 +123,7 @@ export default async function RootLayout({
         <ScrollProgress />
         <CoverArm />
 
-        <Masthead locale={locale} />
+        <Masthead locale={locale} pathname={pathname} />
 
         {children}
 
