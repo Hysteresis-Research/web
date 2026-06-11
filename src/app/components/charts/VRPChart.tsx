@@ -40,14 +40,14 @@ export default function VRPChart() {
             x2={W - M.right}
             y1={yScale(v)}
             y2={yScale(v)}
-            stroke="var(--rule-soft)"
+            stroke="var(--gridline)"
             strokeWidth={0.5}
           />
           <text
             x={M.left - 6}
             y={yScale(v) + 3}
             fill="var(--ink-3)"
-            fontFamily="var(--mono)"
+            fontFamily="var(--grot)"
             fontSize={9}
             textAnchor="end"
           >
@@ -60,7 +60,7 @@ export default function VRPChart() {
         x2={W - M.right}
         y1={yZero}
         y2={yZero}
-        stroke="var(--rule)"
+        stroke="var(--hair)"
         strokeWidth={1}
       />
       {DATA.map((d, i) => {
@@ -75,14 +75,14 @@ export default function VRPChart() {
               y={top}
               width={barW}
               height={h}
-              fill={isHighlight ? 'var(--accent)' : 'var(--ink-3)'}
+              fill={isHighlight ? 'var(--signal)' : 'var(--ink-3)'}
               opacity={isHighlight ? 1 : 0.85}
             />
             <text
               x={cx}
               y={d.value >= 0 ? top - 6 : top + h + 12}
               fill="var(--ink)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={10}
               textAnchor="middle"
             >
@@ -92,7 +92,7 @@ export default function VRPChart() {
               x={cx}
               y={H - M.bottom + 16}
               fill="var(--ink-3)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={9.5}
               textAnchor="middle"
             >
@@ -103,7 +103,7 @@ export default function VRPChart() {
                 x={cx}
                 y={H - M.bottom + 28}
                 fill="var(--ink-3)"
-                fontFamily="var(--mono)"
+                fontFamily="var(--grot)"
                 fontSize={8}
                 textAnchor="middle"
                 opacity={0.65}
@@ -119,7 +119,7 @@ export default function VRPChart() {
         y={M.top + innerH / 2}
         transform={`rotate(-90 14 ${M.top + innerH / 2})`}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >

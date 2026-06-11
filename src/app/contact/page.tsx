@@ -1,10 +1,12 @@
-import BHMark from '../components/BHMark';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../lib/seo';
+import Reveal from '../components/Reveal';
+import SectionHead from '../components/SectionHead';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Contact · Hysteresis Research',
-  description: 'Correspondence — write to the desk.',
+  title: 'Correspondence · Hysteresis Research',
+  description:
+    'Correspondence — research collaboration, allocator conversations, the occasional question on method. Write to the desk.',
   path: '/contact',
   lang: 'en',
 });
@@ -12,35 +14,46 @@ export const metadata: Metadata = pageMetadata({
 export default function Contact() {
   return (
     <main>
-      <div className="col">
-        <div className="marginalia">§1</div>
-        <div className="hero-mark">
-          <BHMark width={180} height={108} strokeWidth={2.2} />
-        </div>
+      <section className="article wrap" id="correspondence">
+        <SectionHead
+          numeral="IV"
+          title="Correspondence"
+          folio="Letters to the desk · p. 05"
+        />
 
-        <div className="marginalia">contact</div>
-        <h1>Contact</h1>
+        <Reveal as="p" className="standfirst">
+          <span className="cap">For allocators who read this far,</span> and for
+          anyone with a serious question on method.
+        </Reveal>
+      </section>
 
-        <div></div>
-        <p className="lede">on correspondence.</p>
+      <div className="corr">
+        <Reveal as="div" className="wrap inner">
+          <div>
+            <p>
+              Research collaboration, allocator conversations, the occasional
+              question on method. Write to the desk — we reply when there is
+              something useful to say.
+            </p>
+            <p>
+              No performance figures travel by email; a figure appears when it can
+              be examined, and not before. What does travel is the argument, and a
+              willingness to be wrong in writing.
+            </p>
+          </div>
 
-        <div className="marginalia">§2</div>
-        <p className="body-paragraph">
-          Research collaboration, allocator conversations, the occasional
-          question on method. Write to the desk{' '}
-          <span className="em">—</span> we reply when there is something
-          useful to say.
-        </p>
-
-        <div className="marginalia">§3</div>
-        <p className="body-paragraph">
-          <a className="email-link" href="mailto:fund@hysres.com">
-            fund@hysres.com
-          </a>
-        </p>
-
-        <div></div>
-        <p className="signature">Hysteresis Research.</p>
+          <aside className="write" aria-label="Reach the desk">
+            <span className="label label--signal">Write to the desk</span>
+            <a className="addr" href="mailto:fund@hysres.com">
+              fund@hysres.com
+            </a>
+            <small>
+              Hysteresis Research ·{' '}
+              <span lang="zh-Hans">迟滞研究</span>. Established MMXXVI. Nothing
+              herein is an offer, a solicitation, or investment advice.
+            </small>
+          </aside>
+        </Reveal>
       </div>
     </main>
   );

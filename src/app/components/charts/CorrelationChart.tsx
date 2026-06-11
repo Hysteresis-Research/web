@@ -39,14 +39,14 @@ export default function CorrelationChart() {
             x2={W - M.right}
             y1={yScale(v)}
             y2={yScale(v)}
-            stroke="var(--rule-soft)"
+            stroke="var(--gridline)"
             strokeWidth={0.5}
           />
           <text
             x={M.left - 6}
             y={yScale(v) + 3}
             fill="var(--ink-3)"
-            fontFamily="var(--mono)"
+            fontFamily="var(--grot)"
             fontSize={9}
             textAnchor="end"
           >
@@ -55,9 +55,9 @@ export default function CorrelationChart() {
         </g>
       ))}
       <path d={toPath(BTC_NVDA)} fill="none" stroke="var(--ink-3)" strokeWidth={1.6} opacity={0.85} />
-      <path d={toPath(BTC_NQ)} fill="none" stroke="var(--accent)" strokeWidth={2.2} />
+      <path d={toPath(BTC_NQ)} fill="none" stroke="var(--signal)" strokeWidth={2.2} />
       {BTC_NQ.map((v, i) => (
-        <circle key={`nq${i}`} cx={xScale(i)} cy={yScale(v)} r={3} fill="var(--accent)" />
+        <circle key={`nq${i}`} cx={xScale(i)} cy={yScale(v)} r={3} fill="var(--signal)" />
       ))}
       {BTC_NVDA.map((v, i) => (
         <circle key={`nv${i}`} cx={xScale(i)} cy={yScale(v)} r={2.5} fill="var(--ink-3)" />
@@ -68,7 +68,7 @@ export default function CorrelationChart() {
           x={xScale(i)}
           y={H - M.bottom + 16}
           fill="var(--ink-3)"
-          fontFamily="var(--mono)"
+          fontFamily="var(--grot)"
           fontSize={9.5}
           textAnchor="middle"
         >
@@ -79,18 +79,18 @@ export default function CorrelationChart() {
         x={xScale(DATES.length - 1) - 38}
         y={yScale(BTC_NQ[BTC_NQ.length - 1]) - 14}
         fill="var(--ink-2)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={10}
       >
         +0.71 → +0.34
       </text>
       <g transform={`translate(${W - M.right + 14} ${M.top + 8})`}>
-        <line x1={0} x2={18} y1={6} y2={6} stroke="var(--accent)" strokeWidth={2.2} />
-        <text x={24} y={9} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={9}>
+        <line x1={0} x2={18} y1={6} y2={6} stroke="var(--signal)" strokeWidth={2.2} />
+        <text x={24} y={9} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={9}>
           BTC – NQ
         </text>
         <line x1={0} x2={18} y1={22} y2={22} stroke="var(--ink-3)" strokeWidth={1.6} />
-        <text x={24} y={25} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={9}>
+        <text x={24} y={25} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={9}>
           BTC – NVDA
         </text>
       </g>
@@ -99,7 +99,7 @@ export default function CorrelationChart() {
         y={M.top + innerH / 2}
         transform={`rotate(-90 14 ${M.top + innerH / 2})`}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >

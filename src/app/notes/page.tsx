@@ -1,97 +1,106 @@
 import Link from 'next/link';
-import BHMark from '../components/BHMark';
-import TickerMark from '../components/TickerMark';
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../lib/seo';
+import Reveal from '../components/Reveal';
+import SectionHead from '../components/SectionHead';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Notes · Hysteresis Research',
-  description: 'Shorter empirical pieces from the desk — observations, retired theses, the shape of a regime transition once the prose has settled.',
+  description:
+    'Shorter empirical pieces from the desk — observations, retired theses, the shape of a regime transition once the prose has settled.',
   path: '/notes',
   lang: 'en',
 });
 
+type Note = {
+  date: string;
+  tag: string;
+  title: string;
+  href: string;
+};
+
+// The register of dispatches. Each note is published when it can stand on its
+// own; the order is most-recent-first. Content preserved from the prior index.
+const NOTES: Note[] = [
+  {
+    date: '2026-05-16',
+    tag: 'MACRO',
+    title: 'Power Is the Binding Constraint on Compute',
+    href: '/notes/power-constrained-compute',
+  },
+  {
+    date: '2026-05-13',
+    tag: 'MSTR',
+    title: 'Discount, unwinding',
+    href: '/notes/mstr-mnav',
+  },
+  {
+    date: '2026-05-13',
+    tag: 'BTC',
+    title: 'Shallower, so far',
+    href: '/notes/three-cycles',
+  },
+  {
+    date: '2026-05-06',
+    tag: 'BTC',
+    title: 'Not the line, the touch',
+    href: '/notes/not-the-line',
+  },
+  {
+    date: '2026-05-05',
+    tag: 'BTC',
+    title: 'Decoupled, on one side',
+    href: '/notes/decoupled-one-side',
+  },
+  {
+    date: '2026-05-02',
+    tag: 'BTC',
+    title: 'The prior, conditioned',
+    href: '/notes/prior-conditioned',
+  },
+  {
+    date: '2026-04-26',
+    tag: 'BTC',
+    title: 'Premium, compressing',
+    href: '/notes/premium-compressing',
+  },
+];
+
 export default function Notes() {
   return (
     <main>
-      <div className="col">
-        <div className="marginalia">§1</div>
-        <div className="hero-mark">
-          <BHMark width={180} height={108} strokeWidth={2.2} />
-        </div>
+      <section className="article wrap" id="notes">
+        <SectionHead
+          numeral="V"
+          title="Notes"
+          folio="The long form between trades"
+        />
 
-        <div className="marginalia">notes</div>
-        <h1>Notes</h1>
+        <Reveal as="p" className="standfirst">
+          <span className="cap">Shorter pieces from the desk</span> —
+          observations, theses that were retired and why, the shape of a regime
+          transition once the prose has settled.
+        </Reveal>
 
-        <div></div>
-        <p className="lede">on the long form between trades.</p>
+        <Reveal as="ol" className="notindex">
+          {NOTES.map((n) => (
+            <li key={n.href}>
+              <Link href={n.href}>
+                <time className="when" dateTime={n.date}>
+                  {n.date}
+                </time>
+                <span className="tag">{n.tag}</span>
+                <span className="head">{n.title}</span>
+              </Link>
+            </li>
+          ))}
+        </Reveal>
 
-        <div className="marginalia">§2</div>
-        <p className="body-paragraph">
-          A space for shorter pieces <span className="em">—</span> observations
-          from the desk, theses that were retired and why, the shape of a
-          regime transition once the prose has settled.
-        </p>
-
-        <div className="marginalia">§3</div>
-        <ul className="entry-list">
-          <li>
-            <time dateTime="2026-05-16">2026-05-16</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="MACRO" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/power-constrained-compute">Power Is the Binding Constraint on Compute</Link>
-          </li>
-          <li>
-            <time dateTime="2026-05-13">2026-05-13</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="MSTR" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/mstr-mnav">Discount, unwinding</Link>
-          </li>
-          <li>
-            <time dateTime="2026-05-13">2026-05-13</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="BTC" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/three-cycles">Shallower, so far</Link>
-          </li>
-          <li>
-            <time dateTime="2026-05-06">2026-05-06</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="BTC" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/not-the-line">Not the line, the touch</Link>
-          </li>
-          <li>
-            <time dateTime="2026-05-05">2026-05-05</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="BTC" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/decoupled-one-side">Decoupled, on one side</Link>
-          </li>
-          <li>
-            <time dateTime="2026-05-02">2026-05-02</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="BTC" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/prior-conditioned">The prior, conditioned</Link>
-          </li>
-          <li>
-            <time dateTime="2026-04-26">2026-04-26</time>
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <TickerMark ticker="BTC" />
-            <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/notes/premium-compressing">Premium, compressing</Link>
-          </li>
-        </ul>
-
-        <div></div>
-        <p className="signature">
-          More in preparation. Each note is published when it can{' '}
-          <span className="signal">stand on its own</span>.
-        </p>
-      </div>
+        <Reveal as="p" className="close" style={{ marginTop: '1.7rem' }}>
+          More in preparation. Each note is published when it can stand on its
+          own.
+        </Reveal>
+      </section>
     </main>
   );
 }

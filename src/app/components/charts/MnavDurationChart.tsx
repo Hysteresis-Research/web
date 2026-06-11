@@ -42,14 +42,14 @@ export default function MnavDurationChart() {
             x2={xScale(v)}
             y1={M.top}
             y2={H - M.bottom}
-            stroke="var(--rule-soft)"
+            stroke="var(--gridline)"
             strokeWidth={0.5}
           />
           <text
             x={xScale(v)}
             y={H - M.bottom + 14}
             fill="var(--ink-3)"
-            fontFamily="var(--mono)"
+            fontFamily="var(--grot)"
             fontSize={9}
             textAnchor="middle"
           >
@@ -67,14 +67,14 @@ export default function MnavDurationChart() {
               y={barTop}
               width={xScale(d.days) - M.left}
               height={barH}
-              fill={d.highlight ? 'var(--accent)' : 'var(--ink-3)'}
+              fill={d.highlight ? 'var(--signal)' : 'var(--ink-3)'}
               opacity={d.highlight ? 1 : 0.7}
             />
             <text
               x={xScale(d.days) + 8}
               y={yMid + 3.5}
               fill="var(--ink)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={10}
             >
               {d.days}d
@@ -83,7 +83,7 @@ export default function MnavDurationChart() {
               x={M.left - 10}
               y={yMid - 2}
               fill="var(--ink-2)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={9.5}
               textAnchor="end"
             >
@@ -93,7 +93,7 @@ export default function MnavDurationChart() {
               x={M.left - 10}
               y={yMid + 10}
               fill="var(--ink-3)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={8}
               textAnchor="end"
               opacity={0.7}
@@ -107,7 +107,7 @@ export default function MnavDurationChart() {
         x={M.left + innerW / 2}
         y={H - 6}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >

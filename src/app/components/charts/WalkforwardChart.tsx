@@ -46,14 +46,14 @@ export default function WalkforwardChart() {
             x2={W - M.right}
             y1={yScale(v)}
             y2={yScale(v)}
-            stroke="var(--rule-soft)"
+            stroke="var(--gridline)"
             strokeWidth={0.5}
           />
           <text
             x={M.left - 6}
             y={yScale(v) + 3}
             fill="var(--ink-3)"
-            fontFamily="var(--mono)"
+            fontFamily="var(--grot)"
             fontSize={9}
             textAnchor="end"
           >
@@ -66,7 +66,7 @@ export default function WalkforwardChart() {
         x2={W - M.right}
         y1={yScale(1.0)}
         y2={yScale(1.0)}
-        stroke="var(--rule)"
+        stroke="var(--hair)"
         strokeWidth={0.5}
         strokeDasharray="2 3"
       />
@@ -88,7 +88,7 @@ export default function WalkforwardChart() {
                   x={cx - barW / 2 - 1}
                   y={yScale(r.is) - 4}
                   fill="var(--ink-2)"
-                  fontFamily="var(--mono)"
+                  fontFamily="var(--grot)"
                   fontSize={8.5}
                   textAnchor="middle"
                 >
@@ -103,14 +103,14 @@ export default function WalkforwardChart() {
                   y={yScale(r.oos)}
                   width={barW}
                   height={yZero - yScale(r.oos)}
-                  fill={r.survived ? 'var(--accent)' : 'var(--ink-2)'}
+                  fill={r.survived ? 'var(--signal)' : 'var(--ink-2)'}
                   opacity={r.survived ? 1 : 0.7}
                 />
                 <text
                   x={cx + barW / 2 + 1}
                   y={yScale(r.oos) - 4}
                   fill="var(--ink)"
-                  fontFamily="var(--mono)"
+                  fontFamily="var(--grot)"
                   fontSize={8.5}
                   textAnchor="middle"
                 >
@@ -122,7 +122,7 @@ export default function WalkforwardChart() {
               x={cx}
               y={H - M.bottom + 16}
               fill="var(--ink-2)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={9.5}
               textAnchor="middle"
             >
@@ -132,7 +132,7 @@ export default function WalkforwardChart() {
               x={cx}
               y={H - M.bottom + 28}
               fill="var(--ink-3)"
-              fontFamily="var(--mono)"
+              fontFamily="var(--grot)"
               fontSize={7.5}
               textAnchor="middle"
               opacity={0.75}
@@ -144,11 +144,11 @@ export default function WalkforwardChart() {
       })}
       <g transform={`translate(${M.left + 8} ${M.top - 8})`}>
         <rect x={0} y={-8} width={10} height={10} fill="var(--ink-3)" opacity={0.65} />
-        <text x={14} y={1} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={9}>
+        <text x={14} y={1} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={9}>
           in-sample
         </text>
-        <rect x={80} y={-8} width={10} height={10} fill="var(--accent)" />
-        <text x={94} y={1} fill="var(--ink-2)" fontFamily="var(--mono)" fontSize={9}>
+        <rect x={80} y={-8} width={10} height={10} fill="var(--signal)" />
+        <text x={94} y={1} fill="var(--ink-2)" fontFamily="var(--grot)" fontSize={9}>
           walk-forward
         </text>
       </g>
@@ -157,7 +157,7 @@ export default function WalkforwardChart() {
         y={M.top + innerH / 2}
         transform={`rotate(-90 14 ${M.top + innerH / 2})`}
         fill="var(--ink-3)"
-        fontFamily="var(--mono)"
+        fontFamily="var(--grot)"
         fontSize={9}
         textAnchor="middle"
       >

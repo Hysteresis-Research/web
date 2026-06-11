@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { pageMetadata } from '../../../lib/seo';
 import { requireViewer } from '@/lib/gate';
+import Reveal from '@/app/components/Reveal';
+import SectionHead from '@/app/components/SectionHead';
 
 // Internal-only route: not in public nav, not in sitemap, noindex/nofollow.
 // Description deliberately anodyne — any future external share (Slack/email
@@ -56,6 +58,18 @@ export default async function DeskLpIntroduction() {
   return (
     <main>
       <style>{css}</style>
+      <section className="article wrap" id="lp-introduction">
+        <SectionHead
+          numeral="LP"
+          title="LP Introduction"
+          folio="Internal · desk"
+        />
+        <Reveal as="p" className="standfirst">
+          <span className="cap">Hysteresis Research</span> is a
+          research-driven quantitative trading firm operating across global
+          macro and crypto derivatives.
+        </Reveal>
+      </section>
       {/* Hysteresis Research · LP Introduction (substantive interior artifact).
           Conforms to founding_document_v1{,_en}.md v1.1 + firm/blurb.md (public-copy
           rules) as applied 2026-05-18. Held — not deployed. Figures/returns/
