@@ -48,6 +48,18 @@
   --measure: 66ch;
   --snap: cubic-bezier(.83,0,.17,1);
 
+  /* desk note (gated /desk) — semantic signals, AA-safe on warm paper.
+     --dn-bear shares the brand signal vermilion; bull/stale are the only
+     additional hues the identity admits, held to AA on --paper-soft. */
+  --dn-bull:  #3A5E32;   /* 5.80:1 on --paper-deep · 4.92:1 on card-soft */
+  --dn-bear:  #B33305;   /* = --signal · 4.83:1 on --paper-deep */
+  --dn-stale: #73520F;   /* 5.57:1 on --paper-deep · 4.73:1 on card-soft */
+  --dn-neut:  var(--ink-2);
+  --dn-card-bg:        var(--paper-soft);
+  --dn-card-soft:      color-mix(in srgb, var(--paper-soft) 92%, var(--ink));
+  --dn-card-rule:      var(--hair);
+  --dn-card-rule-soft: var(--hair-soft);
+
   color-scheme: light;
 }
 
@@ -55,6 +67,7 @@
 .theme-dark {
   --paper:       #14110A;
   --paper-deep:  #1B160D;
+  --paper-soft:  var(--paper-deep);  /* must re-declare per theme: a :root-only alias freezes to the light value */
   --ink:         #ECE4D2;
   --ink-60:      rgba(236,228,210,.66);
   --ink-40:      rgba(236,228,210,.46);
@@ -67,6 +80,16 @@
   --signal:      #E8633A;
   --signal-wash: rgba(232,99,58,.12);
   --ghost-fallback: rgba(236,228,210,.20);
+
+  /* desk note (gated /desk) — dark edition signals on warm midnight. */
+  --dn-bull:  #84B074;   /* 7.23:1 on --paper-deep · 6.02:1 on card-soft */
+  --dn-bear:  #E8633A;   /* = --signal · 5.38:1 on --paper-deep */
+  --dn-stale: #CDA64A;   /* 7.84:1 on --paper-deep · 6.53:1 on card-soft */
+  --dn-neut:  var(--ink-2);
+  --dn-card-bg:        var(--paper-soft);
+  --dn-card-soft:      color-mix(in srgb, var(--paper-soft) 92%, var(--ink));
+  --dn-card-rule:      var(--hair);
+  --dn-card-rule-soft: var(--hair-soft);
 
   color-scheme: dark;
 }
@@ -1026,4 +1049,589 @@ footer.colophon-foot{ border-top:3px double var(--ink); }
   }
   .cover-unit{ min-height:auto; }
   .article,.pullquote{ break-inside:avoid; }
+}
+
+/* ───── Desk note (gated /desk) — Signal Issue port ─────────────────────
+   The gated desk layer carries only markup; its styling lives here.
+   Two surfaces:
+     1. the /desk + /zh/desk INDEX — a quiet two-column register
+        (.col grid · marginalia · entry-list · ticker-mark), and
+     2. the dated NOTE artifact — a self-contained letterhead CARD
+        (.desk-stage > .desk-letter > .dn-*), rendered UNDER the shared
+        Masthead that layout.tsx adds to every route.
+   Ported from the legacy desk CSS (14a99a9) and remapped into the
+   Signal Issue idiom: Spectral for prose, Archivo (tabular) for the
+   apparatus — labels / keys / data / stamps — Noto Serif SC for hanzi;
+   one-accent discipline (--signal), square corners, --hair/--gridline
+   rules. Semantic --dn-bull/--dn-bear/--dn-stale defined in the token
+   blocks above (AA-safe both editions). The daily note is produced by an
+   autonomous agent cloning the 2026-05-17 markup — keep these classes
+   matching that structure. */
+
+/* ── 1 · INDEX register (/desk, /zh/desk) ─────────────────────────────── */
+.col{
+  width:100%;
+  max-width:660px;
+  margin:0 auto;
+  padding:clamp(2.6rem,6vw,4.5rem) var(--gutter) clamp(3.4rem,8vw,5.5rem);
+  display:grid;
+  grid-template-columns:56px 1fr;
+  gap:0 24px;
+  align-items:start;
+}
+.col .marginalia{
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 520;
+  font-size:.62rem;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-3);
+  padding-top:.55rem;
+  padding-right:.5rem;
+  text-align:right;
+  border-right:1px solid var(--hair-soft);
+  min-height:2.6rem;
+  align-self:stretch;
+}
+.col .hero-mark{
+  grid-column:2;
+  color:var(--ink);
+  margin-bottom:2.25rem;
+}
+.col .hero-mark svg{ display:block; }
+.col h1{
+  grid-column:2;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 122,'wght' 880;
+  font-size:clamp(2.4rem,5.6vw,4rem);
+  line-height:1;
+  letter-spacing:-.012em;
+  text-transform:uppercase;
+  color:var(--ink);
+  margin-bottom:.3rem;
+}
+.col .lede{
+  grid-column:2;
+  font-family:var(--serif);
+  font-style:italic;
+  font-weight:300;
+  font-size:clamp(1.15rem,2vw,1.5rem);
+  line-height:1.4;
+  letter-spacing:-.005em;
+  color:var(--ink);
+  max-width:30ch;
+  margin-bottom:2.6rem;
+}
+.col .body-paragraph{
+  grid-column:2;
+  font-family:var(--serif);
+  font-size:clamp(1.02rem,1.45vw,1.15rem);
+  line-height:1.66;
+  color:var(--ink);
+  max-width:42ch;
+  text-wrap:pretty;
+  margin-bottom:1.75rem;
+}
+.col .body-paragraph .em,
+.col .signature .em{ font-style:normal; color:var(--ink-3); }
+.col .body-paragraph a,
+.col .signature a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--hair);
+  transition:color .2s ease, border-color .2s ease;
+}
+.col .body-paragraph a:hover,
+.col .signature a:hover{ color:var(--signal); border-bottom-color:var(--signal); }
+.col .signature{
+  grid-column:2;
+  margin-top:3rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--hair);
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1rem;
+  color:var(--ink-2);
+  max-width:32ch;
+}
+
+/* the dated register itself — a five-track baseline grid */
+.entry-list{
+  grid-column:2;
+  font-family:var(--serif);
+  font-size:clamp(1.02rem,1.45vw,1.15rem);
+  line-height:1.6;
+  color:var(--ink);
+  max-width:42ch;
+  margin:.4rem 0 1.75rem;
+  display:grid;
+  grid-template-columns:auto auto auto auto 1fr;
+  column-gap:.55em;
+  row-gap:.65em;
+  align-items:baseline;
+}
+.entry-list li{ display:contents; }
+.entry-list time{
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 560;
+  font-size:.74em;
+  letter-spacing:.06em;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-3);
+}
+.entry-list .entry-sep{ color:var(--ink-3); opacity:.5; }
+.entry-list a{
+  color:var(--ink);
+  text-decoration:none;
+  border-bottom:1px solid var(--hair);
+  transition:color .2s ease, border-color .2s ease;
+}
+.entry-list a:hover{ color:var(--signal); border-bottom-color:var(--signal); }
+
+/* the inline asset glyph + ticker */
+.ticker-mark{
+  display:inline-flex;
+  align-items:center;
+  gap:.34em;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 105,'wght' 640;
+  font-size:.72em;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  font-variant-numeric:tabular-nums;
+  color:var(--ink-2);
+  white-space:nowrap;
+}
+.ticker-mark svg{
+  width:.95em; height:.95em;
+  display:inline-block; flex-shrink:0;
+  transform:translateY(.06em);
+}
+.ticker-mark-text{ display:inline-block; }
+
+@media (max-width:640px){
+  .col{ grid-template-columns:1fr; gap:0; }
+  .col .marginalia{
+    grid-column:1;
+    border-right:none;
+    border-bottom:1px solid var(--hair-soft);
+    padding:0 0 .5rem;
+    text-align:left;
+    min-height:0;
+    margin-bottom:1.4rem;
+  }
+  .col .hero-mark,
+  .col h1,
+  .col .lede,
+  .col .body-paragraph,
+  .col .signature,
+  .entry-list{ grid-column:1; }
+}
+
+/* ── 2 · NOTE letterhead card (/desk/YYYY-MM-DD + /zh mirror) ─────────── */
+.desk-stage{
+  position:relative; z-index:1;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:clamp(2rem,4vw,3.4rem) var(--gutter) clamp(3.5rem,7vw,5rem);
+}
+
+/* the artifact: a bordered letterhead on soft paper, sitting clearly
+   below the shared Masthead — not a second site header. */
+.desk-letter{
+  width:100%;
+  max-width:880px;
+  background:var(--dn-card-bg);
+  border:1px solid var(--dn-card-rule);
+  border-radius:2px;
+  box-shadow:0 1px 0 var(--dn-card-rule-soft), 0 18px 40px -28px rgba(0,0,0,.45);
+  position:relative;
+}
+
+/* titleband — the note's own dateline strip, set in the apparatus face */
+.dn-titleband{
+  border-bottom:1px solid var(--dn-card-rule-soft);
+  padding:13px clamp(20px,4vw,38px);
+  background:var(--dn-card-soft);
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:1rem;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 600;
+  font-size:10px;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-2);
+}
+
+.dn-body{ padding:clamp(34px,5vw,56px) clamp(22px,5vw,64px) clamp(30px,4vw,48px); position:relative; }
+
+/* masthead-of-the-note: mark · lockup · spot stamp */
+.dn-head{
+  display:grid;
+  grid-template-columns:auto 1fr auto;
+  gap:24px; align-items:center;
+  margin-bottom:26px; padding-bottom:22px;
+  border-bottom:1px solid var(--dn-card-rule-soft);
+}
+.dn-mark{ color:var(--ink); }
+.dn-lockup .dn-name{
+  font-family:var(--serif); font-weight:500;
+  font-size:27px; letter-spacing:-.014em;
+  line-height:1.02; color:var(--ink);
+}
+.dn-lockup .dn-name-cn{
+  font-family:var(--hanzi); font-weight:500;
+  font-size:11px; letter-spacing:.32em;
+  color:var(--ink-3); margin-top:6px; padding-left:2px;
+}
+.dn-stamp{
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 560;
+  font-size:10px; text-align:right; color:var(--ink-3);
+  letter-spacing:.14em; text-transform:uppercase;
+  font-variant-numeric:tabular-nums lining-nums;
+  line-height:1.7;
+}
+.dn-stamp .dn-big{
+  font-family:var(--serif); font-size:22px; font-weight:500;
+  color:var(--ink); letter-spacing:0; text-transform:none;
+  font-variant-numeric:tabular-nums;
+  display:block; margin-top:4px;
+}
+
+/* data manifest — provenance band */
+.dn-manifest{
+  border:1px solid var(--dn-card-rule-soft);
+  background:var(--dn-card-soft);
+  border-radius:2px;
+  padding:14px 18px;
+  margin-bottom:24px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 460;
+  font-size:10.5px;
+  line-height:1.65;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-2);
+}
+.dn-lbl{
+  display:block;
+  color:var(--signal);
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-variation-settings:'wdth' 104,'wght' 640;
+  font-size:9.5px;
+  margin-bottom:8px;
+}
+.dn-manifest table{ border-collapse:collapse; width:100%; }
+.dn-manifest td{ padding:2px 12px 2px 0; font-size:10.5px; vertical-align:top; }
+.dn-manifest .dn-s{ color:var(--ink-3); width:32%; }
+.dn-manifest .dn-v-cell{ color:var(--ink); width:34%; }
+.dn-manifest .dn-flag{ color:var(--dn-stale); width:34%; }
+
+/* meta tiles */
+.dn-meta{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  margin-bottom:28px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 500;
+  font-size:11px;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-2);
+  line-height:1.55;
+}
+.dn-meta .dn-k{
+  display:block;
+  color:var(--ink-3);
+  text-transform:uppercase;
+  letter-spacing:.18em;
+  font-variation-settings:'wdth' 102,'wght' 600;
+  font-size:9px;
+  margin-bottom:3px;
+}
+.dn-meta .dn-v{ color:var(--ink); display:block; font-size:13.5px; }
+.dn-meta .dn-v.bull{ color:var(--dn-bull); }
+.dn-meta .dn-v.bear{ color:var(--dn-bear); }
+.dn-meta .dn-v.stale{ color:var(--dn-stale); }
+.dn-meta .dn-src{
+  font-size:9px; color:var(--ink-3);
+  margin-top:2px; letter-spacing:.04em;
+}
+
+/* section heads — Spectral title + Archivo roman index */
+.dn-sec{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:17px;
+  color:var(--ink);
+  letter-spacing:-.005em;
+  margin:28px 0 12px;
+  padding-bottom:6px;
+  border-bottom:1px solid var(--dn-card-rule-soft);
+  display:flex; align-items:baseline; justify-content:space-between;
+  gap:1rem;
+}
+.dn-roman{
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 560;
+  font-size:10px; color:var(--ink-3);
+  letter-spacing:.18em;
+  font-variant-numeric:tabular-nums lining-nums;
+}
+
+/* prose — the argument, in Spectral */
+.dn-prose{
+  font-family:var(--serif);
+  font-size:15.5px;
+  line-height:1.62;
+  color:var(--ink);
+  max-width:660px;
+}
+.dn-prose p{ margin-bottom:.9em; }
+.dn-lead{
+  font-family:var(--serif);
+  font-size:18px; font-style:italic;
+  color:var(--ink-2); line-height:1.5;
+  margin-bottom:1.3em;
+}
+
+/* inline tags + signal underline */
+.dn-tag{
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 540;
+  font-size:11px;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-3);
+  background:var(--dn-card-soft);
+  border:1px solid var(--dn-card-rule-soft);
+  padding:1px 6px;
+  border-radius:2px;
+  white-space:nowrap;
+}
+.dn-tag.bull{ color:var(--dn-bull); border-color:color-mix(in srgb, var(--dn-bull) 42%, transparent); }
+.dn-tag.bear{ color:var(--dn-bear); border-color:color-mix(in srgb, var(--dn-bear) 42%, transparent); }
+.dn-tag.stale{ color:var(--dn-stale); border-color:color-mix(in srgb, var(--dn-stale) 48%, transparent); }
+.dn-signal{ border-bottom:1px solid var(--signal); padding-bottom:1px; }
+.dn-em{ color:var(--ink-3); font-style:normal; }
+
+/* data tables — tabular Archivo */
+.dn-kv{
+  width:100%;
+  margin:8px 0 16px;
+  border-collapse:collapse;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 480;
+  font-size:11.5px;
+  font-variant-numeric:tabular-nums lining-nums;
+  display:block;
+  overflow-x:auto;
+}
+.dn-kv th{
+  text-align:left;
+  color:var(--ink-3);
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-size:9px;
+  font-variation-settings:'wdth' 102,'wght' 620;
+  padding:6px 8px 6px 0;
+  border-bottom:1px solid var(--dn-card-rule-soft);
+}
+.dn-kv td{
+  padding:4px 8px 4px 0;
+  color:var(--ink);
+  border-bottom:1px solid var(--dn-card-rule-soft);
+  vertical-align:top;
+}
+.dn-kv td:first-child{ color:var(--ink-2); }
+.dn-kv td.num{ text-align:right; font-variant-numeric:tabular-nums lining-nums; }
+.dn-kv td.bull{ color:var(--dn-bull); }
+.dn-kv td.bear{ color:var(--dn-bear); }
+.dn-kv td.neut{ color:var(--ink-2); }
+.dn-kv td.stale{ color:var(--dn-stale); }
+.dn-kv td.hot{ color:var(--signal); }
+.dn-kv td.note{
+  color:var(--ink-3); font-size:10px;
+  font-style:italic; padding-left:8px;
+}
+
+/* trade card */
+.dn-trade{
+  border:1px solid var(--dn-card-rule-soft);
+  background:var(--dn-card-soft);
+  border-radius:2px;
+  padding:18px 22px;
+  margin-bottom:14px;
+  position:relative;
+}
+.dn-side{
+  position:absolute; top:-8px; left:18px;
+  background:var(--dn-card-bg); padding:0 8px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 102,'wght' 640;
+  font-size:10px;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+}
+.dn-side.long{ color:var(--dn-bull); }
+.dn-side.short{ color:var(--dn-bear); }
+.dn-side.vol{ color:var(--signal); }
+.dn-side.relval{ color:var(--signal); }
+.dn-side.framework{ color:var(--ink-3); }
+.dn-trade-name{
+  font-family:var(--serif); font-weight:500;
+  font-size:16px; color:var(--ink);
+  margin-bottom:6px;
+}
+.dn-thesis{
+  font-family:var(--serif); font-style:italic;
+  font-size:13.5px; color:var(--ink-2);
+  line-height:1.55; margin-bottom:10px;
+}
+.dn-lvls{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 480;
+  font-size:11.5px;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink);
+}
+.dn-lvl-k{
+  display:block;
+  color:var(--ink-3);
+  text-transform:uppercase;
+  letter-spacing:.16em;
+  font-variation-settings:'wdth' 102,'wght' 600;
+  font-size:9px;
+  margin-bottom:2px;
+}
+.dn-lvl-v.bull{ color:var(--dn-bull); }
+.dn-lvl-v.bear{ color:var(--dn-bear); }
+.dn-gating{
+  margin-top:10px;
+  padding-top:8px;
+  border-top:1px dashed var(--dn-card-rule-soft);
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 460;
+  font-size:10.5px;
+  color:var(--ink-3);
+  line-height:1.5;
+}
+.dn-gating b{ color:var(--signal); font-weight:inherit; font-variation-settings:'wdth' 100,'wght' 660; }
+
+/* audit trace + NFA + signature + footer */
+.dn-audit-trace{
+  border:1px solid var(--dn-card-rule-soft);
+  border-radius:2px;
+  background:transparent;
+  padding:12px 18px;
+  margin-top:14px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 460;
+  font-size:10px;
+  line-height:1.65;
+  color:var(--ink-3);
+  letter-spacing:.01em;
+}
+.dn-audit-trace b{ color:var(--ink-2); font-weight:inherit; font-variation-settings:'wdth' 100,'wght' 640; }
+.dn-at-head{
+  color:var(--ink-2);
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-variation-settings:'wdth' 104,'wght' 640;
+  font-size:9.5px;
+  display:block;
+  margin-bottom:6px;
+}
+.dn-nfa{
+  border:1px dashed var(--dn-card-rule-soft);
+  border-radius:2px;
+  background:transparent;
+  padding:14px 18px;
+  margin-top:14px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 460;
+  font-size:10.5px;
+  line-height:1.7;
+  color:var(--ink-3);
+  letter-spacing:.01em;
+}
+.dn-nfa-head{
+  color:var(--signal);
+  text-transform:uppercase;
+  letter-spacing:.2em;
+  font-variation-settings:'wdth' 104,'wght' 660;
+  font-size:10px;
+  display:block;
+  margin-bottom:8px;
+}
+.dn-nfa em{ color:var(--ink-2); font-style:normal; }
+
+.dn-signature{
+  margin-top:32px;
+  padding-top:22px;
+  border-top:1px solid var(--dn-card-rule-soft);
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:end;
+  gap:24px;
+}
+.dn-sign-line{
+  font-family:var(--serif); font-style:italic;
+  font-size:15px; color:var(--ink-2);
+}
+.dn-sign-name{
+  font-family:var(--serif); font-weight:500;
+  color:var(--ink); margin-top:4px; font-style:normal;
+}
+.dn-sign-stamp{ color:var(--ink-3); }
+
+.dn-foot{
+  border-top:1px solid var(--dn-card-rule-soft);
+  padding:16px clamp(20px,4vw,38px);
+  background:var(--dn-card-soft);
+  display:flex; justify-content:space-between; align-items:baseline;
+  gap:16px;
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 100,'wght' 560;
+  font-size:9.5px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  font-variant-numeric:tabular-nums lining-nums;
+  color:var(--ink-3);
+}
+.dn-foot span:last-child{ text-align:right; text-transform:none; letter-spacing:.03em; }
+
+@media (max-width:760px){
+  .dn-head{ grid-template-columns:auto 1fr; }
+  .dn-stamp{ grid-column:1 / -1; text-align:left; }
+  .dn-meta{ grid-template-columns:1fr 1fr; }
+  .dn-lvls{ grid-template-columns:1fr 1fr; }
+  .dn-prose{ font-size:14.5px; }
+  /* manifest table stacks; flag chip drops to its own row */
+  .dn-manifest table,
+  .dn-manifest tbody,
+  .dn-manifest tr{ display:block; }
+  .dn-manifest tr{
+    padding:8px 0;
+    border-bottom:1px dashed var(--dn-card-rule-soft);
+  }
+  .dn-manifest tr:last-child{ border-bottom:none; }
+  .dn-manifest td{ display:block; width:100% !important; padding:2px 0; }
+  .dn-manifest .dn-s{ color:var(--ink-3); font-size:9.5px; text-transform:uppercase; letter-spacing:.13em; }
+  .dn-manifest .dn-v-cell{ color:var(--ink); word-break:break-all; }
+  .dn-manifest .dn-flag{ color:var(--dn-stale); font-style:italic; }
+  .dn-manifest{ padding:12px 14px; }
+  .dn-kv th,.dn-kv td{ padding:4px 6px 4px 0; font-size:10.5px; }
+  .dn-foot{ flex-direction:column; align-items:flex-start; }
+  .dn-foot span:last-child{ text-align:left; }
+}
+
+@media print{
+  .desk-letter{ box-shadow:none; border-color:#171209; }
 }
