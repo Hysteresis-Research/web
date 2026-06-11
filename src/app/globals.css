@@ -254,6 +254,9 @@ button{ font:inherit; color:inherit; background:none; border:none; }
 .masthead nav a em{ font-style:normal; color:var(--signal); margin-right:.45em; }
 .masthead nav a:hover,
 .masthead nav a:focus-visible{ color:var(--signal); }
+/* CN nav: CJK labels need a larger body and tighter tracking than the latin chrome */
+[lang="zh-Hans"] .masthead nav a{ font-size:.86rem; letter-spacing:.08em; }
+[lang="zh-Hans"] .masthead nav a em{ margin-right:.3em; }
 
 .masthead .clock{
   position:absolute; right:0; top:50%; transform:translateY(-50%);
@@ -267,7 +270,18 @@ button{ font:inherit; color:inherit; background:none; border:none; }
 
 .masthead .edition-switch{
   position:absolute; left:0; top:50%; transform:translateY(-50%);
+  display:flex; align-items:center; gap:1rem;
 }
+.lang-switch{
+  font-family:var(--grot);
+  font-variation-settings:'wdth' 108,'wght' 640;
+  font-size:.66rem; letter-spacing:.14em; text-transform:uppercase;
+  text-decoration:none; color:var(--ink-60);
+  border-bottom:1px solid transparent;
+  transition:color .2s ease, border-color .2s ease;
+}
+.lang-switch:hover,
+.lang-switch:focus-visible{ color:var(--signal); border-bottom-color:var(--signal); }
 @media (max-width:860px){
   .masthead .edition-switch{
     position:static; transform:none;
@@ -311,6 +325,18 @@ button{ font:inherit; color:inherit; background:none; border:none; }
 .hl-line .stop{
   width:.125em; height:.125em; background:var(--signal);
   align-self:flex-end; margin-bottom:.05em; flex:none;
+}
+/* CN cover headline: latin space-between scatters a 2–3 glyph CJK line, and
+   --grot (Archivo) has no CJK so it falls back to an inconsistent system face.
+   Set the brand CJK face and align the block right — diagonal tension against
+   the left-anchored kicker (not justified). */
+[lang="zh-Hans"] .hl-line{ justify-content:flex-end; gap:.08em; }
+[lang="zh-Hans"] .hl-line .g{
+  font-family:var(--hanzi);
+  font-variation-settings:normal;
+  font-weight:700;
+  text-transform:none;
+  letter-spacing:.01em;
 }
 
 .cover-base{
@@ -1043,7 +1069,7 @@ footer.colophon-foot{ border-top:3px double var(--ink); }
 /* ---------- print: the issue on actual paper ---------- */
 @media print{
   body{ background:#fff; color:#171209; font-size:11pt; }
-  .progress,.ticker,.cover-grid,.reg,.masthead .clock,.cover-base .scroll,.edition-toggle{ display:none; }
+  .progress,.ticker,.cover-grid,.reg,.masthead .clock,.cover-base .scroll,.edition-toggle,.lang-switch{ display:none; }
   .js .hl-line .g,.js .hl-line .stop,.js [data-io],.js .loop,.js .fig-late{
     transform:none !important; opacity:1 !important; stroke-dashoffset:0 !important;
   }

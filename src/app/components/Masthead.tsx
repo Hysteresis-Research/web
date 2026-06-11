@@ -24,6 +24,7 @@ const NAV_EN = [
   { numeral: 'II', label: 'The Practice', href: '/firm' },
   { numeral: 'III', label: 'The Mandate', href: '/firm#mandate' },
   { numeral: 'IV', label: 'Correspondence', href: '/contact' },
+  { numeral: 'V', label: 'Notes', href: '/notes' },
 ] as const;
 
 const NAV_ZH = [
@@ -31,13 +32,30 @@ const NAV_ZH = [
   { numeral: '二', label: '实践', href: '/zh/firm' },
   { numeral: '三', label: '纲领', href: '/zh/firm#mandate' },
   { numeral: '四', label: '通信', href: '/zh/contact' },
+  { numeral: '五', label: '笔记', href: '/zh/notes' },
 ] as const;
 
-export default function Masthead({ locale = 'en' }: { locale?: Locale }) {
+// The alternate-locale mirror of the current path: /zh/firm ⇄ /firm, /zh ⇄ /.
+function altLocaleHref(pathname: string, zh: boolean): string {
+  if (zh) {
+    const stripped = pathname.replace(/^\/zh(?=\/|$)/, '');
+    return stripped === '' ? '/' : stripped;
+  }
+  return pathname === '/' ? '/zh' : `/zh${pathname}`;
+}
+
+export default function Masthead({
+  locale = 'en',
+  pathname = '/',
+}: {
+  locale?: Locale;
+  pathname?: string;
+}) {
   const zh = locale === 'zh';
   const nav = zh ? NAV_ZH : NAV_EN;
   const home = zh ? '/zh' : '/';
   const navLabel = zh ? '本期目录' : 'Contents';
+  const altHref = altLocaleHref(pathname, zh);
 
   return (
     <header className="masthead wrap" lang={zh ? 'zh-Hans' : undefined}>
@@ -93,6 +111,15 @@ export default function Masthead({ locale = 'en' }: { locale?: Locale }) {
         </nav>
         <UtcClock />
         <span className="edition-switch">
+          <Link
+            className="lang-switch"
+            href={altHref}
+            lang={zh ? 'en' : 'zh-Hans'}
+            hrefLang={zh ? 'en' : 'zh-Hans'}
+            aria-label={zh ? 'Switch to English' : '切换到中文'}
+          >
+            {zh ? 'EN' : '中文'}
+          </Link>
           <ThemeToggle locale={locale} />
         </span>
       </div>
