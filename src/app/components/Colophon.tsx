@@ -12,17 +12,19 @@ import FooterLegalLinks from './FooterLegalLinks';
 type Locale = 'en' | 'zh';
 
 const CONTENTS_EN = [
-  { label: 'I · On Method', href: '/approach' },
+  { label: 'I · On Method', href: '/#method' },
   { label: 'II · The Practice', href: '/firm' },
-  { label: 'III · The Mandate', href: '/firm#mandate' },
+  { label: 'III · The Mandate', href: '/#mandate' },
   { label: 'IV · Correspondence', href: '/contact' },
+  { label: 'V · Notes', href: '/notes' },
 ] as const;
 
 const CONTENTS_ZH = [
-  { label: '一 · 方法', href: '/zh/approach' },
+  { label: '一 · 方法', href: '/zh#method' },
   { label: '二 · 实践', href: '/zh/firm' },
-  { label: '三 · 纲领', href: '/zh/firm#mandate' },
+  { label: '三 · 纲领', href: '/zh#mandate' },
   { label: '四 · 通信', href: '/zh/contact' },
+  { label: '五 · 笔记', href: '/zh/notes' },
 ] as const;
 
 export default function Colophon({ locale = 'en' }: { locale?: Locale }) {
