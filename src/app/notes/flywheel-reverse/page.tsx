@@ -126,6 +126,13 @@ export default function FlywheelReverse() {
             paid weekly, in the only unit that accrues to a holder. We are
             counting it.
           </Reveal>
+
+          <Reveal as="p" className="colophon">
+            <b>Sources.</b> Holdings, the week&rsquo;s raise and purchase, and the
+            32-coin sale are from MSTR&rsquo;s 8-Ks of 2026-05-31 and 2026-06-08;
+            the first sale since 2022 follows from the filing record, and the
+            5.6% move is the session tape.
+          </Reveal>
         </div>
       </article>
     </main>

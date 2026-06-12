@@ -92,6 +92,12 @@ export default function FlywheelReverseZh() {
           <Reveal as="p" className="close">
             飞轮反转，不是对价格的判决。它是一笔成本，按周支付，计在持有人唯一真正累积的那个单位里。我们在数着。
           </Reveal>
+
+          <Reveal as="p" className="colophon">
+            <b>出处。</b>持仓、当周的融资与买入、以及那 32 枚的卖出，均出自 MSTR
+            2026-05-31 与 2026-06-08 的 8-K；「2022 年以来首次卖出」由申报记录得出，5.6%
+            的股价反应取自当日盘面。
+          </Reveal>
         </div>
       </section>
     </main>

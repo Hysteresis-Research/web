@@ -598,6 +598,15 @@ section{ scroll-margin-top:24px; }
 
 .essay .close{ margin-top:1.7rem; font-size:clamp(1rem, 1.4vw, 1.1rem); }
 
+/* a quiet source line at the foot of a note */
+.essay .colophon{
+  margin-top:2.6rem; padding-top:1rem;
+  border-top:1px solid var(--hair-soft);
+  font-family:var(--grot); font-size:.7rem; line-height:1.6;
+  letter-spacing:.03em; color:var(--ink-40); max-width:var(--measure);
+}
+.essay .colophon b{ color:var(--ink-60); font-weight:600; font-variation-settings:'wght' 600; }
+
 sup.fn{
   font-family:var(--grot);
   font-variation-settings:'wdth' 100,'wght' 700;
