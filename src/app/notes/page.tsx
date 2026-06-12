@@ -23,6 +23,12 @@ type Note = {
 // own; the order is most-recent-first. Content preserved from the prior index.
 const NOTES: Note[] = [
   {
+    date: '2026-06-12',
+    tag: 'MSTR',
+    title: 'The flywheel, in reverse',
+    href: '/notes/flywheel-reverse',
+  },
+  {
     date: '2026-05-16',
     tag: 'MACRO',
     title: 'Power Is the Binding Constraint on Compute',

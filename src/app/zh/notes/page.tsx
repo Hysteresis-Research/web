@@ -23,6 +23,12 @@ type Note = {
 // 标题与链接沿用先前的索引，未作改动。
 const NOTES: Note[] = [
   {
+    date: '2026-06-12',
+    tag: 'MSTR',
+    title: '飞轮，反着转',
+    href: '/zh/notes/flywheel-reverse',
+  },
+  {
     date: '2026-05-16',
     tag: 'MACRO',
     title: '电力是算力的硬约束',
