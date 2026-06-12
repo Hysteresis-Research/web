@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 
 const BASE = 'https://www.hysteresisresearch.com';
 
-const PAGES = ['', '/approach', '/firm', '/notes', '/contact'];
+const PAGES = ['', '/firm', '/notes', '/contact'];
 const NOTES = [
   'premium-compressing',
   'decoupled-one-side',

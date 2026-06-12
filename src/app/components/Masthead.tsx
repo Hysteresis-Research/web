@@ -10,9 +10,11 @@ import ThemeToggle from './ThemeToggle';
 // /zh/* tree, so on Chinese pages it must read in Chinese with /zh nav targets.
 // `locale` is threaded down from the layout (derived from the request path).
 //
-// EN routes: I On Method → /approach · II The Practice → /firm · III The
-// Mandate → /firm#mandate · IV Correspondence → /contact.
-// ZH routes point to the /zh equivalents with Chinese numerals + labels.
+// EN routes: I On Method → /#method · II The Practice → /firm · III The
+// Mandate → /#mandate · IV Correspondence → /contact · V Notes → /notes.
+// I and III live in the issue itself (the homepage); II, IV and V are the
+// standalone leaves. ZH routes point to the /zh equivalents with Chinese
+// numerals + labels.
 //
 // The clock sits OUTSIDE the <nav> landmark (a clock is not navigation) but
 // inside a positioned wrapper so it still aligns to the nav row.
@@ -20,17 +22,17 @@ import ThemeToggle from './ThemeToggle';
 type Locale = 'en' | 'zh';
 
 const NAV_EN = [
-  { numeral: 'I', label: 'On Method', href: '/approach' },
+  { numeral: 'I', label: 'On Method', href: '/#method' },
   { numeral: 'II', label: 'The Practice', href: '/firm' },
-  { numeral: 'III', label: 'The Mandate', href: '/firm#mandate' },
+  { numeral: 'III', label: 'The Mandate', href: '/#mandate' },
   { numeral: 'IV', label: 'Correspondence', href: '/contact' },
   { numeral: 'V', label: 'Notes', href: '/notes' },
 ] as const;
 
 const NAV_ZH = [
-  { numeral: '一', label: '方法', href: '/zh/approach' },
+  { numeral: '一', label: '方法', href: '/zh#method' },
   { numeral: '二', label: '实践', href: '/zh/firm' },
-  { numeral: '三', label: '纲领', href: '/zh/firm#mandate' },
+  { numeral: '三', label: '纲领', href: '/zh#mandate' },
   { numeral: '四', label: '通信', href: '/zh/contact' },
   { numeral: '五', label: '笔记', href: '/zh/notes' },
 ] as const;

@@ -158,6 +158,15 @@ export default function Home() {
                 <span className="folio">页 05</span>
               </a>
             </li>
+            <li>
+              <a href="/zh/notes">
+                <span className="num">五</span>
+                <span className="t">笔记</span>
+                <span className="d">—— 一直在记的档案：哪些论断退场了，为什么</span>
+                <span className="leader" role="presentation" />
+                <span className="folio">页 06</span>
+              </a>
+            </li>
           </Reveal>
         </section>
 
@@ -283,6 +292,12 @@ export default function Home() {
               <p>
                 抱负是机构级的跨资产配置：一本账，随范式更替而在其间转移——在时间维度上，
                 也在跨资产的主要品种之间——并以同一套纪律，在任何体量下运转。
+              </p>
+              <p>
+                这份抱负有自己的日程。三年内——在主要品种上形成一套统一的范式模型，可复用，
+                由日常运作的流程不断校验。五年内——多个子策略并行运转，发表第一篇公开的论文，
+                把方法的内核记录在案。十年内——方法在几轮不同的市场环境里得到验证，
+                成为一种可被继承的形态。
               </p>
               <p>
                 论日历，公司还年轻；论性情，它走得审慎。它创立于二〇二六年，是为周期里
