@@ -195,9 +195,10 @@ export default function MnavDilutionExplorer({ lang = 'en' }: { lang?: Lang }) {
         >
           {t.here} · {mnav.toFixed(2)}× · {(atm >= 0 ? '+' : '') + atm.toFixed(2)}%
         </text>
-        {/* axis titles */}
-        <text x={m.l + iw} y={m.t + ih + 34} textAnchor="end" fill="var(--ink-40)" fontFamily="var(--grot)" fontSize={9} letterSpacing="0.04em">
-          {t.xlab} →
+        {/* x-axis label — centered below the ticks so it clears the corner
+            'HYSTERESIS RESEARCH' watermark (was right-aligned and overlapped it) */}
+        <text x={m.l + iw / 2} y={m.t + ih + 34} textAnchor="middle" fill="var(--ink-40)" fontFamily="var(--grot)" fontSize={9} letterSpacing="0.1em">
+          {t.xlab}
         </text>
         {/* legend */}
         <g transform={`translate(${m.l + 6} ${m.t + 4})`} fontFamily="var(--grot)" fontSize={9}>
