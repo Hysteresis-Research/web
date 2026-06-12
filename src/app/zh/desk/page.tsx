@@ -60,6 +60,13 @@ export default async function DeskZh() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-12">2026-06-12</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-06-12">空头回补反弹周内重夺 200W 地板 —— dealer 本子翻净多 γ、06-15 周 close 是那根二元</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-11">2026-06-11</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />

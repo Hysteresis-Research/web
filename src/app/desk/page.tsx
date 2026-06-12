@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-12">2026-06-12</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-12">200W floor reclaimed intraweek on a short-cover bounce — dealer book flipped net-long-gamma, the 06-15 weekly close the binary</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-11">2026-06-11</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
