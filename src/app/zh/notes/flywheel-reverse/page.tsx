@@ -19,7 +19,7 @@ export default function FlywheelReverseZh() {
     <main lang="zh-Hans">
       <section className="article wrap" id="note">
         <SectionHead
-          numeral="八"
+          numeral="五"
           title="飞轮，反着转"
           folio="札记 · 2026-06-12 · MSTR"
         />
@@ -61,7 +61,7 @@ export default function FlywheelReverseZh() {
           <Reveal as="p">
             把溢价的符号翻过来，引擎也就翻了过来。我们在{' '}
             <Link href="/zh/notes/mstr-mnav">折价，正在收窄</Link>{' '}
-            里跟踪的那段折价，始终没有合上——今天仍在 0.80&times; 附近。以低于其所代表价值的价格发一股、再按全价买币，新来的这股，带着的币
+            里跟踪的那段折价，始终没有合上——MSTR 增发时，它就在 0.78&times; 附近。以低于其所代表价值的价格发一股、再按全价买币，新来的这股，带着的币
             <em>少</em>于已经在外的那些。折价之下，飞轮不会空转，它倒着转。
           </Reveal>
 
@@ -70,7 +70,7 @@ export default function FlywheelReverseZh() {
             <span className="leadin">f&nbsp;&times;&nbsp;mNAV&nbsp;&gt;&nbsp;1</span>
             ——f 是融资里真正买币的那一份。哪怕 f&nbsp;=&nbsp;1、每一元都买币，你仍然需要溢价。f
             一旦小于 1，门槛还要往上抬：按这一周的 0.56，折价得反转到 1.79&times;
-            mNAV，增发才不再稀释。当时离这个数远得很。上面图里的标记点，正落在阴影那半边——把股价往上拖，看它要走多远。
+            mNAV，增发才不再稀释。当时离这个数远得很。上面图里的标记点，离增厚那条线还远——把股价往上拖，看它要走多远。
           </Reveal>
 
           <Reveal as="aside" className="marginnote">
@@ -80,8 +80,7 @@ export default function FlywheelReverseZh() {
 
           <Reveal as="p">
             那为什么还要在折价里增发？因为另一个选项更难看。融来的 $181M 里，$101M
-            买了币，剩下的堆成现金——那是给永续优先股付息的缓冲，一年大约
-            $7.5–8 亿，对着一门现金流稀薄的软件生意。用 0.80&times;
+            买了币，剩下的堆成现金——那是给永续优先股付息的缓冲，一年已近 $10 亿、还在涨，对着一门现金流稀薄的软件生意。用 0.78&times;
             卖普通股去喂这笔票息，是在「不再卖更多币」的前提下，让机器继续运转的最不难看的办法。普通股东被稀释、被劣后，为的是护住优先股。
           </Reveal>
 

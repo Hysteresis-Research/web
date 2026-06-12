@@ -74,7 +74,8 @@ export default function FlywheelReverse() {
             Reverse the sign of the premium and you reverse the engine. The
             discount we tracked in{' '}
             <Link href="/notes/mstr-mnav">Discount, unwinding</Link> never
-            closed — it sits near 0.80&times; today. Issue a share below the
+            closed — it stood near 0.78&times; as the company issued into it.
+            Issue a share below the
             value it represents, buy coin at full value, and the new share
             arrives carrying <em>less</em> bitcoin than the ones already
             outstanding. The flywheel does not idle at a discount. It runs
@@ -88,8 +89,8 @@ export default function FlywheelReverse() {
             every dollar into bitcoin, you still need a premium. Below it the bar
             climbs: at the 0.56 of this week, the discount would have to invert
             to 1.79&times; mNAV before issuance stopped diluting. It was nowhere
-            near. The marker in the plate above sits in the shaded half — drag
-            the price up and watch how far it has to travel.
+            near. The marker in the plate above sits well short of that
+            breakeven — drag the price up and watch how far it has to travel.
           </Reveal>
 
           <Reveal as="aside" className="marginnote">
@@ -102,9 +103,10 @@ export default function FlywheelReverse() {
           <Reveal as="p">
             Why issue into a discount at all? Because the alternative is worse to
             look at. Of the $181M raised, $101M bought bitcoin and the remainder
-            built cash — the buffer that pays the perpetual-preferred coupon,
-            roughly $750–800M a year against a software business that throws off
-            little. Selling common at 0.80&times; to feed that coupon is the
+            built cash — the buffer that pays the perpetual-preferred coupon, on
+            the order of a billion dollars a year and climbing, against a
+            software business that throws off little. Selling common at
+            0.78&times; to feed that coupon is the
             least-ugly way to keep the machine fed without selling more coin.
             Common holders are diluted, and subordinated, to protect the
             preferred.

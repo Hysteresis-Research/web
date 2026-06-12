@@ -14,7 +14,10 @@ import ChartFrame from './ChartFrame';
 const SHARES_M = 358.2;
 const HOLDINGS = 845_256;
 const RAISED = 181e6;
-const SPOT = 63_478; // BTC, 2026-06-12 snapshot
+// The plate reconstructs the 2026-06-08 disclosure, so bitcoin is marked at the
+// week's realized average purchase price ($101.3M / 1,550 ≈ $65,332), not the
+// later spot — that is what makes the −0.24%/wk and the 1,550 coins consistent.
+const SPOT = 65_332;
 
 type Lang = 'en' | 'zh';
 
@@ -34,7 +37,7 @@ const COPY: Record<Lang, Record<string, string>> = {
     cf: 'at this f',
     c1: 'f = 1',
     breakeven: 'accretive above mNAV',
-    foot: 'Snapshot · 2026-06-12. Drag the levers.',
+    foot: 'As disclosed · 2026-06-08. Drag the levers.',
   },
   zh: {
     price: '股价',
@@ -51,12 +54,12 @@ const COPY: Record<Lang, Record<string, string>> = {
     cf: '当前 f',
     c1: 'f = 1',
     breakeven: '增厚需 mNAV 高于',
-    foot: '快照 · 2026-06-12。拖动两根杠杆。',
+    foot: '据 2026-06-08 披露。拖动两根杠杆。',
   },
 };
 
 export default function MnavDilutionExplorer({ lang = 'en' }: { lang?: Lang }) {
-  const [price, setPrice] = useState(120.15);
+  const [price, setPrice] = useState(120.44);
   const [pct, setPct] = useState(56);
   const t = COPY[lang];
 
@@ -129,7 +132,7 @@ export default function MnavDilutionExplorer({ lang = 'en' }: { lang?: Lang }) {
           y={m.t}
           width={px(1) - px(xMin)}
           height={ih}
-          fill="var(--signal-wash, color-mix(in srgb, var(--signal) 8%, transparent))"
+          fill="var(--signal-wash)"
         />
         {/* y gridlines + labels */}
         {yTicks.map((v) => (
@@ -238,7 +241,7 @@ export default function MnavDilutionExplorer({ lang = 'en' }: { lang?: Lang }) {
         </label>
       </div>
 
-      <div className={'de-verdict ' + (dilutive ? 'is-dil' : 'is-acc')}>
+      <div className={'de-verdict ' + (dilutive ? 'is-dil' : 'is-acc')} aria-live="polite">
         <span className="de-test">
           f × mNAV = {f.toFixed(2)} × {mnav.toFixed(2)} = <b>{fm.toFixed(2)}</b>
         </span>
@@ -256,6 +259,7 @@ export default function MnavDilutionExplorer({ lang = 'en' }: { lang?: Lang }) {
 }
 
 function niceStep(s: number) {
+  if (!(s > 0)) return 1; // guard log10(0)/NaN even though the y-range is clamped
   const p = Math.pow(10, Math.floor(Math.log10(s)));
   const n = s / p;
   return (n < 1.5 ? 1 : n < 3 ? 2 : n < 7 ? 5 : 10) * p;
