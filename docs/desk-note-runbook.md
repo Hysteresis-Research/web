@@ -210,6 +210,19 @@ rules or EN-density caps.
   evidence = flag. Attack: funding ×1095, GEX dual-ref sign, SM cut fraction,
   MA offsets, claims-vs-loaded-data, EN/ZH parity, the requireViewer pattern,
   `next build`.
+- **Second auditor — `ask-deepseek` arithmetic/consistency pass (added 2026-06-13).**
+  codex stays primary and **owns the publish gate**; `ask-deepseek` is a supplementary
+  numeric auditor that recomputes every *self-contained* claim from the note text alone:
+  funding ×1095, GEX dual-ref signs, SM cut = |Δ|/prior_net, MA offsets = spot/MA−1,
+  expiry-strip sum, R/R ratios, and cross-block number consistency. Run it on the EN note
+  text; **adjudicate, do not auto-apply** — recompute each flagged number yourself before
+  acting (a delegated audit is an input, not a verdict) — then fold any *confirmed* finding
+  into the same `audits/` record and fix it in EN+ZH. **Why deepseek, not the others**
+  (2026-06-13 A/B on the 06-13 note): deepseek caught a real R/R entry-price inconsistency
+  codex missed, with zero noise; **GLM produced 3 confident FALSE-positive MAJORs from its
+  own arithmetic errors — mis-summed the expiry strip, inverted the MA-offset convention —
+  so GLM is NOT used as an auditor**; kimi is clean but slow and is the ZH writer (conflicted).
+  **Fallback**: if `command -v ask-deepseek` fails, codex-only — never block the cron.
 - Write `audits/YYYY-MM-DD-desk-note.md` matching existing `audits/` format
   (12 fields: date target files reviewer scope snapshot tokens build verdict +
   findings table w/ severity + cleared + follow-up).
