@@ -111,6 +111,12 @@ The agent has **zero conversation context** — everything needed is here.
   `不仅…而且`, emoji, over-bold, forced three-item 排比). It is **not** a voice
   rewrite; native-first generation stays the primary fix; re-read for voice
   after. (Full rationale in §4.)
+- **CN register anchor (positive exemplar — NOT a substitution list).** The trader
+  voice prefers physical, active verbs over flat statives: e.g. 推到 / 下移至 / 稳坐 /
+  悬在 / 按了暂停 over 长到 / 走下到 / 坐在 / 还在 / 停住了 (2026-06-13 A/B — Kimi & GLM
+  landed this energy, DeepSeek left it flat). This anchors the *energy* only; do **not**
+  apply it as a find-replace table — let it come from native generation, exactly like the
+  title register anchor in §4. Numbers/tickers/EN code-switch terms stay verbatim regardless.
 
 ## 4 · Author the pages
 
@@ -124,6 +130,20 @@ dn-manifest → 8 dn-meta tiles → dn-prose §I–VI → dn-trade → dn-audit-
    ZH reads CN context; neither reads the sibling paragraph mid-write. Numbers
    + caveats stay identical across the two; sentence shape comes from each
    language's own register.
+
+   **ZH §I–VI via Kimi (2026-06-13 A/B: Kimi wins this register).** Draft the ZH
+   prose with `ask-kimi` instead of writing it yourself. Pass Kimi the section's
+   *frozen facts* (every number, ticker, and EN code-switch term that must appear,
+   verbatim) **plus its CN intent — generated forward from the data, NOT by
+   translating the EN paragraph** (Kimi supplies native CN sentence shape around the
+   frozen facts; feeding it the EN sentence re-creates the 翻译腔 trap §3/§4 warn
+   against). Then **gate before integrating**: (a) grep-verify **zero drift** — every
+   number/ticker in the EN §I–VI must appear in the ZH; (b) `humanizer-zh` light lint
+   (Kimi output still carries 破折号 / 否定式排比 — strip them); (c) re-read for voice.
+   **FALLBACK — the daily cron must NEVER block on Kimi:** if `command -v ask-kimi`
+   fails, or it errors/times out, write the ZH native-claude per the prior method.
+   Kimi is an *enhancement* inside the fire path of an unattended job, never a hard
+   dependency; a delegated draft is an input, not the finished page.
 2. Fill `dn-meta` tiles, `dn-trade` book, `dn-manifest`, `dn-audit-trace` **last**.
    These disclosure blocks are 报告体 by construction and will bleed register
    backward into §I–VI if written first.
