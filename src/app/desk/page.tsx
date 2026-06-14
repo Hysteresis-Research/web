@@ -64,6 +64,13 @@ export default async function Desk() {
         <div className="marginalia">§4</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-14">2026-06-14</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-14">A real up-leg on improving structure into top-divergence exhaustion — gamma tripled, funding flipped to pay shorts, the SM feed went dark, the desk stays flat</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-13">2026-06-13</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
