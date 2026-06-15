@@ -75,7 +75,7 @@ export default async function DeskZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-15">在硬起来的结构上一根第四 session 上涨腿、延伸进加剧的疲态 —— 200W 重夺加深到四根最终收、γ 加深到 +74.1M、funding 翻回付多、SM feed 仍冻、交易台守 flat</Link>
+            <Link href="/zh/desk/2026-06-15">第四程上涨，顶背离走阔</Link>
           </li>
           <li>
             <time dateTime="2026-06-14">2026-06-14</time>
