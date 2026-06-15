@@ -51,6 +51,8 @@ export function pageMetadata(opts: PageMetaInput): Metadata {
     },
     twitter: {
       card: 'summary_large_image',
+      site: '@hysrespro',
+      creator: '@hysrespro',
       title: opts.title,
       description: opts.description,
     },

@@ -58,6 +58,17 @@ export default async function DeskZh() {
         </p>
 
         <div className="marginalia">§4</div>
+        <p className="body-paragraph">
+          <a href="https://bytes.space/" target="_blank" rel="noopener">
+            工作台 ↗
+          </a>{' '}
+          <span className="em">—</span> 仍在打磨中的实时仪表盘：regime
+          评分、多模型预测锦标赛、MACD 周期、每日市场剖面、MSTR
+          稀释探索器。公开、只读、随时改动，不另行通知。
+          <span className="em">非投资建议。</span>
+        </p>
+
+        <div className="marginalia">§5</div>
         <ul className="entry-list">
           <li>
             <time dateTime="2026-06-14">2026-06-14</time>
