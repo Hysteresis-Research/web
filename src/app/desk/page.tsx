@@ -76,6 +76,13 @@ export default async function Desk() {
         <div className="marginalia">§5</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-15">2026-06-15</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-06-15">A fourth-session up-leg on firming structure into intensifying exhaustion — the 200W reclaim deepened to four finalized closes, gamma to +74.1M, funding flipped back to pay longs, the SM feed stayed frozen, the desk stays flat</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-14">2026-06-14</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
