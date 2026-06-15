@@ -44,6 +44,16 @@ export default function Colophon({ locale = 'en' }: { locale?: Locale }) {
             <p style={{ marginTop: '.7rem' }}>
               创立于二〇二六年。研究驱动的量化交易公司——本页一如其所属的刊物，只在有可被检验的判断时才发表。
             </p>
+            <span className="label" style={{ display: 'block', marginTop: '1.1rem' }}>
+              别处
+            </span>
+            <ul>
+              <li>
+                <a href="https://x.com/hysrespro" target="_blank" rel="noopener">
+                  在 X 关注 @hysrespro ↗
+                </a>
+              </li>
+            </ul>
           </div>
           <div>
             <span className="label">版本说明</span>
@@ -89,6 +99,16 @@ export default function Colophon({ locale = 'en' }: { locale?: Locale }) {
             published — like this page — only when there is something defensible
             to say.
           </p>
+          <span className="label" style={{ display: 'block', marginTop: '1.1rem' }}>
+            Elsewhere
+          </span>
+          <ul>
+            <li>
+              <a href="https://x.com/hysrespro" target="_blank" rel="noopener">
+                @hysrespro on X ↗
+              </a>
+            </li>
+          </ul>
         </div>
         <div>
           <span className="label">Colophon</span>

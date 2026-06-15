@@ -62,6 +62,18 @@ export default async function Desk() {
         </p>
 
         <div className="marginalia">§4</div>
+        <p className="body-paragraph">
+          <a href="https://bytes.space/" target="_blank" rel="noopener">
+            The Workbench ↗
+          </a>{' '}
+          <span className="em">—</span> live but unfinished instruments: the
+          regime score, the multi-model forecast tournament, MACD cycle, the
+          daily market profile, the MSTR dilution explorer. Public, read-only,
+          and revised without notice.{' '}
+          <span className="em">Not investment advice.</span>
+        </p>
+
+        <div className="marginalia">§5</div>
         <ul className="entry-list">
           <li>
             <time dateTime="2026-06-12">2026-06-12</time>

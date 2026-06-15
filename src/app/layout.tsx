@@ -33,6 +33,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
+    site: '@hysrespro',
+    creator: '@hysrespro',
     title: 'Hysteresis Research',
     description:
       'A research-driven quantitative trading firm operating where price lags fundamentals.',
