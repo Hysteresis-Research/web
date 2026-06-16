@@ -185,7 +185,7 @@ export default async function Desk() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-01">Anchor held on close, leverage rebuilt one-sided short, scout re-anchored off the dead W-SMA20</Link>
+            <Link href="/desk/2026-06-01">Anchor held, leverage rebuilt one-sided short</Link>
           </li>
           <li>
             <time dateTime="2026-05-31">2026-05-31</time>
