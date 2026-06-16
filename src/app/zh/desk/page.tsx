@@ -89,28 +89,28 @@ export default async function DeskZh() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-14">在改善的结构上一根真上涨腿、延伸进顶背离疲态 —— γ 翻三倍、funding 翻成付空、SM feed 走黑、交易台守 flat</Link>
+            <Link href="/zh/desk/2026-06-14">真上涨腿进顶背离疲态</Link>
           </li>
           <li>
             <time dateTime="2026-06-13">2026-06-13</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-13">重夺的 200W 地板上方消化 —— 每一根结构读都硬起来、盘面停住、scout 衰减出射程</Link>
+            <Link href="/zh/desk/2026-06-13">重夺地板上方消化</Link>
           </li>
           <li>
             <time dateTime="2026-06-12">2026-06-12</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-12">空头回补反弹周内重夺 200W 地板 —— dealer 本子翻净多 γ、06-15 周 close 是那根二元</Link>
+            <Link href="/zh/desk/2026-06-12">周内重夺，本子翻净多 γ</Link>
           </li>
           <li>
             <time dateTime="2026-06-11">2026-06-11</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/zh/desk/2026-06-11">200W 地板仍在下方、底下点起一簇均值回归 —— funding 转负且 live、flip 腿是把关的那条</Link>
+            <Link href="/zh/desk/2026-06-11">地板下点起一簇均值回归</Link>
           </li>
           <li>
             <time dateTime="2026-06-10">2026-06-10</time>

@@ -94,28 +94,28 @@ export default async function Desk() {
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-14">A real up-leg on improving structure into top-divergence exhaustion — gamma tripled, funding flipped to pay shorts, the SM feed went dark, the desk stays flat</Link>
+            <Link href="/desk/2026-06-14">Real up-leg into top-divergence exhaustion</Link>
           </li>
           <li>
             <time dateTime="2026-06-13">2026-06-13</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-13">Digestion above the reclaimed 200W floor — structure firmed on every read, the tape stalled, the scout decayed out of reach</Link>
+            <Link href="/desk/2026-06-13">Digestion above the reclaimed floor</Link>
           </li>
           <li>
             <time dateTime="2026-06-12">2026-06-12</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-12">200W floor reclaimed intraweek on a short-cover bounce — dealer book flipped net-long-gamma, the 06-15 weekly close the binary</Link>
+            <Link href="/desk/2026-06-12">Reclaimed intraweek, book flipped long-gamma</Link>
           </li>
           <li>
             <time dateTime="2026-06-11">2026-06-11</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
             <span className="entry-sep" aria-hidden="true">·</span>
-            <Link href="/desk/2026-06-11">200W floor still below, a mean-revert cluster fired underneath — funding live, the flip leg the holdout</Link>
+            <Link href="/desk/2026-06-11">Mean-revert cluster fired below the floor</Link>
           </li>
           <li>
             <time dateTime="2026-06-10">2026-06-10</time>
