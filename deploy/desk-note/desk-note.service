@@ -1,0 +1,21 @@
+[Unit]
+Description=Daily BTC desk-note publish routine (Claude headless + codex audit)
+Documentation=file:///opt/desk-note/run.sh https://github.com/hysres/web/blob/main/docs/desk-note-runbook.md
+After=network-online.target daily-update.service reports-refresh.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/desk-note
+ExecStart=/opt/desk-note/run.sh
+EnvironmentFile=/etc/desk-note.env
+
+# Wall-clock ceiling: runbook normally 25-35min; pad for codex audit + retries.
+TimeoutStartSec=90min
+
+# Memory ceiling: claude + codex + node + npm can balloon.
+MemoryMax=4G
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=desk-note

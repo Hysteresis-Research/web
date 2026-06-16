@@ -1,0 +1,16 @@
+[Unit]
+Description=Trigger daily desk-note at 00:05 UTC (Beijing 08:05)
+Documentation=https://github.com/hysres/web/blob/main/docs/desk-note-runbook.md
+
+[Timer]
+# 00:05 UTC daily. Server daily-update.timer runs 00:00 + reports-refresh.timer hourly ~:01,
+# so by 00:05 both have refreshed (data ~4-5min fresh).
+OnCalendar=*-*-* 00:05:00 UTC
+# If server was down at the trigger, run once on next boot.
+Persistent=true
+# Avoid global-clock-sync stampedes (per codex review MED finding).
+RandomizedDelaySec=180
+Unit=desk-note.service
+
+[Install]
+WantedBy=timers.target
