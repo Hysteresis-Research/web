@@ -11,7 +11,7 @@ ExecStart=/opt/desk-note/run.sh
 EnvironmentFile=/etc/desk-note.env
 
 # Wall-clock ceiling: runbook normally 25-35min; pad for codex audit + retries.
-TimeoutStartSec=90min
+TimeoutStartSec=180min
 
 # Memory ceiling: claude + codex + node + npm can balloon.
 MemoryMax=4G
