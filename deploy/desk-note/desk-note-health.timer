@@ -1,0 +1,13 @@
+[Unit]
+Description=Trigger desk-note health check at 03:30 UTC (after the 00:05 run + 180min ceiling)
+Documentation=https://github.com/hysres/web/blob/main/deploy/desk-note/README.md
+
+[Timer]
+# 03:30 UTC: the 00:05 run with a 180-min ceiling can finish as late as ~03:05.
+OnCalendar=*-*-* 03:30:00 UTC
+Persistent=true
+RandomizedDelaySec=120
+Unit=desk-note-health.service
+
+[Install]
+WantedBy=timers.target

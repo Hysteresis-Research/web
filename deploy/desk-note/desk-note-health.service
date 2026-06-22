@@ -1,0 +1,15 @@
+[Unit]
+Description=Desk-note daily health check (did today's note reach origin/main?)
+Documentation=file:///opt/desk-note/health-check.sh
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/opt/desk-note
+ExecStart=/opt/desk-note/health-check.sh
+EnvironmentFile=/etc/desk-note.env
+TimeoutStartSec=2min
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=desk-note-health
