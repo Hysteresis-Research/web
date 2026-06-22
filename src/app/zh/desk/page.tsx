@@ -71,6 +71,13 @@ export default async function DeskZh() {
         <div className="marginalia">§5</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-06-22">2026-06-22</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-06-22">未收盘周线 bar 站在地板上方、dealer 本子去放大至 flat、盘面冻结 130.6 小时</Link>
+          </li>
+          <li>
             <time dateTime="2026-06-20">2026-06-20</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
