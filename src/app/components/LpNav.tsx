@@ -9,6 +9,7 @@ const SECTIONS = [
   { slug: '/firm', en: 'firm', zh: '公司' },
   { slug: '/strategies', en: 'strategies', zh: '策略' },
   { slug: '/terms', en: 'terms', zh: '条款' },
+  { slug: '/nav', en: 'nav', zh: '净值' },
 ] as const;
 
 export default function LpNav() {
