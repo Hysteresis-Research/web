@@ -1730,3 +1730,39 @@ footer.colophon-foot{ border-top:3px double var(--ink); }
 @media print{
   .desk-letter{ box-shadow:none; border-color:#171209; }
 }
+
+/* ---------- /lp/nav — the gated NAV block ---------- */
+.lp-nav{ margin-top:.4rem; }
+.lp-nav-note{ font-family:var(--serif); color:var(--ink-60); font-size:.95rem;
+  border-top:1px solid var(--hair); padding-top:1rem; }
+.lp-nav-flag{ font-family:var(--grot); font-size:.68rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--signal);
+  border:1px solid var(--signal); border-radius:2px; display:inline-block;
+  padding:.28em .7em; margin:0 .5rem .8rem 0; background:var(--signal-wash); }
+.lp-nav-heads{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem;
+  border-top:1px solid var(--hair); border-bottom:1px solid var(--hair-soft);
+  padding:1rem 0; margin-bottom:1.1rem; }
+.lp-nav-heads .lp-nav-k{ display:block; font-family:var(--grot);
+  font-size:.62rem; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:.35rem; }
+.lp-nav-heads b{ font-family:var(--serif); font-weight:600; font-size:1.5rem;
+  letter-spacing:0; color:var(--ink); }
+.lp-nav-heads .lp-nav-sub{ display:block; font-family:var(--serif);
+  font-size:.82rem; color:var(--ink-60); margin-top:.3rem; }
+.lp-nav-plate{ margin:1.2rem 0; }
+.lp-nav-table{ border-collapse:collapse; width:100%; margin:1.2rem 0;
+  font-family:var(--serif); font-size:.92rem; }
+.lp-nav-table caption{ text-align:left; font-family:var(--grot);
+  font-size:.66rem; letter-spacing:.22em; text-transform:uppercase;
+  color:var(--ink-3); padding-bottom:.5rem; }
+.lp-nav-table td{ border-top:1px solid var(--hair-soft); padding:.5em .8em .5em 0;
+  vertical-align:top; }
+.lp-nav-table td:first-child{ font-family:var(--grot); font-size:.7rem;
+  letter-spacing:.1em; text-transform:uppercase; color:var(--ink-2);
+  width:34%; padding-top:.72em; }
+.lp-nav-table td:nth-child(2){ font-weight:600; white-space:nowrap; }
+.lp-nav-table .lp-nav-notecell{ color:var(--ink-60); font-size:.84rem; }
+.lp-nav-disclosure{ font-family:var(--serif); font-size:.84rem; line-height:1.65;
+  color:var(--ink-60); border-top:1px solid var(--hair); padding-top:.9rem;
+  margin-top:1.4rem; }
+@media (max-width:700px){ .lp-nav-heads{ grid-template-columns:1fr; gap:.9rem; } }
