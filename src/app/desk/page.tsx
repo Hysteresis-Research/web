@@ -76,6 +76,13 @@ export default async function Desk() {
         <div className="marginalia">§5</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-07-09">2026-07-09</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/desk/2026-07-09">Reclaim handed back intra-week as the tape turns genuinely bearish</Link>
+          </li>
+          <li>
             <time dateTime="2026-07-08">2026-07-08</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
