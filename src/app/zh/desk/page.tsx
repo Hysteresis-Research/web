@@ -71,6 +71,13 @@ export default async function DeskZh() {
         <div className="marginalia">§5</div>
         <ul className="entry-list">
           <li>
+            <time dateTime="2026-07-27">2026-07-27</time>
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <TickerMark ticker="BTC" />
+            <span className="entry-sep" aria-hidden="true">·</span>
+            <Link href="/zh/desk/2026-07-27">上收重夺 D-EMA50 cap、但靠空头回补 / OI 收缩、smart money 减多加空、scout 仍递延</Link>
+          </li>
+          <li>
             <time dateTime="2026-07-26">2026-07-26</time>
             <span className="entry-sep" aria-hidden="true">·</span>
             <TickerMark ticker="BTC" />
