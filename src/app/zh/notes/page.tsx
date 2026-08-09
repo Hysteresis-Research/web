@@ -23,6 +23,12 @@ type Note = {
 // 标题与链接沿用先前的索引，未作改动。
 const NOTES: Note[] = [
   {
+    date: '2026-08-09',
+    tag: 'COMPUTE',
+    title: '算力，按基建融资',
+    href: '/zh/notes/compute-underwritten',
+  },
+  {
     date: '2026-06-12',
     tag: 'MSTR',
     title: '飞轮，反着转',
