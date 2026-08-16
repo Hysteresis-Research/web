@@ -50,7 +50,7 @@ export default function ChartFrame({ title, ariaLabel, children }: Props) {
           fontFamily="var(--grot)"
           fontSize={7}
           letterSpacing="0.18em"
-          style={{ letterSpacing: '0.18em' }}
+          style={{ letterSpacing: '0.18em', fontSize: 7 }}
         >
           HYSTERESIS  RESEARCH
         </text>
