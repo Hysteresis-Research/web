@@ -113,7 +113,12 @@ export default function Masthead({
         </nav>
         <UtcClock />
         <span className="edition-switch">
-          <Link
+          {/* Plain <a>, not <Link>: the locale is derived in the root layout
+              from the x-pathname header, and the root layout does not
+              re-render on a soft navigation — a <Link> switch left the
+              masthead, colophon and <html lang> in the previous edition.
+              A hard navigation re-renders the whole document in the new one. */}
+          <a
             className="lang-switch"
             href={altHref}
             lang={zh ? 'en' : 'zh-Hans'}
@@ -121,7 +126,7 @@ export default function Masthead({
             aria-label={zh ? 'Switch to English' : '切换到中文'}
           >
             {zh ? 'EN' : '中文'}
-          </Link>
+          </a>
           <ThemeToggle locale={locale} />
         </span>
       </div>
