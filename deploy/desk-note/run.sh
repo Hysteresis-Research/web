@@ -1,5 +1,8 @@
 #!/bin/bash
 # Daily desk-note runner — 4-stage refactor (replaces the monolithic
+# 2026-08-19: Stage A/C + title helper pinned claude-opus-4-8 -> claude-opus-5 (model-generation
+# pass; Opus 5 = in-plan Opus tier on Max, thinking adaptive by default; server claude-code moved
+# to the native 2.1.227 binary the same day — --max-turns/--permission-mode/--allowedTools verified).
 # claude --print that died on 2026-05-30 / 2026-05-31 with the same
 # socket-drop failure mode). Each claude call is bounded to a single
 # scope; codex runs directly (not wrapped in claude).
@@ -107,7 +110,7 @@ After writing $EN_FILE, exit. Do not perform any other action."
 
   set +e
   claude --print \
-    --model claude-opus-4-8 \
+    --model claude-opus-5 \
     --permission-mode acceptEdits \
     --allowedTools "Bash,Read,Edit,Write,Glob,Grep" \
     --max-turns 120 \
@@ -263,7 +266,7 @@ After step 7 succeeds, exit cleanly. Stage C is done."
 
   set +e
   claude --print \
-    --model claude-opus-4-8 \
+    --model claude-opus-5 \
     --permission-mode acceptEdits \
     --allowedTools "Bash,Read,Edit,Write,Glob,Grep" \
     --max-turns 120 \
@@ -370,7 +373,7 @@ title_gate() {
   prompt="Shorten this desk-note index title to a single short noun phrase, 25-55 characters. NO comma-chained clauses, NO dollar/number/percent values, NO parenthetical, NO em-dash clause lists. Capture only the single spine; the body of the note carries the detail. Exemplars ($lang): $exemplars. Output ONLY the replacement title text on one line, nothing else.
 
 Title: $title"
-  short="$(printf '%s' "$prompt" | claude --print --model claude-opus-4-8 --max-turns 2 2>/dev/null | head -1 | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//; s/^[\"“]//; s/[\"”]$//')"
+  short="$(printf '%s' "$prompt" | claude --print --model claude-opus-5 --max-turns 2 2>/dev/null | head -1 | sed -E 's/^[[:space:]]+//; s/[[:space:]]+$//; s/^[\"“]//; s/[\"”]$//')"
   local sn
   sn="$(printf '%s' "$short" | python3 -c 'import sys; print(len(sys.stdin.read()))' 2>/dev/null || echo 999)"
   if [ -z "$short" ] || [ "$sn" -gt 80 ] || printf '%s' "$short" | grep -qiE '^error'; then
