@@ -47,6 +47,13 @@ fi
 if [ -z "$fails" ]; then
   notify "desk-note ♥ alive" default heartbeat "auth + push OK · $(date -u '+%a %H:%MZ')"
 else
-  notify "desk-note ✗ PRE-FLIGHT FAIL" urgent rotating_light "broken: ${fails}· fix before the next note run · ssh btc"
+  # Make the alert self-actionable — the recurring failures have a known fix.
+  hint="fix before the next note run · ssh btc"
+  case "$fails" in
+    *claude-auth*)     hint="RE-LOGIN AUTH: ssh btc → claude auth login --claudeai (OAuth expired, ~monthly)" ;;
+    *git-push-denied*) hint="push denied — check deploy key / PAT on Hysteresis-Research/web" ;;
+    *codex-auth*)      hint="codex re-login: ssh btc → codex login --device-auth" ;;
+  esac
+  notify "desk-note ✗ PRE-FLIGHT FAIL" urgent rotating_light "broken: ${fails}· ${hint}"
 fi
 exit 0
