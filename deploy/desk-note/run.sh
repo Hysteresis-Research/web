@@ -76,6 +76,24 @@ fi
 git config user.name  "desk-note-bot"
 git config user.email "desk-note-bot@hysres"
 
+# -- Cadence gate (2026-08-22): weekly + event-triggered daily --------------
+# Monday = the weekly note (anchored to the just-settled W-SUN weekly close).
+# Other days publish ONLY if an event fired (event-check.sh: a real 24h/7d move
+# or a funding regime flip); else skip -- the weekly note covers a quiet range.
+# Cuts daily Opus-5 cost + daily failure surface on a frozen tape while a real
+# move still gets a same-day note. Force any day: touch /tmp/desk-note-force-$TODAY
+DOW="$(date -u +%u)"   # 1=Mon .. 7=Sun
+if [ -f "/tmp/desk-note-force-$TODAY" ]; then
+  echo "cadence: FORCE marker present -- proceeding"
+elif [ "$DOW" = "1" ]; then
+  echo "cadence: Monday -- weekly note, proceeding"
+elif /opt/desk-note/event-check.sh; then
+  echo "cadence: event fired -- event-triggered daily, proceeding"
+else
+  echo "cadence: quiet tape, not Monday -- skipping today (weekly cadence covers it)"
+  exit 0
+fi
+
 EN_FILE="src/app/desk/$TODAY/page.tsx"
 ZH_FILE="src/app/zh/desk/$TODAY/page.tsx"
 AUDIT_FILE="audits/$TODAY-desk-note.md"

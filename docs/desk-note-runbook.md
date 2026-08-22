@@ -4,8 +4,20 @@ Self-contained runbook for the recurring **Hysteresis Research BTC desk note**.
 This file IS the payload for the scheduled agent (`/schedule` remote routine).
 The agent has **zero conversation context** — everything needed is here.
 
-- **Cadence**: daily, **00:05 UTC** (Beijing 08:05).
-- **Why this time**: btc-fetcher `daily-update.timer` runs `00:00 UTC`;
+- **Cadence (2026-08-22): WEEKLY + event-triggered daily.** The timer still
+  fires **00:05 UTC** daily, but `run.sh` gates publish: **Monday = the weekly
+  note** (anchored to the just-settled W-SUN weekly close, the desk's real
+  decision cadence); **other days publish ONLY if `event-check.sh` fires** (a
+  |24h| move ≥ 6%, |7d| move ≥ 12%, or a funding sign-flip through zero) —
+  else the run exits early and the week's note covers the quiet range. Force a
+  note on any day: `touch /tmp/desk-note-force-$(date -u +%F)` then start the
+  service. Rationale: on a frozen/ranging tape the daily note manufactured
+  1500-char walls all concluding "book stays FLAT" (near-zero marginal info) and
+  every daily run was a failure opportunity (monthly OAuth expiry, timeouts,
+  deploy-key breaks); weekly + event cuts cost + failure surface while a real
+  move still gets a same-day note. Thresholds tune via `/etc/desk-note.env`
+  (`DESK_NOTE_EVENT_MOVE_PCT`, `DESK_NOTE_EVENT_MOVE7D_PCT`).
+- **Why 00:05 UTC**: btc-fetcher `daily-update.timer` runs `00:00 UTC`;
   `reports-refresh.timer` runs hourly (~:01). At 00:05 UTC both have just run,
   so server artifacts are ~4–5 min fresh.
 - **Output**: gated `hysteresisresearch.com/desk/YYYY-MM-DD` (EN) + `/zh/desk/...`
